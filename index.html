@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTD Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">LTD</div>
+            <ul class="nav-links">
+                <li><a href="#" data-category="home" class="active">Home</a></li>
+                <li><a href="#" data-category="decoration">Décoration</a></li>
+                <li><a href="#" data-category="restauration">Restauration</a></li>
+                <li><a href="#" data-category="creations">Création</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page home active">
+        <section class="hero">
+            <h1>Welcome to LTD Projects</h1>
+            <p>Explore our categories of works below:</p>
+            <div class="categories"></div>
+
+            </div>
+        </section>
+    </div>
+    <div class="page decoration inactive">
+        <h1>Decoration</h1>
+        <p>Découvrez nos projets de decoration.</p>
+        <div class="project-gallery" id="decoration-gallery"></div>
+    </div>
+     <div class="page restauration inactive">
+        <h1>Restauration</h1>
+        <p>Découvrez nos projets de restauration.</p>
+        <div class="project-gallery" id="restauration-gallery"></div>
+    </div> 
+    <div class="page creations inactive">
+        <h1>Créations</h1>
+        <p>Découvrez nos projets de créations.</p>
+        <div class="project-gallery" id="creations-gallery"></div>
+    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LTD Projects. All rights reserved.</p>
+    </footer>
+   
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <div id="imageModal" class="modal inactive">
+        <button class="close-modal" onclick="closeModal()">✖</button>
+        <div class="modal-content">
+           
+          <!-- Section 1 : Photo principale -->
+          <section class="modal-section photo-principale">
+            <img src="" alt="Photo principale du projet" />
+          </section>
+      
+          <!-- Section 2 : Détails -->
+          <section class="modal-section details">
+            <img src="path/to/photo2.jpg" alt="Photo secondaire" />
+            <div class="details-text">
+              <h3>Titre du chantier</h3>
+              <p>Description détaillée du projet avec des informations techniques.</p>
+            </div>
+          </section>
+      
+          <!-- Section 3 : Galerie -->
+          <section class="modal-section galerie">
+            <h4>Galerie Photos</h4>
+            <div class="galerie-grid">
+              <img src="path/to/photo3.jpg" alt="Photo 3" />
+              <img src="path/to/photo4.jpg" alt="Photo 4" />
+              <img src="path/to/photo5.jpg" alt="Photo 5" />
+              <!-- Ajouter autant de photos que nécessaire -->
+            </div>
+          </section>
+      
+          <!-- Section 4 : Carousel -->
+          <section class="modal-section-carousel">
+            <h4>Carousel</h4>
+            <div class="carousel-wrapper">
+                <button class="carousel-button prev" onclick="scrollCarousel(-1)">&#10094;</button>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <!-- Les images dynamiques seront insérées ici -->
+                    </div>
+                </div>
+                <button class="carousel-button next" onclick="scrollCarousel(1)">&#10095;</button>
+            </div>
+          </section>
+        </div>
+      </div>
+      
+    
+    
+</body>
+</html>
