@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 imgElement.src = project.images[0];
                 imgElement.alt = project.name;
                 imgElement.className = "project-image";
+                imgElement.dataset.projectId = project.id;
                 imgElement.addEventListener("click", () => openModal(project)); // Ouvre la modale avec les détails
                 galleryContainer.appendChild(imgElement);
 
@@ -82,34 +83,46 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Modale introuvable.");
             return;
         }
-
+    
         // Photo principale
         const mainPhoto = modal.querySelector(".photo-principale img");
         mainPhoto.src = project.images[0];
-
+         mainPhoto.classList.add("project-image"); // Ajoute la classe project-image
+    mainPhoto.dataset.projectId = project.id; // Ajoute l'ID du projet
+    
         // Section détails
         const detailPhoto = modal.querySelector(".details img");
         detailPhoto.src = project.images[1] || ""; // Deuxième photo, ou vide si manquante
+        detailPhoto.classList.add("project-image"); // Ajoute la classe project-image
+        detailPhoto.dataset.projectId = project.id; // Ajoute l'ID du projet
+        
         const detailTitle = modal.querySelector(".details-text h3");
         detailTitle.textContent = project.name;
         const detailDescription = modal.querySelector(".details-text p");
         detailDescription.textContent = project.description;
-
-        // Galerie
+    
+        // Galerie (gallery-grid)
         const galleryContainer = modal.querySelector(".galerie-grid");
         galleryContainer.innerHTML = ""; // Réinitialise la galerie
+    
         project.images.slice(2).forEach((imgSrc) => {
             const imgElement = document.createElement("img");
             imgElement.src = imgSrc;
             imgElement.alt = project.name;
+            imgElement.classList.add("project-image"); // Ajout de la classe project-image
+            imgElement.addEventListener("click", () => {
+                const clickedIndex = project.images.indexOf(imgSrc); // Index de l'image cliquée
+                openGrandeImageModal(project.images, clickedIndex); // Ouvre la grande modale avec le slider
+            });
             galleryContainer.appendChild(imgElement);
         });
-
+    
         // Afficher la modale
         modal.classList.remove("inactive");
         modal.classList.add("active");
         document.body.classList.add("modal-open");
     };
+    
   
 
     // **5. Fermer la modale**
@@ -242,12 +255,116 @@ if (carouselContainer && carousel) {
             scrollLeft(); // Défile à gauche
         }
     });
+    
 
     // Gestion des boutons
     document.querySelector(".next").addEventListener("click", scrollRight);
     document.querySelector(".prev").addEventListener("click", scrollLeft);
-}
-   
+    }
+    // **8. Gestion de la modale-grande-image**
+// **8. Gestion de la modale-grande-image**
+const openGrandeImageModal = (projectImages, clickedIndex) => {
+    const modal = document.getElementById("modale-grande-image");
+    const slider = modal.querySelector(".slider-grande-image");
+
+    if (!modal || !slider) {
+        console.error("Modale 'grande' ou slider introuvable.");
+        return;
+    }
+
+    // Réinitialise le slider
+    slider.innerHTML = "";
+
+    // Ajoute toutes les images du projet au slider
+    projectImages.forEach((imgSrc) => {
+        const imgElement = document.createElement("img");
+        imgElement.src = imgSrc;
+        imgElement.alt = "Image grand format";
+        imgElement.style.width = "100%";
+        imgElement.style.flexShrink = "0"; // Empêche les images de se rétrécir
+        slider.appendChild(imgElement);
+    });
+
+    // Positionne le slider sur l'image cliquée
+    const slideWidth = slider.firstElementChild.offsetWidth;
+    slider.style.transform = `translateX(-${clickedIndex * slideWidth}px)`;
+
+    // Affiche la modale "grande"
+    modal.classList.remove("inactive");
+    modal.classList.add("active");
+
+    // Stocke l’index courant pour navigation
+    modal.dataset.currentIndex = clickedIndex;
+};
+
+const closeGrandeImageModal = () => {
+    const modal = document.getElementById("modale-grande-image");
+    if (modal) {
+        modal.classList.remove("active");
+        modal.classList.add("inactive");
+    }
+};
+
+const slideGrandeImagePrev = () => {
+    const modal = document.getElementById("modale-grande-image");
+    const slider = modal.querySelector(".slider-grande-image");
+    if (!modal || !slider) return;
+
+    const currentIndex = parseInt(modal.dataset.currentIndex, 10);
+    const newIndex = (currentIndex - 1 + slider.children.length) % slider.children.length;
+
+    modal.dataset.currentIndex = newIndex;
+    const slideWidth = slider.firstElementChild.offsetWidth;
+    slider.style.transform = `translateX(-${newIndex * slideWidth}px)`;
+};
+
+const slideGrandeImageNext = () => {
+    const modal = document.getElementById("modale-grande-image");
+    const slider = modal.querySelector(".slider-grande-image");
+    if (!modal || !slider) return;
+
+    const currentIndex = parseInt(modal.dataset.currentIndex, 10);
+    const newIndex = (currentIndex + 1) % slider.children.length;
+
+    modal.dataset.currentIndex = newIndex;
+    const slideWidth = slider.firstElementChild.offsetWidth;
+    slider.style.transform = `translateX(-${newIndex * slideWidth}px)`;
+};
+
+// **Gestion des clics pour ouvrir la modale-grande-image**
+document.querySelectorAll(".project-image").forEach((image) => {
+    image.addEventListener("click", () => {
+        const projectId = parseInt(image.dataset.projectId, 10); // Récupère l'ID du projet
+        const project = categories
+            .flatMap(cat => cat.projects)
+            .find(proj => proj.id === projectId);
+
+        if (project) {
+            // Crée une liste contenant toutes les images du projet
+            const allImages = [
+                project.images[0], // Photo principale
+                ...(project.images[1] ? [project.images[1]] : []), // Détail (si disponible)
+                ...project.images.slice(2), // Images de la galerie
+            ];
+
+            // Trouve l'index de l'image cliquée dans la liste complète
+            const clickedIndex = allImages.indexOf(image.src);
+
+            // Ouvre la grande modale avec toutes les images et l'index correct
+            openGrandeImageModal(allImages, clickedIndex);
+        } else {
+            console.error("Projet introuvable pour l'image cliquée.");
+        }
+    });
+});
+
+// **Attache la fermeture de la modale**
+document.querySelector(".close-grande-image").addEventListener("click", closeGrandeImageModal);
+
+// Attache les boutons de navigation pour le slider
+document.querySelector(".slider-grande-image-button.prev").addEventListener("click", slideGrandeImagePrev);
+document.querySelector(".slider-grande-image-button.next").addEventListener("click", slideGrandeImageNext);
+
 });
 
 

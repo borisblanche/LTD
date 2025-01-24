@@ -59,12 +59,12 @@
            
           <!-- Section 1 : Photo principale -->
           <section class="modal-section photo-principale">
-            <img src="" alt="Photo principale du projet" />
+            <img src="" alt="Photo principale du projet"class="project-image" />
           </section>
       
           <!-- Section 2 : Détails -->
           <section class="modal-section details">
-            <img src="path/to/photo2.jpg" alt="Photo secondaire" />
+            <img src="path/to/photo2.jpg" alt="Photo secondaire"class="project-image" />
             <div class="details-text">
               <h3>Titre du chantier</h3>
               <p>Description détaillée du projet avec des informations techniques.</p>
@@ -75,9 +75,9 @@
           <section class="modal-section galerie">
             <h4>Galerie Photos</h4>
             <div class="galerie-grid">
-              <img src="path/to/photo3.jpg" alt="Photo 3" />
-              <img src="path/to/photo4.jpg" alt="Photo 4" />
-              <img src="path/to/photo5.jpg" alt="Photo 5" />
+              <img src="path/to/photo3.jpg" alt="Photo 3"class="project-image" />
+              <!-- <img src="path/to/photo4.jpg" alt="Photo 4" />
+              <img src="path/to/photo5.jpg" alt="Photo 5" /> -->
               <!-- Ajouter autant de photos que nécessaire -->
             </div>
           </section>
@@ -97,6 +97,19 @@
           </section>
         </div>
       </div>
+      <div id="modale-grande-image" class="modal-grande inactive">
+        <div class="modal-grande-content">
+            <button class="close-grande-image">&#10005;</button>
+            <div class="slider-grande-image-container">
+                <div class="slider-grande-image">
+                    <!-- Les images seront ajoutées dynamiquement -->
+                </div>
+            </div>
+            <button class="slider-grande-image-button prev">&#10094;</button>
+            <button class="slider-grande-image-button next">&#10095;</button>
+        </div>
+    </div>
+    
       
     
     
