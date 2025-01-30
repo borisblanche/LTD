@@ -1,3 +1,18 @@
+document.querySelector(".logo").addEventListener("click", (e) => {
+    e.preventDefault(); // Évite tout comportement par défaut
+
+    // Sélectionne toutes les pages et désactive-les
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+        page.classList.add("inactive");
+    });
+
+    // Active la page home
+    document.querySelector(".home").classList.add("active");
+    document.querySelector(".home").classList.remove("inactive");
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".nav-links a");
     const pages = document.querySelectorAll(".page");
@@ -67,20 +82,29 @@ document.addEventListener("DOMContentLoaded", () => {
             if (project.images.length > 0) {
                 const firstImage = project.images[0]; // Prendre uniquement la première image
                 
+                const projectItem = document.createElement("div");
+                projectItem.classList.add("project-item");
+                
+                // **Image du projet**
                 const imgElement = document.createElement("img");
-                imgElement.src = firstImage.src; // Utilise la source de la première image
+                imgElement.src = firstImage.src;
                 imgElement.alt = `${project.name} - Image ${firstImage.index}`;
                 imgElement.className = "project-image";
                 imgElement.dataset.projectId = project.id;
-    
-                imgElement.addEventListener("click", () => openModal(project)); // Ouvre la modale avec les détails
-    
-                galleryContainer.appendChild(imgElement);
-    
-                const caption = document.createElement("p");
-                caption.textContent = project.name; // Nom du projet comme légende
-                caption.className = "project-caption";
-                galleryContainer.appendChild(caption);
+                
+                // **Ajout du titre en overlay**
+                const titleElement = document.createElement("div");
+                titleElement.classList.add("project-title");
+                titleElement.textContent = project.name;
+                
+                // ✅ **Ajoute l'événement au conteneur et non à l'image uniquement**
+                projectItem.addEventListener("click", () => openModal(project));
+                
+                // **Ajoute les éléments au conteneur**
+                projectItem.appendChild(imgElement);
+                projectItem.appendChild(titleElement);
+                galleryContainer.appendChild(projectItem);
+                
             }
         });
     };
@@ -245,17 +269,29 @@ document.addEventListener("DOMContentLoaded", () => {
         categories.forEach((category) => {
             category.projects.forEach((project) => {
                 if (project.images.length > 0) {
+                    const projectItem = document.createElement("div");
+                    projectItem.classList.add("carousel-image-container");
+                    
+                    // **Image du projet**
                     const imgElement = document.createElement("img");
                     imgElement.src = project.images[0].src;
                     imgElement.alt = project.name;
                     imgElement.classList.add("carousel-image");
                     imgElement.dataset.projectId = project.id;
-
-                    imgElement.addEventListener("click", () => {
-                        openModal(project);
-                    });
-
-                    projectImages.push(imgElement);
+                    
+                    // **Ajout du titre en overlay**
+                    const titleElement = document.createElement("div");
+                    titleElement.classList.add("carousel-title");
+                    titleElement.textContent = project.name;
+                    
+                    // ✅ Ajout de l’événement pour ouvrir la modale
+                    projectItem.addEventListener("click", () => openModal(project));
+                    
+                    // **Ajoute les éléments dans le conteneur**
+                    projectItem.appendChild(imgElement);
+                    projectItem.appendChild(titleElement);
+                    projectImages.push(projectItem);
+                    
                 }
             });
         });

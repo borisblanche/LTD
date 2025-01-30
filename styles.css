@@ -1,8 +1,29 @@
+html, body {
+  width: 100%;
+  overflow: hidden; /* Évite le scroll horizontal */
+}
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white; /* Couleur à ajuster si besoin */
+  z-index: 1000;
 }
 
 .page {
@@ -13,13 +34,258 @@ body {
     display: block; /* Affiche uniquement la page active */
 }
 
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #222;
-    color: white;
+  width: 100%;
+  height: 120px; /* Hauteur fixe */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white; /* Change selon ton thème */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
 }
+
+.logo img {
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* ✅ Conteneur des liens */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  padding: 10px 15px; /* Zone de clic améliorée */
+  transition: color 0.3s ease, background 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  color: white;
+  background: #007bff;
+}
+/* Style général pour le main */
+/* Assure que le body et le html prennent toute la hauteur */
+.home {
+  margin-top: 0;
+  min-height: calc(100vh - 120px); /* Permet le scroll si nécessaire */
+  overflow-y: auto;
+}
+
+/* Le main occupe toute la hauteur et largeur */
+main {
+  width: 100%;
+  height: calc(100vh - 120px); /* Toute la hauteur sauf la navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px; /* Décalage pour éviter la navbar */
+  background: #f5f5f5;
+}
+
+/* Style des pages */
+.page {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 120px); /* S'assure que la page prend toute la hauteur */
+  display: none; /* Cache les pages sauf l'active */
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  overflow-y: auto; /* Permet le scroll si le contenu est plus grand que l'écran */
+  padding: 40px 20px; /* Ajoute de l'espace autour pour éviter que les éléments collent aux bords */
+  box-sizing: border-box;
+  margin-top: 120px; /* Décalage pour éviter que le contenu passe sous la navbar */
+}
+
+/* ✅ Garde uniquement la page active visible */
+.page.active {
+  display: flex; /* Utilisation de flex pour centrer proprement */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Permet au contenu de s'étendre vers le bas */
+  opacity: 1;
+}
+
+/* Style pour la section hero */
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 70px; /* Compense la hauteur de la navbar */
+  background: url('assets/background.jpg') no-repeat center center/cover;
+  color: green;
+}
+.page h1 {
+  font-size: 2.8rem; /* ✅ Taille du titre */
+  font-weight: bold;
+  color: #333; /* ✅ Couleur du texte */
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  border-bottom: 3px solid #007bff; /* ✅ Petite barre bleue sous le titre */
+  display: inline-block; /* ✅ Ajuste la taille de l'élément au contenu */
+  letter-spacing: 2px;
+}
+.page p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #555; /* ✅ Couleur plus douce */
+  text-align: center;
+  max-width: 800px; /* ✅ Largeur max pour éviter un texte trop long */
+  margin: 10px auto; /* ✅ Centrage automatique */
+  line-height: 1.6; /* ✅ Espacement entre les lignes */
+  padding: 0 20px;
+}
+
+
+
+/* Titres */
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+ 
+}
+
+.hero h2{
+  font-size: 3rem;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ 
+}
+.hero h3{
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ 
+} .hero h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ 
+}
+
+/* Galeries */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 20px;
+  padding-bottom: 80px; /* Ajoute de l'espace pour éviter que le dernier projet soit masqué */
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .navbar {
+    height: 90px;
+    padding: 0 15px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  main {
+    height: calc(100vh - 90px);
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  main {
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero h2, .hero h3, .hero h4 {
+    font-size: 1.6rem;
+  }
+
+  .project-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 50px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero h2, .hero h3, .hero h4 {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .project-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+ 
+
+
+
 
 .categories {
     display: flex;
@@ -34,22 +300,23 @@ body {
     max-width: 30%;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
     text-align: center;
     margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
+    cursor: pointer;
    
 }
 
 .category:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .category img {
     width: 100%;
-    height: auto;
+    height: 80%;
     display: block;
     
 }
@@ -64,12 +331,56 @@ body {
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
 }
+.project-item {
+  position: relative;
+  width: 200px; /* Ajuste selon ton design */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
 
-.project-gallery img {
+.project-item:hover {
+  transform: scale(1.05);
+}
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+.project-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* ✅ Prend toute la place */
+  display: flex;
+  align-items: center; /* ✅ Centre verticalement */
+  justify-content: center; /* ✅ Centre horizontalement */
+  background: rgba(0, 0, 0, 0.7); /* ✅ Ombre couvrant toute l'image */
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* ✅ Afficher le titre et l'ombre au survol */
+.project-item:hover .project-title {
+  opacity: 0.9;
+}
+
+
+/* .project-gallery img {
     max-width: 200px;
+    padding: 5px;
+    margin: 10px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -78,7 +389,7 @@ body {
 
 .project-gallery img:hover {
     transform: scale(1.1);
-}
+} */
 
 /* Style pour la modale */
 /* Général pour la modale */
@@ -162,8 +473,8 @@ body.modal-open {
   /* Bouton de fermeture */
   .close-modal {
     position: absolute;
-    top: 40px;
-    right: 120px;
+    top: 5%;
+    right: 5%;
    
     color: black;
     background-color: white;
@@ -181,7 +492,9 @@ body.modal-open {
   }
 
   .project-image {
-    width: 100%; /* S'adapte au conteneur */
+    max-width: 50nh;
+    max-height: 60vh;
+   
     height: auto;
     border-radius: 8px; /* Coins arrondis */
     transition: box-shadow 0.3s ease; /* Transition fluide pour l'ombrage */
@@ -197,7 +510,7 @@ body.modal-open {
     display: block;
     width: 60%; /* L'image occupe toute la largeur */
     max-height: 60vh; /* Limite la hauteur à 100% de la hauteur de l'écran */
-    margin: 0 auto; /* Centre horizontalement */
+    margin: 50px auto; /* Centre horizontalement */
     object-fit: cover; /* Adapte l'image à son conteneur */
     border-radius: 5px;
   }
@@ -237,7 +550,7 @@ body.modal-open {
   /* Section 3 : Galerie */
   .galerie-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Trois colonnes pour des images plus petites */
+    grid-template-columns: repeat(2, 1fr); /* Trois colonnes pour des images plus petites */
     gap: 2%; /* Réduit l'espace entre les images pour conserver l'effet aéré */
     padding: 10px; /* Ajoute un peu de padding autour de la galerie */
   }
@@ -254,19 +567,23 @@ body.modal-open {
   /* .galerie-grid img:hover {
     transform: scale(1.1); 
   } */
-  .modal-section.carousel {
+  .modal-section .carousel {
+    
     position: relative; /* Assure que le carousel est bien positionné */
     width: 100%; /* Prend toute la largeur disponible */
-    margin: 0 auto; /* Centre la section horizontalement */
+    margin:  auto; /* Centre la section horizontalement */
     padding: 20px 0; /* Ajoute de l'espace autour */
     box-sizing: border-box; /* Inclut le padding dans la largeur totale */
   }
   .modal-section.carousel,
 
   .carousel-wrapper {
+   
     position: relative; /* Parent pour le positionnement des boutons */
-    width: 90%; /* Largeur totale */
-    margin: auto;
+    width: 95%; /* Largeur totale */
+    margin: 20px auto;
+    margin-top: 50px;
+    padding: 20px;
 }
 
 .carousel-container {
@@ -279,14 +596,49 @@ body.modal-open {
     gap: 10px;
     transition: transform 0.3s ease;
 }
+.carousel-image-container {
+  position: relative;
+  width: 100px; /* Garde la taille d’origine */
+  height: 100px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.carousel-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.carousel-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6); /* Fond sombre */
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+.carousel-image-container:hover .carousel-title {
+  opacity: 1;
+}
 
-.carousel img {
+/* .carousel img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
 .carousel img:hover {
     transform: scale(1.1);
