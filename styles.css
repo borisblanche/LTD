@@ -372,55 +372,80 @@ body.modal-open {
 }
 
 /* Conteneur du slider */
+/* Assurez-vous que le conteneur du slider n'affiche qu'une seule image à la fois */
+/* Assurez-vous que le conteneur du slider affiche une seule image */
 .slider-grande-image-container {
-    position: relative;
-    overflow: hidden; /* Masque les parties du slider débordantes */
-    width: 100%;
-    height: 100%; /* Ajustez la hauteur selon vos besoins */
+  width: 100%;
+  max-width: 800px; /* Ajustable en fonction de la taille désirée */
+  max-height: 100%; /* Ajustable pour éviter les débordements */
+  overflow: hidden;
+  position: relative;
+  margin: auto; /* Centre le slider */
+  border-radius: 10px; /* Ajoute des bords arrondis pour un design moderne */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet propre */
 }
 
-/* Slider */
+/* Défilement horizontal des images */
 .slider-grande-image {
-    display: flex;
-    transition: transform 0.3s ease; /* Animation fluide lors des transitions */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
-/* Images dans le slider */
+/* Assurez-vous que chaque image a une taille correcte et ne dépasse pas */
 .slider-grande-image img {
-    object-fit: contain; /* Assure que l'image reste entière */
-    width: 800px; /* Image s'adapte à la largeur du slider */
-    height: 800px; /* Conserve les proportions */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste l'image sans la déformer */
+  flex-shrink: 0;
+  border-radius: 10px;
 }
 
-/* Boutons de navigation */
+/* Boutons de navigation stylés */
 .slider-grande-image-button {
-    position: absolute;
-    top: 50%; /* Centre verticalement */
-    transform: translateY(-50%); /* Corrige le centrage vertical */
-    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-    color: white;
-    border: none;
-    font-size: 2rem; /* Taille des icônes */
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 10; /* Assure que les boutons restent au-dessus */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 20px;
+  border-radius: 50%; /* Rend les boutons ronds */
+  transition: background 0.3s ease;
 }
 
-/* Bouton "prev" */
-.slider-grande-image-button.prev {
-    left: 10px; /* Positionné à gauche */
-}
-
-/* Bouton "next" */
-.slider-grande-image-button.next {
-    right: 10px; /* Positionné à droite */
-}
-
-/* Effet au survol */
 .slider-grande-image-button:hover {
-    background: rgba(0, 0, 0, 0.8); /* Fond plus foncé */
+  background: rgba(0, 0, 0, 0.8);
 }
+
+/* Position des boutons */
+.slider-grande-image-button.prev {
+  left: 15px;
+}
+
+.slider-grande-image-button.next {
+  right: 15px;
+}
+
+/* Icônes pour remplacer le texte des boutons (si nécessaire) */
+.slider-grande-image-button::before {
+  content: "❮"; /* Flèche gauche */
+  font-weight: bold;
+}
+
+.slider-grande-image-button.next::before {
+  content: "❯"; /* Flèche droite */
+}
+
+/* Ajoute une animation douce au hover */
+.slider-grande-image-button:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
 
 
 
