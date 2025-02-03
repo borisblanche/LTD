@@ -1,3 +1,36 @@
+// document.addEventListener("DOMContentLoaded", () => {
+//     const burger = document.querySelector(".burger-menu");
+//     const navLinks = document.querySelector(".nav-links");
+
+//     // ✅ Ouvre et ferme le menu burger
+//     burger.addEventListener("click", () => {
+//         navLinks.classList.toggle("active");
+//         burger.classList.toggle("active");
+//     });
+
+//     // ✅ Ferme le menu burger après un clic sur un lien
+//     document.querySelectorAll(".nav-links a").forEach(link => {
+//         link.addEventListener("click", (e) => {
+//             e.preventDefault(); // Empêche le comportement par défaut du lien
+    
+//             const categoryName = link.getAttribute("data-category"); // Utilise data-category
+//             if (!categoryName) {
+//                 console.error("❌ Le lien ne contient pas de catégorie valide.");
+//                 return;
+//             }
+    
+//             updateActivePage(categoryName); // Active la bonne page
+    
+//             // ✅ Ferme le menu burger après un clic
+//             document.querySelector(".nav-links").classList.remove("active");
+//             document.querySelector(".burger-menu").classList.remove("active");
+//         });
+//     });
+    
+// });
+
+
+
 document.querySelector(".logo").addEventListener("click", (e) => {
     e.preventDefault(); // Évite tout comportement par défaut
 
@@ -23,6 +56,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // **1. Navigation entre les pages**
     const updateActivePage = (categoryName) => {
+
+        console.log("🔄 Mise à jour de la page pour :", categoryName);
+        if (categoryName === "projets") {
+            console.log("📌 Scrolling vers la section catégories.");
+            const section = document.getElementById("categories-section");
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+            } else {
+                console.error("❌ La section #categories-section est introuvable.");
+            }
+            return; // ⛔️ STOP : On ne va pas plus loin !
+        }
+    
+        // 🔹 Désactive toutes les pages et active la bonne
+        document.querySelectorAll(".page").forEach(page => {
+            page.classList.toggle("active", page.classList.contains(categoryName));
+            page.classList.toggle("inactive", !page.classList.contains(categoryName));
+        });
+       
         pages.forEach(page => {
             page.classList.remove("active", "inactive"); // Enlève les classes active et inactive
             page.classList.add(page.classList.contains(categoryName) ? "active" : "inactive"); // Ajoute active à la page correspondante
@@ -80,6 +132,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // **3. Afficher les images de la catégorie active**
     const displayCategoryImages = (categoryName) => {
+        if (!categoryName) {
+            console.error("displayCategoryImages: Aucun nom de catégorie fourni.");
+            return;
+        }
         const category = categoriesData.find(cat => cat.name.toLowerCase() === categoryName.toLowerCase());
         if (!category) {
             console.error(`Catégorie "${categoryName}" non trouvée.`);
@@ -563,6 +619,177 @@ if (currentCategoryName !== "home") {
     displayCategoryImages(currentCategoryName);
 }
 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const navLinks = document.querySelectorAll(".nav-links a");
+//     const pages = document.querySelectorAll(".page");
+
+//     const updateActivePage = (targetId) => {
+//         // Désactive toutes les pages
+//         pages.forEach(page => {
+//             page.classList.remove("active");
+//             page.classList.add("inactive");
+//         });
+
+//         // Vérifie si c'est une page existante
+//         const targetPage = document.querySelector(`.${targetId}`);
+//         if (targetPage) {
+//             targetPage.classList.add("active");
+//             targetPage.classList.remove("inactive");
+//         } else {
+//             // Si c'est une section, on scrolle vers elle
+//             const targetSection = document.getElementById(targetId);
+//             if (targetSection) {
+//                 window.scrollTo({ top: targetSection.offsetTop - 100, behavior: "smooth" });
+//             }
+//         }
+
+//         // ✅ Ferme le menu burger après le clic
+//         document.querySelector(".nav-links").classList.remove("active");
+//         document.querySelector(".burger-menu").classList.remove("active");
+//     };
+
+//     // ✅ Ajoute l'événement aux liens de navigation
+//     navLinks.forEach(link => {
+//         link.addEventListener("click", (e) => {
+//             e.preventDefault();
+//             const targetId = link.getAttribute("href").substring(1); // Supprime le "#"
+//             updateActivePage(targetId);
+//         });
+//     });
+// });
+// document.querySelectorAll(".nav-links a").forEach(link => {
+//     link.addEventListener("click", (e) => {
+//         e.preventDefault(); // Empêche le comportement par défaut du lien
+
+//         const categoryName = link.getAttribute("data-category"); // Utilise data-category
+
+//         updateActivePage(categoryName); // Active la bonne page
+
+//         // ✅ Ferme le menu burger après un clic sur un lien
+//         document.querySelector(".nav-links").classList.remove("active");
+//         document.querySelector(".burger-menu").classList.remove("active");
+//     });
+// });
+document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.querySelector(".burger-menu");
+    const navLinks = document.querySelector(".nav-links");
+    const pages = document.querySelectorAll(".page");
+
+    // ✅ Fonction pour activer la bonne section
+    const updateActivePage = (categoryName) => {
+        console.log(`🔄 Activation de la section : ${categoryName}`);
+
+        // 🔹 Si "projets" est cliqué → D'abord revenir sur "home", puis scroller
+        if (categoryName === "projets") {
+            console.log("📌 Demande d'affichage de la section catégories...");
+
+            // D'abord s'assurer que la page "home" est bien active
+            if (!document.querySelector(".home").classList.contains("active")) {
+                console.log("🏠 Retour à Home d'abord...");
+                updateActivePage("home"); // On revient sur home
+                setTimeout(() => { scrollToProjects(); }, 300); // Puis on scroll après un court délai
+            } else {
+                scrollToProjects();
+            }
+            return; // ⛔ STOP ici, ne pas continuer à exécuter le reste du code
+        }
+
+        // 🔹 Désactive toutes les autres pages
+        pages.forEach(page => {
+            page.classList.remove("active");
+            page.classList.add("inactive");
+        });
+
+        // 🔹 Activer la bonne page, si elle existe
+        const targetPage = document.querySelector(`.${categoryName}`);
+        if (targetPage) {
+            targetPage.classList.add("active");
+            targetPage.classList.remove("inactive");
+        }
+        
+        if (categoryName === "home") {
+            console.log("🏠 Scroll forcé vers le haut...");
+        
+            // Force le scroll en haut immédiatement
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        
+            // 🕐 Ajoute un délai pour garantir le scroll avec un effet plus lent
+            setTimeout(() => {
+                let currentPosition = window.scrollY;
+                const scrollSpeed = 20; // Ajuste la vitesse (plus petit = plus lent)
+        
+                const interval = setInterval(() => {
+                    if (currentPosition > 0) {
+                        currentPosition -= scrollSpeed;
+                        window.scrollTo(0, currentPosition);
+                    } else {
+                        clearInterval(interval); // Stoppe le scroll une fois en haut
+                    }
+                }, 10); // Met à jour toutes les 10ms pour une transition plus fluide
+            }, 300); // Petit délai pour éviter le conflit avec `window.scrollTo({ top: 0, behavior: "smooth" })`
+        }
+        
+        
+        
+
+        // 🔹 Met à jour l'état actif des liens de navigation
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.classList.toggle("active", link.getAttribute("data-category") === categoryName);
+        });
+
+        // ✅ Ferme le menu burger après un clic sur un lien
+        navLinks.classList.remove("active");
+        burger.classList.remove("active");
+    };
+
+    // ✅ Fonction qui scroll directement à la section projets
+    const scrollToProjects = () => {
+        console.log("📌 Scrolling vers la section catégories...");
+        const section = document.getElementById("categories-section");
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+            console.error("❌ La section #categories-section est introuvable.");
+        }
+    };
+
+    // ✅ Événement d'ouverture / fermeture du menu burger
+    burger.addEventListener("click", () => {
+        console.log("🍔 Menu burger cliqué !");
+        navLinks.classList.toggle("active");
+        burger.classList.toggle("active");
+    });
+
+    // ✅ Gestion des clics sur les liens de navigation
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const target = link.getAttribute("data-category") || link.getAttribute("href").substring(1);
+            if (!target) return console.error("❌ Lien sans catégorie valide.");
+
+            updateActivePage(target);
+        });
+    });
+
+    // ✅ Clique sur le logo → Retourne à "home"
+    const logo = document.querySelector(".logo");
+    if (logo) {
+        logo.addEventListener("click", (e) => {
+            e.preventDefault();
+            updateActivePage("home");
+        });
+    }
+
+    // ✅ Initialise la page avec l'URL (ex: ?category=projets)
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentCategoryName = urlParams.get("category") || "home";
+    updateActivePage(currentCategoryName);
+});
+
 
 
 
