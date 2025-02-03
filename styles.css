@@ -1,10 +1,10 @@
 html, body {
   width: 100%;
-  overflow: hidden; /* Évite le scroll horizontal */
-}
-body {
-  overflow: auto;
-  scrollbar-width: none; /* Firefox */
+  height: 100%; /* Assure que le body occupe toute la hauteur */
+  overflow: auto; /* Permet le défilement sur la page */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
@@ -22,7 +22,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background: white; /* Couleur à ajuster si besoin */
+ 
   z-index: 1000;
 }
 
@@ -41,13 +41,13 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background: white; /* Change selon ton thème */
+  background-color: transparent; /* Change selon ton thème */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
   z-index: 1000;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  */
 }
 
 .logo img {
@@ -86,57 +86,125 @@ header {
 /* Assure que le body et le html prennent toute la hauteur */
 .home {
   margin-top: 0;
-  min-height: calc(100vh - 120px); /* Permet le scroll si nécessaire */
+  /* min-height: calc(100vh - 120px);  */
   overflow-y: auto;
+ 
+}
+.page.home {
+  overflow-y: auto; /* Permet le défilement uniquement sur cette page */
+  height: 100%;
+  /* Marge pour ne pas que le contenu soit caché derrière la navbar */
 }
 
 /* Le main occupe toute la hauteur et largeur */
 main {
   width: 100%;
-  height: calc(100vh - 120px); /* Toute la hauteur sauf la navbar */
+  min-height: 100vh;
+  /* height: calc(100vh - 120px); */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 120px; /* Décalage pour éviter la navbar */
-  background: #f5f5f5;
+  /* margin-top: 120px; */
+  background-color: transparent;
+  
 }
 
 /* Style des pages */
 .page {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 120px); /* S'assure que la page prend toute la hauteur */
+  min-height: 100vh;
+ 
+ text-align: center;
+  /* min-height: calc(100vh - 120px);  */
   display: none; /* Cache les pages sauf l'active */
   opacity: 0;
   transition: opacity 0.5s ease-out;
   overflow-y: auto; /* Permet le scroll si le contenu est plus grand que l'écran */
-  padding: 40px 20px; /* Ajoute de l'espace autour pour éviter que les éléments collent aux bords */
+  /* Ajoute de l'espace autour pour éviter que les éléments collent aux bords */
   box-sizing: border-box;
-  margin-top: 120px; /* Décalage pour éviter que le contenu passe sous la navbar */
+  /* background-color: #007bff; */
+
 }
 
 /* ✅ Garde uniquement la page active visible */
 .page.active {
-  display: flex; /* Utilisation de flex pour centrer proprement */
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Permet au contenu de s'étendre vers le bas */
+  display: block;
   opacity: 1;
 }
 
 /* Style pour la section hero */
 .hero {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 70px; /* Compense la hauteur de la navbar */
-  background: url('assets/background.jpg') no-repeat center center/cover;
+  /* padding-top: 70px;  */
+  background: url('./assets/Logo/fonddaccueil.jpg') no-repeat center center/cover;
   color: green;
+}
+.hero, .categories-content {
+  min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Pas de marge */
+  padding: 0; /* Pas de padding */
+}
+/* .categories-content{
+  flex-direction: column;
+  width: 90%;
+} */
+#categories-section {
+  background-color: beige;  /* Fond bleu */
+  color: white;  /* Texte en blanc pour contraster */
+  display: flex;
+  justify-content: center;
+ 
+  flex-direction: column;
+  width: 100%; /* Prend toute la largeur */
+  height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+  padding: 20px; /* Ajoute un peu de padding */
+  box-sizing: border-box; /* S'assure que le padding n'affecte pas la taille */
+}
+
+
+
+
+/* Flexbox pour centrer correctement .categories-text */
+.categories-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%; /* La section occupe toute la largeur */
+  max-width: 900px; /* Limite la largeur pour une meilleure lisibilité */
+  text-align: center;
+  background-color: transparent; /* Aucun fond */
+  padding: 20px;
+  margin: 20px;  /* Marge autour du texte pour mieux l'espacer */
+}
+.categories-text p {
+  font-size: 1.2rem;
+  color: white;  /* Assure que le texte est visible */
+  line-height: 1.6;  /* Espacement entre les lignes */
+  margin: 20px 0;  /* Marge au-dessus et en-dessous du texte */
+  padding: 10px 0; /* Padding pour améliorer l'espacement autour du texte */
+  background-color: transparent; /* Enlève le fond de la p */
+  max-width: 100%; /* Limite la largeur de l'élément */
+  overflow: hidden; /* Cache tout débordement */
+}
+
+ .categories {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  max-width: 90%;
+  height: 50vh; /* Laisse la div s'adapter à son contenu */
 }
 .page h1 {
   font-size: 2.8rem; /* ✅ Taille du titre */
@@ -149,17 +217,51 @@ main {
   border-bottom: 3px solid #007bff; /* ✅ Petite barre bleue sous le titre */
   display: inline-block; /* ✅ Ajuste la taille de l'élément au contenu */
   letter-spacing: 2px;
+  margin-top: 10%;
 }
 .page p {
   font-size: 1.2rem;
   font-weight: 300;
-  color: #555; /* ✅ Couleur plus douce */
+  color: #555; 
   text-align: center;
   max-width: 800px; /* ✅ Largeur max pour éviter un texte trop long */
   margin: 10px auto; /* ✅ Centrage automatique */
   line-height: 1.6; /* ✅ Espacement entre les lignes */
   padding: 0 20px;
 }
+/* Style pour les liens de navigation */
+.navigation-links {
+  position: absolute; /* Permet de positionner les liens sur la page */
+  top: 200px; /* Les placer près du bas de la page */
+  width: 100%; /* S'étend sur toute la largeur */
+  display: flex;
+  justify-content: space-between; /* Espace égal entre les liens */
+  padding: 0 20px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white; /* Couleur du texte des liens */
+  background-color: rgba(0, 0, 0, 0.5); /* Fond légèrement transparent pour le lien */
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #007bff; /* Changer la couleur au survol */
+}
+
+/* Spécifie la position à gauche et à droite */
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
 
 
 
@@ -194,110 +296,11 @@ main {
  
 }
 
-/* Galeries */
-.project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  width: 90%;
-  max-width: 1200px;
-  margin-top: 20px;
-  padding-bottom: 80px; /* Ajoute de l'espace pour éviter que le dernier projet soit masqué */
-}
-
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .navbar {
-    height: 90px;
-    padding: 0 15px;
-  }
-
-  .logo img {
-    height: 60px;
-  }
-
-  main {
-    height: calc(100vh - 90px);
-    margin-top: 90px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-top: 10px;
-  }
-
-  .nav-links a {
-    font-size: 16px;
-    padding: 8px 12px;
-  }
-
-  main {
-    height: calc(100vh - 80px);
-    margin-top: 80px;
-  }
-
-  .hero h1 {
-    font-size: 2.8rem;
-  }
-
-  .hero h2, .hero h3, .hero h4 {
-    font-size: 1.6rem;
-  }
-
-  .project-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
-
-@media (max-width: 480px) {
-  .logo img {
-    height: 50px;
-  }
-
-  .hero h1 {
-    font-size: 2.4rem;
-  }
-
-  .hero h2, .hero h3, .hero h4 {
-    font-size: 1.4rem;
-  }
-
-  .nav-links {
-    gap: 8px;
-  }
-
-  .project-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
-}
-
- 
-
-
-
-
-.categories {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px auto;
-    max-width: 1200px;
-   
-}
 
 .category {
     flex: 1;
     max-width: 30%;
+    
     background-color: white;
     border-radius: 10px;
     transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
@@ -327,16 +330,33 @@ main {
     color: #333;
 }
 
+/* Galeries */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  width: 100%; /* Prend toute la largeur */
+  max-width: 100%; /* Pas de limite à la largeur */
+  padding: 0; /* Pas de padding */
+  margin: 0; /* Pas de marge */
+}
+
+
+/* Responsive */
+
+
+
+
 
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
 }
 .project-item {
   position: relative;
-  width: 200px; /* Ajuste selon ton design */
+  width: 400px; /* Ajuste selon ton design */
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -819,5 +839,78 @@ body.modal-open {
     }
   }
   
+  @media (max-width: 1024px) {
+    .navbar {
+      height: 90px;
+      padding: 0 15px;
+    }
   
+    .logo img {
+      height: 60px;
+    }
+  
+    main {
+      height: calc(100vh - 90px);
+      margin-top: 90px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 0;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding-top: 10px;
+    }
+  
+    .nav-links a {
+      font-size: 16px;
+      padding: 8px 12px;
+    }
+  
+    main {
+      height: calc(100vh - 80px);
+      margin-top: 80px;
+    }
+  
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+  
+    .hero h2, .hero h3, .hero h4 {
+      font-size: 1.6rem;
+    }
+  
+    .project-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo img {
+      height: 50px;
+    }
+  
+    .hero h1 {
+      font-size: 2.4rem;
+    }
+  
+    .hero h2, .hero h3, .hero h4 {
+      font-size: 1.4rem;
+    }
+  
+    .nav-links {
+      gap: 8px;
+    }
+  
+    .project-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+  }
 

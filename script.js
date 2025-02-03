@@ -24,15 +24,35 @@ document.addEventListener("DOMContentLoaded", () => {
     // **1. Navigation entre les pages**
     const updateActivePage = (categoryName) => {
         pages.forEach(page => {
-            page.classList.remove("active", "inactive");
-            page.classList.add(page.classList.contains(categoryName) ? "active" : "inactive");
+            page.classList.remove("active", "inactive"); // Enlève les classes active et inactive
+            page.classList.add(page.classList.contains(categoryName) ? "active" : "inactive"); // Ajoute active à la page correspondante
         });
 
         navLinks.forEach(link => {
-            const linkCategory = link.getAttribute("data-category");
-            link.classList.toggle("active", linkCategory === categoryName);
+            const linkCategory = link.getAttribute("data-category"); // Récupère la catégorie du lien
+            link.classList.toggle("active", linkCategory === categoryName); // Ajoute la classe active au lien
         });
+        displayCategoryImages(categoryName); 
     };
+    document.querySelectorAll('.navigation-links a').forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault(); // Empêche le comportement par défaut du lien
+
+        const targetCategory = link.getAttribute("data-category"); // Récupère la catégorie associée au lien
+        updateActivePage(targetCategory); // Met à jour la page active en fonction de la catégorie
+    });
+});
+
+    // **2. Ajout d'événements de clic sur les liens**
+    navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault(); // Empêche le comportement par défaut du lien
+            const targetCategory = link.getAttribute("data-category"); // Récupère la catégorie cible
+            updateActivePage(targetCategory); // Met à jour la page active en fonction de la catégorie
+        });
+    });
+    
+    
 
     // **2. Insérer dynamiquement les catégories dans la section Home**
     if (categoriesContainer) {
@@ -108,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     };
+
     
     
     
