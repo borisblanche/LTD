@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LTD Project</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -19,15 +23,15 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home" data-category="home">Accueil</a></li>
-        <li><a href="#projets" data-category="projets">Projets</a></li>
-        <li><a href="#autrepage1" data-category="autrepage1">Autre Page</a></li>
-        <li><a href="#autrepage2" data-category="autrepage2">Autre Page 2</a></li>
-                
+                <li><a href="#projets" data-category="projets">Projets</a></li>
+                <li><a href="#autrepage1" data-category="portrait">Portrait</a></li>
+                <li><a href="#autrepage2" data-category="contact">Contact</a></li>
+
             </ul>
         </nav>
     </header>
-    
-    
+
+
 
     <main>
         <div class="page home active">
@@ -40,100 +44,164 @@
             </section>
             <section id="categories-section" class="categories-content">
                 <div class="categories-text">
-                   
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sequi aspernatur quae, corporis magnam maiores tempora totam quaerat officia temporibus in labore! Maiores hic nulla ipsam soluta repellendus labore explicabo facere nostrum nobis, omnis excepturi consequatur odio earum nihil praesentium placeat, et accusamus itaque repellat assumenda cumque pariatur alias sed?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sequi aspernatur quae,
+                        corporis magnam maiores tempora totam quaerat officia temporibus in labore! Maiores hic nulla
+                        ipsam soluta repellendus labore explicabo facere nostrum nobis, omnis excepturi consequatur odio
+                        earum nihil praesentium placeat, et accusamus itaque repellat assumenda cumque pariatur alias
+                        sed?</p>
                 </div>
-                
+
                 <div class="categories"></div>
             </section>
         </div>
-    
+
         <div class="page decoration inactive">
             <h1>Décoration</h1>
             <div class="navigation-links">
-                <a href="#" class="nav-link left"data-category="meubles-peints">← Meubles Peints</a>
-                <a href="#" class="nav-link right"data-category="créations">creations →</a>
+                <a href="#" class="nav-link left" data-category="meubles-peints">← Meubles Peints</a>
+                <a href="#" class="nav-link right" data-category="créations">creations →</a>
             </div>
             <p>Découvrez nos projets de décoration.</p>
             <div class="project-gallery" id="decoration-gallery"></div>
         </div>
-    
+
         <div class="page créations inactive">
             <h1>Créations</h1>
             <div class="navigation-links">
-                <a href="#" class="nav-link left"data-category="decoration">← Décoration</a>
-                <a href="#" class="nav-link right"data-category="meubles-peints">Meubles Peints →</a>
+                <a href="#" class="nav-link left" data-category="decoration">← Décoration</a>
+                <a href="#" class="nav-link right" data-category="meubles-peints">Meubles Peints →</a>
             </div>
             <p>Découvrez nos projets de créations.</p>
             <div class="project-gallery" id="creations-gallery"></div>
         </div>
-    
+
         <div class="page meubles-peints inactive">
             <h1>Meubles peints</h1>
             <div class="navigation-links">
-                <a href="#" class="nav-link left"data-category="créations">← creations</a>
-                <a href="#" class="nav-link right"data-category="decoration">Décoration →</a>
+                <a href="#" class="nav-link left" data-category="créations">← creations</a>
+                <a href="#" class="nav-link right" data-category="decoration">Décoration →</a>
             </div>
             <p>Découvrez nos projets de meubles peints.</p>
             <div class="project-gallery" id="meubles-peints-gallery"></div>
         </div>
+        <div class="page portrait inactive">
+            <h1>A propos de moi </h1>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci iusto neque molestiae veritatis,
+                    rem et nisi nemo harum ex omnis ducimus unde! Delectus vel expedita dignissimos corrupti culpa
+                    libero modi eum! Quisquam illum quibusdam doloribus saepe! Sint ad illo deserunt dolores tenetur
+                    tempore cumque culpa quis quod quia, dicta doloremque natus veniam sapiente error facilis quidem!
+                    Veniam voluptatem magnam a hic corporis fugit. Quibusdam, nobis neque. Saepe aut, quaerat soluta
+                    necessitatibus culpa sequi odit perferendis aperiam error, vel suscipit! Ab temporibus totam
+                    quibusdam in ad ipsum natus aut dolorem et culpa, explicabo cumque optio nulla recusandae nemo,
+                    quidem amet, repudiandae nihil doloremque doloribus perferendis molestias eius! Officiis, beatae
+                    libero neque aspernatur voluptas tenetur officia fugit optio nobis cum maiores eveniet? Est unde,
+                    minus, vitae iste amet ea, itaque odit molestias delectus sunt assumenda distinctio voluptatibus
+                    sapiente saepe reiciendis. Dignissimos, voluptatem. Accusantium perspiciatis ex quis minus,
+                    aspernatur cupiditate suscipit quos dignissimos dolorem accusamus sint voluptates nisi quo quas
+                    aliquam earum! Explicabo assumenda qui quae cumque omnis. Molestiae nostrum, itaque harum laboriosam
+                    minus dolor autem dolorem, quos dolores at suscipit facilis vel nulla odit delectus? Quis recusandae
+                    pariatur officia voluptatem perferendis. Praesentium dolore incidunt ab, similique voluptate optio a
+                    qui fugit cumque.</p>
+            </div>
+        </div>
+        <div class="page contact inactive">
+            <!-- Image d'illustration -->
+            <div class="contact-img-content">
+                <img src="./assets/conservation-restauration/conservation-1.webp"
+                    alt="Illustration de conservation-restauration">
+            </div>
+        
+            <!-- Informations de contact -->
+            <div class="contact-text-content inactive">
+                <ul class="contact-me">
+                    <li>
+                        📧 <a href="mailto:contact@letempsdudecor.com">contact@letempsdudecor.com</a>
+                    </li>
+                    <li>
+                        📞 <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                    </li>
+                </ul>
+        
+                <!-- Liens vers les réseaux sociaux -->
+                <div class="contact-socials">
+                    <a href="https://www.instagram.com/letempsdudecor" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/letempsdudecor" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Carte interactive -->
+            <div class="contact-me-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999507658474!2d2.292292815674193!3d48.85884407928753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66ff0b7a6328b%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sfr!4v1619198482304!5m2!1sen!2sfr"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div> <!-- Fermeture correcte de .page.contact -->
+        
+
     </main>
-    
-    
-    
+
+
+
 
     <footer>
         <p>&copy; 2025 LTD Projects. All rights reserved.</p>
     </footer>
-   
+
 
     <script src="data.js"></script>
     <script src="script.js"></script>
     <div id="imageModal" class="modal inactive">
         <button class="close-modal" onclick="closeModal()">✖</button>
         <div class="modal-content">
-           
-          <!-- Section 1 : Photo principale -->
-          <section class="modal-section photo-principale">
-            <img src="" alt="Photo principale du projet"class="project-image" />
-          </section>
-      
-          <!-- Section 2 : Détails -->
-          <section class="modal-section details">
-            <img src="path/to/photo2.jpg" alt="Photo secondaire"class="project-image" />
-            <div class="details-text">
-              <h3>Titre du chantier</h3>
-              <p>Description détaillée du projet avec des informations techniques.</p>
-            </div>
-          </section>
-      
-          <!-- Section 3 : Galerie -->
-          <section class="modal-section galerie">
-            <!-- <h4>Galerie Photos</h4> -->
-            <div class="galerie-grid">
-              <img src="path/to/photo3.jpg" alt="Photo 3"class="project-image" />
-              <!-- <img src="path/to/photo4.jpg" alt="Photo 4" />
-              <img src="path/to/photo5.jpg" alt="Photo 5" /> -->
-              <!-- Ajouter autant de photos que nécessaire -->
-            </div>
-          </section>
-      
-          <!-- Section 4 : Carousel -->
-          <section class="modal-section-carousel">
-            <!-- <h4>Carousel</h4> -->
-            <div class="carousel-wrapper">
-                <button class="carousel-button prev" onclick="scrollCarousel(-1)">&#10094;</button>
-                <div class="carousel-container">
-                    <div class="carousel">
-                        <!-- Les images dynamiques seront insérées ici -->
-                    </div>
+
+            <!-- Section 1 : Photo principale -->
+            <section class="modal-section photo-principale">
+                <img src="" alt="Photo principale du projet" class="project-image" />
+            </section>
+
+            <!-- Section 2 : Détails -->
+            <section class="modal-section details">
+                <img src="" alt="Photo secondaire" class="project-image" />
+                <div class="details-text">
+                    <h3>Titre du chantier</h3>
+                    <p>Description détaillée du projet avec des informations techniques.</p>
                 </div>
-                <button class="carousel-button next" onclick="scrollCarousel(1)">&#10095;</button>
-            </div>
-          </section>
+            </section>
+
+            <!-- Section 3 : Galerie -->
+            <section class="modal-section galerie">
+                <!-- <h4>Galerie Photos</h4> -->
+                <div class="galerie-grid">
+                    <img src="" alt="Photo 3" class="project-image" />
+                    <!-- <img src="path/to/photo4.jpg" alt="Photo 4" />
+              <img src="path/to/photo5.jpg" alt="Photo 5" /> -->
+                    <!-- Ajouter autant de photos que nécessaire -->
+                </div>
+            </section>
+
+            <!-- Section 4 : Carousel -->
+            <section class="modal-section-carousel">
+                <!-- <h4>Carousel</h4> -->
+                <div class="carousel-wrapper">
+                    <button class="carousel-button prev" onclick="scrollCarousel(-1)">&#10094;</button>
+                    <div class="carousel-container">
+                        <div class="carousel">
+                            <!-- Les images dynamiques seront insérées ici -->
+                        </div>
+                    </div>
+                    <button class="carousel-button next" onclick="scrollCarousel(1)">&#10095;</button>
+                </div>
+            </section>
         </div>
-      </div>
-      <div id="modale-grande-image" class="modal-grande inactive">
+    </div>
+    <div id="modale-grande-image" class="modal-grande inactive">
         <div class="modal-grande-content">
             <button class="close-grande-image">&#10005;</button>
             <button class="slider-grande-image-button prev">&#10094;</button>
@@ -141,16 +209,17 @@
                 <div class="slider-grande-image">
                     <!-- Les images seront ajoutées dynamiquement -->
                 </div>
-              
+
             </div>
             <button class="slider-grande-image-button next">&#10095;</button>
-           
+
         </div>
-       
+
     </div>
-    
-      
-    
-    
+
+
+
+
 </body>
+
 </html>

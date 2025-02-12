@@ -136,6 +136,17 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("displayCategoryImages: Aucun nom de catégorie fourni.");
             return;
         }
+        const pagesSansGalerie = ["home", "portrait", "contact", "projets"];
+    
+        if (pagesSansGalerie.includes(categoryName)) {
+            console.warn(`⚠️ La page '${categoryName}' n'a pas de galerie d'images.`);
+            return; // ⛔ Stop ici pour éviter l'erreur
+        }
+
+        if (categoryName === "home") {
+            console.warn("🏠 Aucune image à afficher pour 'home'.");
+            return;
+        }
         const category = categoriesData.find(cat => cat.name.toLowerCase() === categoryName.toLowerCase());
         if (!category) {
             console.error(`Catégorie "${categoryName}" non trouvée.`);
@@ -333,136 +344,188 @@ document.addEventListener("DOMContentLoaded", () => {
     // Sélection des éléments
     // Sélection des éléments
     // **7. Gestion du carousel**
-    const carouselContainer = document.querySelector(".carousel-container");
-    const carousel = document.querySelector(".carousel");
-    const prevButton = document.querySelector(".carousel-button.prev");
-    const nextButton = document.querySelector(".carousel-button.next");
-
-    if (carouselContainer && carousel) {
-        // Réinitialise le contenu du carrousel
-        carousel.innerHTML = "";
-
-        const projectImages = [];
-        categories.forEach((category) => {
-            category.projects.forEach((project) => {
-                if (project.images.length > 0) {
-                    const projectItem = document.createElement("div");
-                    projectItem.classList.add("carousel-image-container");
-                    
-                    // **Image du projet**
-                    const imgElement = document.createElement("img");
-                    imgElement.src = project.images[0].src;
-                    imgElement.alt = project.name;
-                    imgElement.classList.add("carousel-image");
-                    imgElement.dataset.projectId = project.id;
-                    
-                    // **Ajout du titre en overlay**
-                    const titleElement = document.createElement("div");
-                    titleElement.classList.add("carousel-title");
-                    titleElement.textContent = project.name;
-                    
-                    // ✅ Ajout de l’événement pour ouvrir la modale
-                    projectItem.addEventListener("click", () => openModal(project));
-                    
-                    // **Ajoute les éléments dans le conteneur**
-                    projectItem.appendChild(imgElement);
-                    projectItem.appendChild(titleElement);
-                    projectImages.push(projectItem);
-                    
-                }
-            });
-        });
-
-        // Ajouter les images au carrousel
-        projectImages.forEach((img) => carousel.appendChild(img));
-
-        const visibleImages = 10;
-        const totalImages = projectImages.length;
-
-        // Ajuster la largeur dynamique du carrousel et des images
-        carousel.style.width = `${totalImages * (100 / visibleImages)}%`;
-        projectImages.forEach((img) => (img.style.width = `${100 / visibleImages}%`));
-
+ 
+        const carouselContainer = document.querySelector(".carousel-container");
+        const carousel = document.querySelector(".carousel");
+        const prevButton = document.querySelector(".carousel-button.prev");
+        const nextButton = document.querySelector(".carousel-button.next");
+    
+        let hoverInterval;
         let isTransitioning = false;
-
-        // Fonction pour avancer
+        const activationDistance = 150; // Distance pour détecter la souris
+    
+        // ✅ Fonction pour générer les images du carrousel
+        if (carouselContainer && carousel) {
+            carousel.innerHTML = ""; // Réinitialise le contenu
+    
+            const projectImages = [];
+            categories.forEach((category) => {
+                category.projects.forEach((project) => {
+                    if (project.images.length > 0) {
+                        const projectItem = document.createElement("div");
+                        projectItem.classList.add("carousel-image-container");
+    
+                        // **Image du projet**
+                        const imgElement = document.createElement("img");
+                        imgElement.src = project.images[0].src;
+                        imgElement.alt = project.name;
+                        imgElement.classList.add("carousel-image");
+                        imgElement.dataset.projectId = project.id;
+    
+                        // **Ajout du titre en overlay**
+                        const titleElement = document.createElement("div");
+                        titleElement.classList.add("carousel-title");
+                        titleElement.textContent = project.name;
+    
+                        // ✅ Ajout de l’événement pour ouvrir la modale
+                        projectItem.addEventListener("click", () => openModal(project));
+    
+                        // **Ajoute les éléments dans le conteneur**
+                        projectItem.appendChild(imgElement);
+                        projectItem.appendChild(titleElement);
+                        projectImages.push(projectItem);
+                    }
+                });
+            });
+    
+            // Ajouter les images au carrousel
+            projectImages.forEach((img) => carousel.appendChild(img));
+    
+            const visibleImages = 10;
+            const totalImages = projectImages.length;
+    
+            // Ajuster la largeur dynamique du carrousel et des images
+            carousel.style.width = `${totalImages * (100 / visibleImages)}%`;
+            projectImages.forEach((img) => (img.style.width = `${100 / visibleImages}%`));
+        }
+    
+        // ✅ Fonction pour avancer le carousel
         const scrollRight = () => {
-            if (isTransitioning) return;
+            if (isTransitioning || !carousel || !carousel.firstElementChild) return;
             isTransitioning = true;
     
-            // Déplacer immédiatement la première image à la fin
             const firstImage = carousel.firstElementChild;
             carousel.appendChild(firstImage);
     
-            // Supprimer la transition pour repositionner instantanément
             carousel.style.transition = "none";
             carousel.style.transform = `translateX(0%)`;
     
-            // Petite pause pour laisser le navigateur appliquer le changement
             requestAnimationFrame(() => {
                 requestAnimationFrame(() => {
-                    // Réactiver la transition après le déplacement
-                    carousel.style.transition = "transform 0.05s ease-in-out";
-                    carousel.style.transform = `translateX(-${100 / visibleImages}%)`;
+                    carousel.style.transition = "transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)";
+                    carousel.style.transform = `translateX(-10%)`;
     
                     setTimeout(() => {
                         isTransitioning = false;
-                    }, 350);
+                    }, 800);
                 });
             });
         };
     
-    
-    
-
-        // Fonction pour reculer
+        // ✅ Fonction pour reculer le carousel
         const scrollLeft = () => {
-            if (isTransitioning) return;
+            if (isTransitioning || !carousel || !carousel.lastElementChild) return;
             isTransitioning = true;
     
-            // Déplacer immédiatement la dernière image au début
             const lastImage = carousel.lastElementChild;
             carousel.prepend(lastImage);
     
-            // Supprimer la transition pour repositionner instantanément
             carousel.style.transition = "none";
-            carousel.style.transform = `translateX(-${100 / visibleImages}%)`;
+            carousel.style.transform = `translateX(-10%)`;
     
-            // Petite pause pour laisser le navigateur appliquer le changement
             requestAnimationFrame(() => {
                 requestAnimationFrame(() => {
-                    // Réactiver la transition après le déplacement
-                    carousel.style.transition = "transform 0.05s ease-in-out";
-                    carousel.style.transform = "translateX(0%)";
+                    carousel.style.transition = "transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)";
+                    carousel.style.transform = `translateX(0%)`;
     
                     setTimeout(() => {
                         isTransitioning = false;
-                    }, 350);
+                    }, 800);
                 });
             });
         };
     
+        // ✅ Fonction pour activer le scroll automatique
+        const startAutoSlide = (direction) => {
+            stopAutoSlide(); // Évite les doublons
+            hoverInterval = setInterval(() => {
+                direction > 0 ? scrollRight() : scrollLeft();
+            }, 300);
+        };
     
-
-        // Ajout des événements pour les boutons
-        nextButton.addEventListener("click", scrollRight);
-        prevButton.addEventListener("click", scrollLeft);
-
-        carouselContainer.addEventListener("wheel", (event) => {
-            event.preventDefault();
-            if (event.deltaY > 0) {
-                scrollRight(); // Molette vers le bas → Avance
+        // ✅ Fonction pour arrêter le scroll automatique
+        const stopAutoSlide = () => {
+            clearInterval(hoverInterval);
+        };
+    
+        // ✅ Détection de la proximité des boutons
+        document.addEventListener("mousemove", (e) => {
+            if (!nextButton || !prevButton) return;
+    
+            const nextRect = nextButton.getBoundingClientRect();
+            const prevRect = prevButton.getBoundingClientRect();
+    
+            const nearNext = e.clientX > nextRect.left - activationDistance && e.clientX < nextRect.right + activationDistance;
+            const nearPrev = e.clientX > prevRect.left - activationDistance && e.clientX < prevRect.right + activationDistance;
+    
+            if (nearNext) {
+                startAutoSlide(1);
+            } else if (nearPrev) {
+                startAutoSlide(-1);
             } else {
-                scrollLeft(); // Molette vers le haut → Recule
+                stopAutoSlide();
             }
         });
-    }
+    
+        // ✅ Ajout des événements "mouseenter" et "mouseleave" sur les boutons
+        if (nextButton) {
+            nextButton.addEventListener("mouseenter", () => startAutoSlide(1));
+            nextButton.addEventListener("mouseleave", stopAutoSlide);
+            nextButton.addEventListener("click", scrollRight);
+        }
+    
+        if (prevButton) {
+            prevButton.addEventListener("mouseenter", () => startAutoSlide(-1));
+            prevButton.addEventListener("mouseleave", stopAutoSlide);
+            prevButton.addEventListener("click", scrollLeft);
+        }
+    
+        // ✅ Ajout du scroll avec la molette
+        carouselContainer.addEventListener("wheel", (event) => {
+            if (!event.ctrlKey) { // Permet de zoomer avec Ctrl+Scroll sans interférence
+                event.preventDefault();
+                if (event.deltaY > 0) {
+                    scrollRight();
+                } else {
+                    scrollLeft();
+                }
+            }
+        }, { passive: false });
+    ;
+    
     // **8. Gestion de la modale-grande-image**
     // **8. Gestion de la modale-grande-image**
  // **8. Gestion de la modale-grande-image**
  const openGrandeImageModal = (projectImages, clickedSrc) => {
     const modal = document.getElementById("modale-grande-image");
-    const slider = modal.querySelector(".slider-grande-image");
+     const slider = modal.querySelector(".slider-grande-image");
+     
+     // Gestion des boutons avec vérification
+  
+     
+
+// if (nextButton) {
+//     nextButton.onclick = () => moveSlider(1);
+// } else {
+//     console.warn("⚠️ Bouton 'next' introuvable dans la modale.");
+// }
+
+// if (prevButton) {
+//     prevButton.onclick = () => moveSlider(-1);
+// } else {
+//     console.warn("⚠️ Bouton 'prev' introuvable dans la modale.");
+// }
+
 
     if (!modal || !slider) {
         console.error("❌ Modale ou slider introuvable.");
@@ -476,7 +539,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const clickedIndex = allImages.indexOf(new URL(clickedSrc, document.baseURI).href);
 
     if (clickedIndex === -1) {
-        console.error("❌ Index introuvable pour l'image cliquée.");
+        // console.error("❌ Index introuvable pour l'image cliquée.");
         console.log("Images disponibles :", allImages);
         console.log("Image cliquée :", clickedSrc);
         return;
@@ -501,7 +564,32 @@ document.addEventListener("DOMContentLoaded", () => {
         slider.appendChild(imgElement);
     });
 
-    const allSliderImages = slider.querySelectorAll(".slider-image");
+     const allSliderImages = slider.querySelectorAll(".slider-image");
+     
+     const enableZoom = (img) => {
+        img.style.transformOrigin = "center center"; // Point central du zoom
+        img.style.transition = "transform 0.5s ease-in-out";
+    
+        img.addEventListener("mousemove", (e) => {
+            const rect = img.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+    
+            img.style.transformOrigin = `${x}% ${y}%`;
+            img.style.transform = "scale(2)"; // Zoom x2
+        });
+    
+        img.addEventListener("mouseleave", () => {
+            setTimeout(() => {
+                img.style.transform = "scale(1)"; // Retour à la taille normale
+            }, 100); // Petit délai pour éviter un effet brusque
+        });
+    };
+    
+
+    // ✅ Applique le zoom à toutes les images du slider
+    allSliderImages.forEach(img => enableZoom(img));
+    
 
     // 🔥 Positionner le slider directement sur l'image cliquée
     setTimeout(() => {
@@ -789,6 +877,53 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentCategoryName = urlParams.get("category") || "home";
     updateActivePage(currentCategoryName);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.querySelector(".burger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    // ✅ Ouvre et ferme le menu burger au clic (mobile + desktop)
+    burger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        burger.classList.toggle("active");
+    });
+
+    // ✅ Ferme le menu burger après un clic sur un lien
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            burger.classList.remove("active");
+        });
+    });
+
+    // ✅ Ajoute le hover uniquement pour grand écran (>= 1024px)
+    const handleHover = (e) => {
+        if (window.innerWidth >= 1024) { // Seulement sur grand écran
+            navLinks.classList.add("active");
+            burger.classList.add("active");
+        }
+    };
+
+    const handleMouseLeave = (e) => {
+        if (window.innerWidth >= 1024) { // Seulement sur grand écran
+            navLinks.classList.remove("active");
+            burger.classList.remove("active");
+        }
+    };
+
+    // 🎯 Appliquer le hover pour grand écran
+    burger.addEventListener("mouseenter", handleHover);
+    navLinks.addEventListener("mouseleave", handleMouseLeave);
+
+    // ✅ Fermer si on réduit la fenêtre (évite un menu bloqué)
+    window.addEventListener("resize", () => {
+        if (window.innerWidth < 1024) {
+            navLinks.classList.remove("active");
+            burger.classList.remove("active");
+        }
+    });
+});
+
 
 
 

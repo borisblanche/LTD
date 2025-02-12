@@ -79,6 +79,7 @@ header {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
   border-radius: 5px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .nav-links li {
@@ -101,6 +102,8 @@ header {
 /* ✅ Afficher le menu lorsqu'il est actif */
 .nav-links.active {
   display: flex;
+  transform: translateX(0); /* Assure que le menu s'affiche bien */
+    opacity: 1;
 }
 
 
@@ -895,6 +898,122 @@ body.modal-open {
 /* Ajoute une animation douce au hover */
 .slider-grande-image-button:hover {
   transform: translateY(-50%) scale(1.1);
+}
+
+
+
+/* Section Contact */
+/* Section Contact */
+.page.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+/* Image principale */
+.contact-img-content img {
+  width: 100%;
+  height: 50vh; /* Hauteur à 50% de l'écran */
+  object-fit: cover; /* Garde l'image bien cadrée */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Informations de contact */
+.contact-text-content {
+  margin: 20px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+}
+
+/* Liste de contact */
+.contact-me {
+  list-style: none;
+  padding: 0;
+  font-size: 22px; /* Texte plus grand */
+  font-weight: bold;
+  color: #48435c;
+}
+
+.contact-me li {
+  margin: 15px 0;
+}
+
+.contact-me a {
+  text-decoration: none;
+  color: #48435c;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.contact-me a:hover {
+  color: #61e786;
+  transform: scale(1.05);
+}
+
+/* Réseaux sociaux */
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 20px;
+}
+
+.contact-socials a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-socials a i {
+  font-size: 24px;
+  color: #48435c;
+}
+
+.contact-socials a:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Carte Google Maps */
+.contact-me-map {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px; /* Agrandit la carte */
+  height: 400px; /* Hauteur augmentée */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-me-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+footer{
+  display: flex;
+  background-color: red;
+  margin: 0;
+}
+
+.page.inactive {
+  display: none !important; /* Cache totalement */
+  height: 0 !important;
+  overflow: hidden;
 }
 
 
