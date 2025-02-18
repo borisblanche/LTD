@@ -37,10 +37,9 @@
         <div class="page home active">
             <section class="hero">
                 <h1>Le Temps du décor</h1>
-                <h2>Peintre en décors</h2>
-                <h3>Décoration - Restauration</h3>
-                <h4>Meubles peints</h4>
-                <!-- <div class="categories"></div> -->
+                <h2>Charlotte Jean-Louis</h2>
+                <h3>Artisan d' art</h3>
+                <h4>Peintre en décor</h4>
             </section>
             <section id="categories-section" class="categories-content">
                 <div class="categories-text">
@@ -108,40 +107,59 @@
         </div>
         <div class="page contact inactive">
             <!-- Image d'illustration -->
-            <div class="contact-img-content">
-                <img src="./assets/conservation-restauration/conservation-1.webp"
-                    alt="Illustration de conservation-restauration">
-            </div>
-        
-            <!-- Informations de contact -->
-            <div class="contact-text-content inactive">
-                <ul class="contact-me">
-                    <li>
-                        📧 <a href="mailto:contact@letempsdudecor.com">contact@letempsdudecor.com</a>
-                    </li>
-                    <li>
-                        📞 <a href="tel:+33123456789">+33 1 23 45 67 89</a>
-                    </li>
-                </ul>
-        
-                <!-- Liens vers les réseaux sociaux -->
-                <div class="contact-socials">
-                    <a href="https://www.instagram.com/letempsdudecor" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/letempsdudecor" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+            <section class="contact-container">
+                <div class="contact-row">
+                    <!-- Photo de l'atelier -->
+                    <div class="contact-photo contact-box">
+                        <img src="./assets/meubles peints/chaises-lot.webp" alt="Photo de l'atelier">
+                    </div>
+                    
+                    <!-- Infos de contact -->
+                    <div class="contact-info contact-box">
+                        <div class="contact-info-content">
+                            <div class="contact-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <p><strong>Email :</strong> contact@example.com</p>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-phone"></i>
+                                <p><strong>Téléphone :</strong> 066343.47.49</p>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p><strong>Adresse :</strong> 123 Rue de l'Atelier, 33000 Bordeaux</p>
+                            </div>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:contact@example.com" aria-label="Email" title="Envoyer un email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        
-            <!-- Carte interactive -->
-            <div class="contact-me-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999507658474!2d2.292292815674193!3d48.85884407928753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66ff0b7a6328b%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sfr!4v1619198482304!5m2!1sen!2sfr"
-                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
+                
+                <div class="contact-row">
+                    <!-- Carte Google Maps -->
+                    <div class="contact-map contact-box">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    
+                    <!-- Informations légales -->
+                    <div class="contact-legal contact-box">
+                        <ul>
+                            <li><strong>SIRET :</strong> 123 456 789 00000</li>
+                            <li><strong>ARE :</strong> Numéro ARE</li>
+                            <li><strong>RE :</strong> Numéro RE</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </div> <!-- Fermeture correcte de .page.contact -->
         
 
@@ -151,8 +169,22 @@
 
 
     <footer>
-        <p>&copy; 2025 LTD Projects. All rights reserved.</p>
+        <div class="footer-container">
+            <ul class="footer-info">
+                <li>Bordeaux ,</li>
+                <li>France entière</li>
+            </ul>
+            <ul class="footer-middle">
+                <li>06.63.43.47.49</li>
+            </ul>
+            <div class="footer-icons">
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="linkedin"title="Linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:contact@example.com" aria-label="Email" title="Envoyer un email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
+    
 
 
     <script src="data.js"></script>
@@ -163,14 +195,15 @@
 
             <!-- Section 1 : Photo principale -->
             <section class="modal-section photo-principale">
-                <img src="" alt="Photo principale du projet" class="project-image" />
+                <img src="image-du-projet.jpg" alt="Photo principale du projet" class="project-image">
+                <h3 class="project-name"></h3>
             </section>
 
             <!-- Section 2 : Détails -->
             <section class="modal-section details">
                 <img src="" alt="Photo secondaire" class="project-image" />
                 <div class="details-text">
-                    <h3>Titre du chantier</h3>
+                    <!-- <h3>Titre du chantier</h3> -->
                     <p>Description détaillée du projet avec des informations techniques.</p>
                 </div>
             </section>

@@ -204,78 +204,101 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     // **4. Fonction pour ouvrir la modale**
- const openModal = (project) => {
-    const modal = document.getElementById("imageModal");
-    if (!modal) {
-        console.error("❌ Modale introuvable.");
-        return;
-    }
-
-    modal.scrollTop = 0;
-    modal.querySelector(".modal-content")?.scrollTo(0, 0);
-
-    // **Photo principale**
-    const mainPhoto = modal.querySelector(".photo-principale img");
-    mainPhoto.src = new URL(project.images[0].src, document.baseURI).href;
-    mainPhoto.classList.add("project-image");
-    mainPhoto.dataset.projectId = project.id;
-    mainPhoto.dataset.imageId = 0;
-
-    mainPhoto.addEventListener("click", () => {
-        openGrandeImageModal(
-            project.images.map(img => new URL(img.src, document.baseURI).href),
-            mainPhoto.src
-        );
-    });
-
-    // **Photo de détail**
-    const detailPhoto = modal.querySelector(".details img");
-    if (project.images[1]) {
-        detailPhoto.src = new URL(project.images[1].src, document.baseURI).href;
-        detailPhoto.classList.add("project-image");
-        detailPhoto.dataset.projectId = project.id;
-        detailPhoto.dataset.imageId = 1;
-
-        detailPhoto.addEventListener("click", () => {
+    const openModal = (project) => {
+        const modal = document.getElementById("imageModal");
+        if (!modal) {
+            console.error("❌ Modale introuvable.");
+            return;
+        }
+    
+        modal.scrollTop = 0;
+        modal.querySelector(".modal-content")?.scrollTo(0, 0);
+    
+        // **Photo principale**
+        const mainPhotoSection = modal.querySelector(".photo-principale");
+        const mainPhoto = mainPhotoSection.querySelector("img");
+        let projectName = mainPhotoSection.querySelector(".project-name"); // ✅ Utilise le bon sélecteur
+    
+        console.log("📌 Projet sélectionné :", project.name);
+    
+        // ✅ **Si le titre n'existe pas, on le crée**
+        if (!projectName) {
+            console.warn("⚠️ `project-name` introuvable, création d'un nouvel élément...");
+            projectName = document.createElement("h3");
+            projectName.classList.add("project-name");
+            mainPhotoSection.appendChild(projectName);
+        }
+    
+        // ✅ **Mise à jour du texte du titre**
+        projectName.textContent = project.name;
+    
+        console.log("✅ Nouveau titre affiché :", projectName.textContent);
+    
+        mainPhoto.src = new URL(project.images[0].src, document.baseURI).href;
+        mainPhoto.classList.add("project-image");
+        mainPhoto.dataset.projectId = project.id;
+        mainPhoto.dataset.imageId = 0;
+    
+        mainPhoto.addEventListener("click", () => {
             openGrandeImageModal(
                 project.images.map(img => new URL(img.src, document.baseURI).href),
-                detailPhoto.src
+                mainPhoto.src
             );
         });
-    }
-
-    // **Mise à jour du texte et de la description**
-    modal.querySelector(".details-text h3").textContent = project.name;
-    modal.querySelector(".details-text p").textContent = project.description;
-
-    // **Ajout des images de la galerie**
-    const galleryContainer = modal.querySelector(".galerie-grid");
-    galleryContainer.innerHTML = ""; // Réinitialisation
-
-    project.images.slice(2).forEach((img, index) => {
-        const imgElement = document.createElement("img");
-        imgElement.src = new URL(img.src, document.baseURI).href;
-        imgElement.alt = `${project.name} - Image ${index + 2}`;
-        imgElement.classList.add("project-image");
-
-        imgElement.dataset.projectId = project.id;
-        imgElement.dataset.imageId = index + 2;
-
-        imgElement.addEventListener("click", () => {
-            openGrandeImageModal(
-                project.images.map(img => new URL(img.src, document.baseURI).href),
-                imgElement.src
-            );
+    
+        // **Photo de détail**
+        const detailPhoto = modal.querySelector(".details img");
+        console.log("📌 Image de détail trouvée ?", detailPhoto);
+        if (project.images[1]) {
+            detailPhoto.src = new URL(project.images[1].src, document.baseURI).href;
+            detailPhoto.classList.add("project-image");
+            detailPhoto.dataset.projectId = project.id;
+            detailPhoto.dataset.imageId = 1;
+    
+            detailPhoto.addEventListener("click", () => {
+                console.log("✅ Clic détecté sur l'image de détail !");
+                openGrandeImageModal(
+                    project.images.map(img => new URL(img.src, document.baseURI).href),
+                    detailPhoto.src
+                );
+            });
+        }
+    
+        // **Mise à jour uniquement de la description**
+        modal.querySelector(".details-text p").textContent = project.description;
+    
+        // **Ajout des images de la galerie**
+        const galleryContainer = modal.querySelector(".galerie-grid");
+        galleryContainer.innerHTML = ""; // Réinitialisation
+    
+        project.images.slice(2).forEach((img, index) => {
+            const imgElement = document.createElement("img");
+            imgElement.src = new URL(img.src, document.baseURI).href;
+            imgElement.alt = `${project.name} - Image ${index + 2}`;
+            imgElement.classList.add("project-image");
+    
+            imgElement.dataset.projectId = project.id;
+            imgElement.dataset.imageId = index + 2;
+    
+            imgElement.addEventListener("click", () => {
+                openGrandeImageModal(
+                    project.images.map(img => new URL(img.src, document.baseURI).href),
+                    imgElement.src
+                );
+            });
+    
+            galleryContainer.appendChild(imgElement);
         });
-
-        galleryContainer.appendChild(imgElement);
-    });
-
-    // **Affiche la modale**
-    modal.classList.remove("inactive");
-    modal.classList.add("active");
-    document.body.classList.add("modal-open");
-};
+    
+        // **Affiche la modale**
+        modal.classList.remove("inactive");
+        modal.classList.add("active");
+        document.body.classList.add("modal-open");
+    };
+    
+    
+    
+    
 
     
     
@@ -375,7 +398,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         // **Ajout du titre en overlay**
                         const titleElement = document.createElement("div");
                         titleElement.classList.add("carousel-title");
-                        titleElement.textContent = project.name;
+                        titleElement.textContent = category.name;
     
                         // ✅ Ajout de l’événement pour ouvrir la modale
                         projectItem.addEventListener("click", () => openModal(project));
@@ -502,6 +525,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, { passive: false });
     ;
+
+    const toggleFullScreen = (element) => {
+        if (!document.fullscreenElement) {
+            element.requestFullscreen().catch(err => {
+                console.error(`Erreur en passant en plein écran: ${err.message}`);
+            });
+        }
+    };
+    
+    
     
     // **8. Gestion de la modale-grande-image**
     // **8. Gestion de la modale-grande-image**
@@ -602,6 +635,8 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(`📌 Slider positionné sur l'index ${clickedIndex}`);
     }, 50);
 
+
+    toggleFullScreen(modal);
     // **Affiche la modale**
     modal.classList.remove("inactive");
     modal.classList.add("active");
@@ -651,7 +686,11 @@ const moveSlider = (direction) => {
         }
     }, { once: true });
 };
-
+const exitFullScreen = () => {
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    }
+};
 
 // **7. Fermeture de la modale**
 const closeGrandeImageModal = () => {
@@ -659,6 +698,8 @@ const closeGrandeImageModal = () => {
     if (modal) {
         modal.classList.remove("active");
         modal.classList.add("inactive");
+        document.body.style.overflow = ""; // ✅ Réactiver le scroll
+        exitFullScreen();
     }
 };
 document.querySelectorAll(".project-image").forEach((image) => {

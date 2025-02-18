@@ -1,3 +1,12 @@
+:root {
+  --gold: #D4AF37;
+  --dark-green: #475D4C;
+  --bg-cream: #f9f5f2;
+  --off-white: #FAF3E0;
+  --deep-black: #1C1C1C;
+}
+
+
 html, body {
   width: 100%;
   height: 100%; /* Assure que le body occupe toute la hauteur */
@@ -39,7 +48,7 @@ header {
 /* ✅ Styles de la navbar */
 .navbar {
   width: 100%;
-  height: 100px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,12 +67,19 @@ header {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  margin-right: 20px;
+
+
+
+ 
 }
 
 .burger-menu span {
   width: 30px;
+ 
   height: 4px;
-  background: black;
+  background: white;
+  border: 1px solid black;
   transition: 0.3s ease;
 }
 
@@ -72,10 +88,15 @@ header {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 70px;
-  right: 20px;
-  background: white;
-  width: 200px;
+  top: 100px;
+  right: 40px;
+  background: transparent;
+  background-color: black;
+  background-color: rgb(9, 67, 9);
+  background-color: var(--dark-green);
+ 
+ 
+  width: 170px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
   border-radius: 5px;
@@ -92,11 +113,16 @@ header {
   text-decoration: none;
   font-size: 18px;
   color: #333;
+  color: white;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #007bff;
+  color: #333;
+  color: goldenrod;
+  color: var(--gold);
+  text-decoration: underline;
 }
 
 /* ✅ Afficher le menu lorsqu'il est actif */
@@ -108,32 +134,11 @@ header {
 
 
 /* ✅ Version mobile : cacher les liens */
-@media (max-width: 768px) {
-  .burger-menu {
-      display: flex; /* Affiché uniquement sur mobile */
-  }
 
-  .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 70px;
-      right: 0;
-      background: white;
-      width: 200px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 10px 0;
-      border-radius: 5px;
-  }
-
-  .nav-links.active {
-      display: flex;
-  }
-}
 
 
 .logo img {
-  height: 80px;
+  height: 120px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
@@ -206,7 +211,7 @@ main {
   overflow-y: auto; /* Permet le scroll si le contenu est plus grand que l'écran */
   /* Ajoute de l'espace autour pour éviter que les éléments collent aux bords */
   box-sizing: border-box;
-  /* background-color: #007bff; */
+ 
 
 }
 
@@ -214,6 +219,7 @@ main {
 .page.active {
   display: block;
   opacity: 1;
+  /* background-color:var(--bg-cream); */
 }
 
 /* Style pour la section hero */
@@ -227,7 +233,44 @@ main {
   text-align: center;
   /* padding-top: 70px;  */
   background: url('./assets/Logo/fonddaccueil.jpg') no-repeat center center/cover;
-  color: green;
+  
+}
+/* Titres */
+.hero h1 {
+  font-size: 5.5rem!important;
+  font-weight: 600!important;;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px!important;
+  margin-top: 0!important;
+ 
+}
+
+.hero h2{
+  font-size: 4.5rem!important;;
+  font-weight: 300!important;;
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 90px!important;
+  
+ 
+}
+.hero h3{
+  font-size: 4rem!important;;
+  font-weight: 500!important;;
+  margin-top: 10px;
+  margin-bottom: 50px!important;
+ 
+ 
+}
+.hero h4 {
+  font-size: 3.5rem!important;;
+  font-weight: 300!important;;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+ 
+ 
 }
 .hero, .categories-content {
   min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
@@ -242,14 +285,15 @@ main {
   width: 90%;
 } */
 #categories-section {
-  background-color: beige;  /* Fond bleu */
+  background-color: var(--bg-cream);  /* Fond bleu */
+  /* background-color: #007bff; */
   color: white;  /* Texte en blanc pour contraster */
   display: flex;
   justify-content: center;
  
   flex-direction: column;
   width: 100%; /* Prend toute la largeur */
-  height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+  height: 110vh; /* Hauteur égale à la hauteur de la fenêtre */
   padding: 20px; /* Ajoute un peu de padding */
   box-sizing: border-box; /* S'assure que le padding n'affecte pas la taille */
 }
@@ -261,13 +305,16 @@ main {
 .categories-text {
   display: flex;
   justify-content: center;
+  
   align-items: center;
   flex-direction: column;
   width: 100%; /* La section occupe toute la largeur */
-  max-width: 900px; /* Limite la largeur pour une meilleure lisibilité */
+  max-width: 80%; /* Limite la largeur pour une meilleure lisibilité */
   text-align: center;
   background-color: transparent; /* Aucun fond */
+  /* background-color: #007bff; */
   padding: 20px;
+  padding-bottom: 50px;
   margin: 20px;  /* Marge autour du texte pour mieux l'espacer */
 }
 .categories-text p {
@@ -277,8 +324,9 @@ main {
   margin: 20px 0;  /* Marge au-dessus et en-dessous du texte */
   padding: 10px 0; /* Padding pour améliorer l'espacement autour du texte */
   background-color: transparent; /* Enlève le fond de la p */
-  max-width: 100%; /* Limite la largeur de l'élément */
+  min-width: 100%; /* Limite la largeur de l'élément */
   overflow: hidden; /* Cache tout débordement */
+  /* background-color: #333; */
 }
 
  .categories {
@@ -296,7 +344,8 @@ main {
   text-transform: uppercase;
   margin-bottom: 15px;
   padding: 10px 20px;
-  border-bottom: 3px solid #007bff; /* ✅ Petite barre bleue sous le titre */
+  /* border-bottom: 3px solid #007bff; */
+   /* ✅ Petite barre bleue sous le titre */
   display: inline-block; /* ✅ Ajuste la taille de l'élément au contenu */
   letter-spacing: 2px;
   margin-top: 10%;
@@ -310,6 +359,8 @@ main {
   margin: 10px auto; /* ✅ Centrage automatique */
   line-height: 1.6; /* ✅ Espacement entre les lignes */
   padding: 0 20px;
+  margin-bottom: 100px;
+  margin-top: 50px;
 }
 /* Style pour les liens de navigation */
 .navigation-links {
@@ -322,61 +373,43 @@ main {
 }
 
 .nav-link {
+ 
   font-size: 1.2rem;
   text-decoration: none;
   color: white; /* Couleur du texte des liens */
   background-color: rgba(0, 0, 0, 0.5); /* Fond légèrement transparent pour le lien */
   padding: 10px 15px;
+  background-color: transparent;
+  color: var(--dark-green);
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: #007bff; /* Changer la couleur au survol */
+  /* background-color: #007bff; */
+  color: var(--dark-green);
+  text-decoration: underline;
 }
 
 /* Spécifie la position à gauche et à droite */
 .left {
+  position: fixed;
+  left: 2%;
+  top: 50%;
   text-align: left;
 }
 
 .right {
+  position: fixed;
+  right: 2%;
+  top: 50%;
   text-align: right;
 }
 
 
 
 
-/* Titres */
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
-  margin-bottom: 20px;
- 
-}
 
-.hero h2{
-  font-size: 3rem;
-  font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 10px;
- 
-}
-.hero h3{
-  font-size: 2rem;
-  font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 10px;
- 
-} .hero h4 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 10px;
- 
-}
 
 
 .category {
@@ -407,8 +440,12 @@ main {
 }
 
 .category h2 {
-    margin: 15px 0;
-    font-size: 18px;
+    /* margin: 15px 0; */
+    font-size: 22px;
+    height: 20%; /* Prend 20% de la hauteur de .category */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #333;
 }
 
@@ -457,7 +494,7 @@ main {
 }
 .project-title {
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 0;
   width: 100%;
   height: 100%; /* ✅ Prend toute la place */
@@ -470,11 +507,12 @@ main {
   font-weight: bold;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 /* ✅ Afficher le titre et l'ombre au survol */
 .project-item:hover .project-title {
+  top: 0;
   opacity: 0.9;
 }
 
@@ -505,7 +543,9 @@ body.modal-open {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    background: rgba(0, 0, 0, 0.5); 
+    background: color-mix(in srgb, var(--dark-green) 90%, transparent);
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -524,7 +564,7 @@ body.modal-open {
   }
   
   .modal-content {
-    background: white;
+    background: var(--bg-cream);
     padding: 20px;
     border-radius: 8px;
     max-width: 90%;
@@ -550,7 +590,7 @@ body.modal-open {
 .modal-content {
     overflow-y: scroll; /* Active le défilement */
     scrollbar-width: thin; /* Réduit la largeur de la barre (Firefox) */
-    scrollbar-color: #888 transparent; /* Couleurs de la barre et de l'arrière-plan (Firefox) */
+    scrollbar-color: #888 transparent;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -562,26 +602,46 @@ body.modal-open {
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-    background-color: #888; /* Couleur de la barre */
+    background-color: #888;
+ 
     border-radius: 10px; /* Arrondi des coins */
     border: 2px solid transparent; /* Espace autour de la barre */
 }
 
 .modal-content::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Couleur de la barre au survol */
+    background-color: #555;
+         /* Couleur de la barre au survol */
 }
+.photo-principale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espace entre l'image et le titre */
+}
+.photo-principale h3 {
+  font-size: 4rem; /* Taille ajustable */
+  font-weight: 300;
+  text-align: center;
+  
+  color: var(--dark-green);
+  text-transform: uppercase;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
 
   
   /* Bouton de fermeture */
   .close-modal {
     position: absolute;
-    top: 5%;
-    right: 5%;
+    top: 10px;
+    right: 10px;
    
-    color: black;
-    background-color: white;
-    border: 5px solid black;
-    font-size: 30px;
+    color: var(--gold);
+    /* background-color: white; */
+    /* border: 5px solid black; */
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 50%;
@@ -589,8 +649,7 @@ body.modal-open {
   }
   
   .close-modal:hover {
-    color: red;
-    border: 5px solid red;
+    scale: 1.2;
   }
 
   .project-image {
@@ -620,24 +679,40 @@ body.modal-open {
   /* Section 2 : Détails */
   .details {
     display: flex;
-    width: 100%; /* Prend toute la largeur de la modale */
-    gap: 20px;
+    width: 94%; /* Prend toute la largeur de la modale */
+    gap: 4%;
     align-items: center;
     justify-content: space-between;
+    margin: 2%;
+    
+    
   }
   
   .details img {
-    width: 50%; /* L'image occupe 50% de la largeur */
+    width: 49%; /* L'image occupe 50% de la largeur */
     max-height: 50vh; /* Limite la hauteur à 100% de la hauteur de l'écran */
     object-fit: cover; /* Adapte l'image à son conteneur */
     border-radius: 5px;
-    margin: 50px;
+    
   }
   
   .details-text {
-    flex: 1; /* Le texte prend l'espace restant */
+    flex: 1;
     font-family: Arial, sans-serif;
-  }
+    color: var(--dark-green);
+    /* background-color: var(--gold); */
+    text-align: center;
+    max-width: 46%;
+    height: 50vh;
+    overflow: hidden; /* ✅ Cache tout débordement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* ✅ Centre le texte verticalement */
+    padding: 20px; /* ✅ Ajoute de l’espace intérieur */
+    box-sizing: border-box; /* ✅ Empêche que `padding` agrandisse la div */
+    word-wrap: break-word; /* ✅ Coupe les mots trop longs */
+}
+
   
   .details-text h3 {
     font-size: 1.5rem;
@@ -653,17 +728,22 @@ body.modal-open {
   .galerie-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Trois colonnes pour des images plus petites */
-    gap: 2%; /* Réduit l'espace entre les images pour conserver l'effet aéré */
-    padding: 10px; /* Ajoute un peu de padding autour de la galerie */
+    gap: 4%;
+    margin: 2%;
+    padding-bottom: 120px; /* Réduit l'espace entre les images pour conserver l'effet aéré */
+   
+    /* Ajoute un peu de padding autour de la galerie */
   }
   
   .galerie-grid img {
-    width: 90%; /* Réduit légèrement la largeur des images pour un effet plus espacé */
+    width: 100%; /* Réduit légèrement la largeur des images pour un effet plus espacé */
     margin: auto; /* Centre les images dans leurs cellules */
     height: auto;
+    max-height: 50vh;
     object-fit: cover; /* Adapte l'image à son conteneur */
     border-radius: 5px; /* Coins arrondis */
     transition: transform 0.3s ease;
+  
   }
   
   /* .galerie-grid img:hover {
@@ -712,6 +792,7 @@ body.modal-open {
   object-fit: cover;
   border-radius: 5px;
   transition: transform 0.3s ease;
+  opacity: 0.8;
 }
 .carousel-title {
   position: absolute;
@@ -722,7 +803,7 @@ body.modal-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.6); /* Fond sombre */
+  background: black; /* Fond sombre */
   color: white;
   font-size: 14px;
   text-align: center;
@@ -731,7 +812,7 @@ body.modal-open {
   pointer-events: none;
 }
 .carousel-image-container:hover .carousel-title {
-  opacity: 1;
+  opacity: 0.9;
 }
 
 /* .carousel img {
@@ -745,36 +826,41 @@ body.modal-open {
 .carousel img:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
+    /* opacity: 1; */
 }
 
 .carousel-button {
-    position: absolute;
-    top: 50%; /* Centre verticalement */
-    transform: translateY(-50%); /* Centre le bouton verticalement */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none; /* ❌ Supprime tout fond */
+  color: var(--dark-green); /* ✅ Utilise ta variable de couleur */
+  border: none;
+  font-size: 2rem; /* ✅ Agrandit légèrement l’icône pour une meilleure visibilité */
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease, opacity 0.2s ease; /* ✅ Ajoute une transition fluide */
+  opacity: 0.7; /* ✅ Rend le bouton un peu plus discret */
 }
 
 .carousel-button.prev {
-    left: -50px; /* Bouton gauche en dehors de la largeur du carousel */
+  left: -45px; /* ✅ Position ajustée à l’intérieur */
 }
 
 .carousel-button.next {
-    right: -50px; /* Bouton droit en dehors de la largeur du carousel */
+  right: -45px; /* ✅ Position ajustée à l’intérieur */
 }
 
+/* ✅ Effet au survol : léger agrandissement et meilleure visibilité */
 .carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.2);
+  opacity: 1;
 }
 
+/* ✅ Effet au focus (pour l’accessibilité) */
 .carousel-button:focus {
-    outline: none;
+  outline: none;
+  opacity: 1;
 }
 
 .modal-grande {
@@ -800,7 +886,7 @@ body.modal-open {
 
 .modal-grande-content {
     position: relative;
-    background: white;
+    background: var(--bg-cream);
     padding: 20px;
     border-radius: 8px;
     width: 90%;
@@ -808,32 +894,37 @@ body.modal-open {
     height: 90%;
 }
 .close-grande-image {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #f44336;
-    color: white;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 10;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  color: var(--dark-green); /* Couleur verte */
+  border: none;
+  font-size: 40px; /* Taille plus visible */
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1000;
 }
 
+/* Ajoute un effet scale au hover */
 .close-grande-image:hover {
-    background: #d32f2f;
+  transform: scale(1.3);
 }
+
+
 
 /* Conteneur du slider */
 /* Assurez-vous que le conteneur du slider n'affiche qu'une seule image à la fois */
 /* Assurez-vous que le conteneur du slider affiche une seule image */
 .slider-grande-image-container {
-  width: 100%;
-  max-width: 800px; /* Ajustable en fonction de la taille désirée */
+  
+  max-width: 800px;
+  /* max-width: 1000px;  */
   max-height: 100%; /* Ajustable pour éviter les débordements */
   overflow: hidden;
   position: relative;
+  
   margin: auto; /* Centre le slider */
   border-radius: 10px; /* Ajoute des bords arrondis pour un design moderne */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet propre */
@@ -861,43 +952,45 @@ body.modal-open {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+  /* background: rgba(0, 0, 0, 0.6); */
   color: white;
+  color: var(--dark-green);
   border: none;
   padding: 12px 18px;
   cursor: pointer;
   z-index: 10;
-  font-size: 20px;
+  font-size: 40px;
   border-radius: 50%; /* Rend les boutons ronds */
-  transition: background 0.3s ease;
+  transition:  0.3s ease;
 }
 
 .slider-grande-image-button:hover {
-  background: rgba(0, 0, 0, 0.8);
+  /* background: rgba(0, 0, 0, 0.8); */
 }
 
 /* Position des boutons */
 .slider-grande-image-button.prev {
-  left: 15px;
+  left: 5%;
 }
 
 .slider-grande-image-button.next {
-  right: 15px;
+  right: 5%;
 }
 
 /* Icônes pour remplacer le texte des boutons (si nécessaire) */
 .slider-grande-image-button::before {
-  content: "❮"; /* Flèche gauche */
+  content: ""; /* Flèche gauche */
   font-weight: bold;
 }
 
 .slider-grande-image-button.next::before {
-  content: "❯"; /* Flèche droite */
+  content: ""; /* Flèche droite */
 }
 
 /* Ajoute une animation douce au hover */
 .slider-grande-image-button:hover {
-  transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%) scale(1.3);
 }
 
 
@@ -910,105 +1003,154 @@ body.modal-open {
   align-items: center;
   text-align: center;
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  background-color: var(--bg-cream);
   border-radius: 10px;
 }
 
 /* Image principale */
-.contact-img-content img {
-  width: 100%;
-  height: 50vh; /* Hauteur à 50% de l'écran */
-  object-fit: cover; /* Garde l'image bien cadrée */
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Informations de contact */
-.contact-text-content {
-  margin: 20px 0;
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
   padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-  max-width: 600px;
 }
-
-/* Liste de contact */
-.contact-me {
-  list-style: none;
-  padding: 0;
-  font-size: 22px; /* Texte plus grand */
-  font-weight: bold;
-  color: #48435c;
-}
-
-.contact-me li {
-  margin: 15px 0;
-}
-
-.contact-me a {
-  text-decoration: none;
-  color: #48435c;
-  transition: color 0.3s, transform 0.2s;
-}
-
-.contact-me a:hover {
-  color: #61e786;
-  transform: scale(1.05);
-}
-
-/* Réseaux sociaux */
-.contact-socials {
+.contact-row {
   display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 50px;
 }
-
-.contact-socials a {
-  width: 50px;
-  height: 50px;
+.contact-box {
+  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  border-radius: 50%;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.contact-socials a i {
-  font-size: 24px;
-  color: #48435c;
-}
-
-.contact-socials a:hover {
-  transform: scale(1.2);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Carte Google Maps */
-.contact-me-map {
-  margin-top: 30px;
-  width: 100%;
-  max-width: 800px; /* Agrandit la carte */
-  height: 400px; /* Hauteur augmentée */
-  overflow: hidden;
+  height: 300px;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
 }
 
-.contact-me-map iframe {
+ .contact-photo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        height: 100%;
+        max-height: 300px;
+    }
+      .contact-photo img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+/* .contact-info{
+  align-items:flex-start ;
+} */
+
+.contact-info, .contact-legal {
+  background: var(--cream);
+  padding: 15px;
+ 
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+  
+  /* border: 1px solid black; */
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  
+ 
+}
+.contact-info-content {
+ 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  
+  
+}
+.contact-info-content p{
+  color: var(--dark-green);
+ 
+  margin: 0;
+}
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-info-item i {
+  font-size: 18px;
+  color: var(--gold);
+}
+.contact-legal  {
+  color: var(--dark-green);
+}
+.contact-legal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100%;
+  /* background-color: #fff; */
+  text-align: left;
+  
+  padding-left: 20px;
+}
+.contact-legal ul {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:flex-start ;
+  
+  list-style: none;
+  /* background-color: #004225; */
+  margin: 5%;
+}
+
+.contact-details {
+  flex-grow: 1;
+}
+.contact-icons {
+  margin-top: 10px;
+}
+.contact-icons a {
+  font-size: 24px;
+  margin: 0 10px;
+  color: var(--gold);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.contact-icons a:hover {
+  transform: scale(1.1);
+  color: var(--dark-green);
+}
+.contact-map iframe {
   width: 100%;
   height: 100%;
-  border: none;
+  border-radius: 10px;
 }
 
-footer{
+/* footer{
   display: flex;
   background-color: red;
   margin: 0;
-}
+} */
 
 .page.inactive {
   display: none !important; /* Cache totalement */
@@ -1018,7 +1160,50 @@ footer{
 
 
 
+footer {
+  background: var(--bg-cream);
+  /* background-color: #d32f2f; */
+  color: black;
+  color: var(--dark-green);
+  padding: 20px 0;
+  /* border-top: 1px solid gray */
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.footer-info, .footer-middle {
+  list-style: none;
+  display: flex;
+ 
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
 
+.footer-icons {
+  display: flex;
+  gap: 30px;
+}
+.footer-icons a {
+  font-size: 24px;
+  color: black;
+  color: var(--dark-green);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+  /* color: #157931; */
+}
+
+/* .footer-info li:hover, .footer-middle:hover{
+  text-decoration: underline;
+  
+} */
 
   
   
@@ -1112,3 +1297,25 @@ footer{
     }
   }
 
+  @media (max-width: 768px) {
+    .burger-menu {
+        display: flex; /* Affiché uniquement sur mobile */
+    }
+  
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        width: 200px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+  
+    .nav-links.active {
+        display: flex;
+    }
+  }

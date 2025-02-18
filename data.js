@@ -17,7 +17,7 @@ const categories = [
                     { index: 1, src: "assets/imitations-matieres/bois-loupe.avif" },
                     { index: 2, src:  "assets/imitations-matieres/bois-noyer.avif" },
                     ],
-                description: "Description of Project 1.1",
+                description: "Description of Project 1.1 premier projet",
                 link: "project1_1.html"
             },
             {
@@ -91,7 +91,7 @@ const categories = [
                     { index: 7, src: "assets/meubles peints/brume4.webp" },
                     ],
               
-                description: "Description of brume",
+                description: "Description of brume papapappappapapappappappppppppppppppppppppp ppppppppppppp pppppp pppppppppppppppppppppppppppppp",
                 link: "project1_1.html"
             },
             {
@@ -113,7 +113,7 @@ const categories = [
                         {index: 1,src: "assets/meubles peints/balade2.webp"},
                      {index: 2,src: "assets/meubles peints/balade3.webp"},
                                           ],
-                description: "Description of balade",
+                description: "lbdbbdb dbbdbbd hhdh d dhhdhd dhhdh dhdhdjd  dhhd d djjd jd jd jd jd jd",
                 link: "project1_2.html"
             },
             {
