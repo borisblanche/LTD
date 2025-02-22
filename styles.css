@@ -7,17 +7,21 @@
 }
 
 
-html, body {
+html,
+body {
   width: 100%;
-  height: 100%; /* Assure que le body occupe toute la hauteur */
-  overflow: auto; /* Permet le défilement sur la page */
+  height: 100%;
+  /* Assure que le body occupe toute la hauteur */
+  overflow: auto;
+  /* Permet le défilement sur la page */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
+  /* Chrome, Safari */
 }
 
 * {
@@ -31,16 +35,19 @@ header {
   position: fixed;
   top: 0;
   left: 0;
- 
+
   z-index: 1000;
 }
 
 .page {
-    display: none; /* Cache toutes les pages par défaut */
+  display: none;
+  /* Cache toutes les pages par défaut */
+  background-color: var(--bg-cream);
 }
 
 .page.active {
-    display: block; /* Affiche uniquement la page active */
+  display: block;
+  /* Affiche uniquement la page active */
 }
 
 
@@ -58,30 +65,39 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
- 
+
 }
 
 /* ✅ Bouton menu burger */
 .burger-menu {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
   cursor: pointer;
-  margin-right: 20px;
+  /* margin-right: 20px; */
+  padding: 6px;
+  background-color: #007bff;
+  background-color: var(--bg-cream);
+  border-radius: 5px 0 5px 5px;
 
 
 
- 
+
 }
 
 .burger-menu span {
-  width: 30px;
- 
-  height: 4px;
-  background: white;
-  border: 1px solid black;
+  width: 35px;
+
+  height: 6px;
+  background: var(--bg-cream);
+  background: var(--dark-green);
+  border: 2px solid var(--dark-green);
+  /* border: 1px solid black; */
   transition: 0.3s ease;
+
 }
+
+
 
 /* ✅ Cacher les liens par défaut */
 .nav-links {
@@ -94,8 +110,8 @@ header {
   background-color: black;
   background-color: rgb(9, 67, 9);
   background-color: var(--dark-green);
- 
- 
+
+
   width: 170px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
@@ -128,8 +144,9 @@ header {
 /* ✅ Afficher le menu lorsqu'il est actif */
 .nav-links.active {
   display: flex;
-  transform: translateX(0); /* Assure que le menu s'affiche bien */
-    opacity: 1;
+  transform: translateX(0);
+  /* Assure que le menu s'affiche bien */
+  opacity: 1;
 }
 
 
@@ -175,10 +192,12 @@ header {
   margin-top: 0;
   /* min-height: calc(100vh - 120px);  */
   overflow-y: auto;
- 
+
 }
+
 .page.home {
-  overflow-y: auto; /* Permet le défilement uniquement sur cette page */
+  overflow-y: auto;
+  /* Permet le défilement uniquement sur cette page */
   height: 100%;
   /* Marge pour ne pas que le contenu soit caché derrière la navbar */
 }
@@ -194,7 +213,7 @@ main {
   justify-content: center;
   /* margin-top: 120px; */
   background-color: transparent;
-  
+
 }
 
 /* Style des pages */
@@ -202,16 +221,18 @@ main {
   position: relative;
   width: 100%;
   min-height: 100vh;
- 
- text-align: center;
+
+  text-align: center;
   /* min-height: calc(100vh - 120px);  */
-  display: none; /* Cache les pages sauf l'active */
+  display: none;
+  /* Cache les pages sauf l'active */
   opacity: 0;
   transition: opacity 0.5s ease-out;
-  overflow-y: auto; /* Permet le scroll si le contenu est plus grand que l'écran */
+  overflow-y: auto;
+  /* Permet le scroll si le contenu est plus grand que l'écran */
   /* Ajoute de l'espace autour pour éviter que les éléments collent aux bords */
   box-sizing: border-box;
- 
+
 
 }
 
@@ -233,69 +254,96 @@ main {
   text-align: center;
   /* padding-top: 70px;  */
   background: url('./assets/Logo/fonddaccueil.jpg') no-repeat center center/cover;
-  
-}
-/* Titres */
-.hero h1 {
-  font-size: 5.5rem!important;
-  font-weight: 600!important;;
-  text-transform: uppercase;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
-  margin-bottom: 50px!important;
-  margin-top: 0!important;
- 
+
 }
 
-.hero h2{
-  font-size: 4.5rem!important;;
-  font-weight: 300!important;;
+/* Titres */
+.hero h1 {
+  font-size: 5.5rem !important;
+  font-weight: 600 !important;
+  ;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px !important;
+  margin-top: 0 !important;
+
+}
+
+.hero h2 {
+  font-size: 4.8rem !important;
+  ;
+  font-weight: 400 !important;
+  ;
   font-style: italic;
   margin-top: 10px;
-  margin-bottom: 90px!important;
-  
- 
+  margin-bottom: 50px !important;
+  color: var(--dark-green);
+
+
 }
-.hero h3{
-  font-size: 4rem!important;;
-  font-weight: 500!important;;
+
+.hero h3 {
+  font-size: 4rem !important;
+  ;
+  font-weight: 200 !important;
+  ;
   margin-top: 10px;
-  margin-bottom: 50px!important;
- 
- 
+  margin-bottom: 30px !important;
+  color: var(--dark-green);
+
+
 }
+
 .hero h4 {
-  font-size: 3.5rem!important;;
-  font-weight: 300!important;;
+  font-size: 3.5rem !important;
+  ;
+  font-weight: 200 !important;
+  ;
   margin-top: 10px;
   margin-bottom: 10px;
-  
- 
- 
+  color: var(--dark-green);
+
+
+
 }
-.hero, .categories-content {
-  min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+
+.hero,
+.categories-content {
+  min-height: 100vh;
+  /* Prend toute la hauteur de la fenêtre */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0; /* Pas de marge */
-  padding: 0; /* Pas de padding */
+  margin: 0;
+  /* Pas de marge */
+  padding: 0;
+  /* Pas de padding */
 }
+
 /* .categories-content{
   flex-direction: column;
   width: 90%;
 } */
 #categories-section {
-  background-color: var(--bg-cream);  /* Fond bleu */
+  background-color: var(--bg-cream);
+  /* Fond bleu */
   /* background-color: #007bff; */
-  color: white;  /* Texte en blanc pour contraster */
+  color: white;
+  /* Texte en blanc pour contraster */
   display: flex;
   justify-content: center;
- 
+
+
   flex-direction: column;
-  width: 100%; /* Prend toute la largeur */
-  height: 110vh; /* Hauteur égale à la hauteur de la fenêtre */
-  padding: 20px; /* Ajoute un peu de padding */
-  box-sizing: border-box; /* S'assure que le padding n'affecte pas la taille */
+  width: 100%;
+  /* Prend toute la largeur */
+  min-height: 110vh;
+  /* Hauteur égale à la hauteur de la fenêtre */
+  padding: 20px;
+  /* Ajoute un peu de padding */
+  box-sizing: border-box;
+  /* S'assure que le padding n'affecte pas la taille */
+  padding-bottom: 150px;
 }
 
 
@@ -305,79 +353,107 @@ main {
 .categories-text {
   display: flex;
   justify-content: center;
-  
+
   align-items: center;
   flex-direction: column;
-  width: 100%; /* La section occupe toute la largeur */
-  max-width: 80%; /* Limite la largeur pour une meilleure lisibilité */
+  width: 100%;
+  /* La section occupe toute la largeur */
+  max-width: 80%;
+  /* Limite la largeur pour une meilleure lisibilité */
   text-align: center;
-  background-color: transparent; /* Aucun fond */
+  background-color: transparent;
+  /* Aucun fond */
   /* background-color: #007bff; */
   padding: 20px;
   padding-bottom: 50px;
-  margin: 20px;  /* Marge autour du texte pour mieux l'espacer */
+  margin: 20px;
+  /* Marge autour du texte pour mieux l'espacer */
 }
+
 .categories-text p {
   font-size: 1.2rem;
-  color: white;  /* Assure que le texte est visible */
-  line-height: 1.6;  /* Espacement entre les lignes */
-  margin: 20px 0;  /* Marge au-dessus et en-dessous du texte */
-  padding: 10px 0; /* Padding pour améliorer l'espacement autour du texte */
-  background-color: transparent; /* Enlève le fond de la p */
-  min-width: 100%; /* Limite la largeur de l'élément */
-  overflow: hidden; /* Cache tout débordement */
+  color: white;
+  /* Assure que le texte est visible */
+  line-height: 1.6;
+  /* Espacement entre les lignes */
+  margin: 20px 0;
+  /* Marge au-dessus et en-dessous du texte */
+  padding: 10px 0;
+  /* Padding pour améliorer l'espacement autour du texte */
+  background-color: transparent;
+  /* Enlève le fond de la p */
+  min-width: 100%;
+  /* Limite la largeur de l'élément */
+  overflow: hidden;
+  /* Cache tout débordement */
   /* background-color: #333; */
 }
 
- .categories {
+.categories {
   display: flex;
   justify-content: space-around;
   margin: 20px auto;
   max-width: 90%;
-  height: 50vh; /* Laisse la div s'adapter à son contenu */
+  height: 50vh;
+  /* Laisse la div s'adapter à son contenu */
 }
+
 .page h1 {
-  font-size: 2.8rem; /* ✅ Taille du titre */
-  font-weight: bold;
-  color: #333; /* ✅ Couleur du texte */
+  font-size: 2.8rem;
+  /* ✅ Taille du titre */
+  font-weight: 100;
+  font-style: italic;
+  color: #333;
+  color: var(--dark-green);
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 15px;
   padding: 10px 20px;
   /* border-bottom: 3px solid #007bff; */
-   /* ✅ Petite barre bleue sous le titre */
-  display: inline-block; /* ✅ Ajuste la taille de l'élément au contenu */
+  /* ✅ Petite barre bleue sous le titre */
+  display: inline-block;
+  /* ✅ Ajuste la taille de l'élément au contenu */
   letter-spacing: 2px;
   margin-top: 10%;
 }
+
 .page p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 300;
-  color: #555; 
+  color: #555;
+  color: var(--dark-green);
   text-align: center;
-  max-width: 800px; /* ✅ Largeur max pour éviter un texte trop long */
-  margin: 10px auto; /* ✅ Centrage automatique */
-  line-height: 1.6; /* ✅ Espacement entre les lignes */
+  max-width: 800px;
+  /* ✅ Largeur max pour éviter un texte trop long */
+  margin: 10px auto;
+  /* ✅ Centrage automatique */
+  line-height: 1.6;
+  /* ✅ Espacement entre les lignes */
   padding: 0 20px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-top: 50px;
 }
+
 /* Style pour les liens de navigation */
 .navigation-links {
-  position: absolute; /* Permet de positionner les liens sur la page */
-  top: 200px; /* Les placer près du bas de la page */
-  width: 100%; /* S'étend sur toute la largeur */
+  position: absolute;
+  /* Permet de positionner les liens sur la page */
+  top: 200px;
+  /* Les placer près du bas de la page */
+  width: 100%;
+  /* S'étend sur toute la largeur */
   display: flex;
-  justify-content: space-between; /* Espace égal entre les liens */
+  justify-content: space-between;
+  /* Espace égal entre les liens */
   padding: 0 20px;
 }
 
-.nav-link {
+/* .nav-link {
  
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
-  color: white; /* Couleur du texte des liens */
-  background-color: rgba(0, 0, 0, 0.5); /* Fond légèrement transparent pour le lien */
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 15px;
   background-color: transparent;
   color: var(--dark-green);
@@ -386,23 +462,41 @@ main {
 }
 
 .nav-link:hover {
-  /* background-color: #007bff; */
+  
   color: var(--dark-green);
   text-decoration: underline;
+} */
+.nav-link {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--dark-green);
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  opacity: 0.8;
+
 }
 
-/* Spécifie la position à gauche et à droite */
+.nav-link:hover {
+  color: var(--dark-green);
+  opacity: 1;
+
+}
+
+
+
+
 .left {
   position: fixed;
   left: 2%;
-  top: 50%;
+  top: 30%;
   text-align: left;
 }
 
 .right {
   position: fixed;
   right: 2%;
-  top: 50%;
+  top: 30%;
   text-align: right;
 }
 
@@ -413,51 +507,60 @@ main {
 
 
 .category {
-    flex: 1;
-    max-width: 30%;
-    
-    background-color: white;
-    border-radius: 10px;
-    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
-    text-align: center;
-    margin: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    cursor: pointer;
-   
+  flex: 1;
+  max-width: 30%;
+
+  background-color: white;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+
+
 }
 
 .category:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .category img {
-    width: 100%;
-    height: 80%;
-    display: block;
-    
+  width: 100%;
+  height: 80%;
+  display: block;
+
 }
 
 .category h2 {
-    /* margin: 15px 0; */
-    font-size: 22px;
-    height: 20%; /* Prend 20% de la hauteur de .category */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
+  /* margin: 15px 0; */
+  font-size: 22px;
+  height: 20%;
+  /* Prend 20% de la hauteur de .category */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  color: var(--dark-green);
 }
 
 /* Galeries */
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, max(250px, 1fr));
   gap: 15px;
-  width: 100%; /* Prend toute la largeur */
-  max-width: 100%; /* Pas de limite à la largeur */
-  padding: 0; /* Pas de padding */
-  margin: 0; /* Pas de marge */
+  width: 80%;
+  /* Prend toute la largeur */
+  margin-left: 10%;
+  margin-right: 10%;
+  max-width: 100%;
+  /* Pas de limite à la largeur */
+  padding: 0;
+  /* Pas de padding */
+
+  /* background-color: #007bff; */
 }
 
 
@@ -468,14 +571,19 @@ main {
 
 
 .project-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  /* background-color: #007bff; */
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+
 .project-item {
   position: relative;
-  width: 400px; /* Ajuste selon ton design */
+  width: 400px;
+  /* Ajuste selon ton design */
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -486,25 +594,38 @@ main {
 .project-item:hover {
   transform: scale(1.05);
 }
+
 .project-image {
   width: 100%;
   height: auto;
+  min-height: 60vh;
+  max-height: 60vh;
   display: block;
   border-radius: 8px;
 }
+
 .project-title {
   position: absolute;
-  top: 100%;
+  /* top: 100%; */
   left: 0;
+
   width: 100%;
-  height: 100%; /* ✅ Prend toute la place */
+  height: 100%;
+  /* ✅ Prend toute la place */
   display: flex;
-  align-items: center; /* ✅ Centre verticalement */
-  justify-content: center; /* ✅ Centre horizontalement */
-  background: rgba(0, 0, 0, 0.7); /* ✅ Ombre couvrant toute l'image */
+  align-items: center;
+  /* ✅ Centre verticalement */
+
+  justify-content: center;
+  /* ✅ Centre horizontalement */
+  background: rgba(0, 0, 0, 0.8);
+  /* background: var(--dark-green);  */
   color: white;
-  font-size: 22px;
-  font-weight: bold;
+  /* color: var(--gold);
+  color: var(--dark-green); */
+  font-size: 3.4rem;
+  font-weight: 400;
+  font-style: italic;
   text-align: center;
   opacity: 0;
   transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -513,7 +634,7 @@ main {
 /* ✅ Afficher le titre et l'ombre au survol */
 .project-item:hover .project-title {
   top: 0;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 
@@ -535,49 +656,53 @@ main {
 /* Général pour la modale */
 
 body.modal-open {
-    overflow: hidden;
+  overflow: hidden;
 }
+
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    background: color-mix(in srgb, var(--dark-green) 90%, transparent);
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    overflow: hidden; /* Supprime la barre de défilement globale */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  background: color-mix(in srgb, var(--dark-green) 90%, transparent);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden;
+  /* Supprime la barre de défilement globale */
 }
-  
-  .modal.active {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .modal.inactive {
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .modal-content {
-    background: var(--bg-cream);
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 90%;
-    min-width: 90%;
-    max-height: 90%;
-    overflow-y: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-  }
-  /* .modal-content {
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-content {
+  background: var(--bg-cream);
+
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  min-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+/* .modal-content {
     scrollbar-width: none;
     -ms-overflow-style: none; 
     overflow-y: scroll; 
@@ -588,204 +713,252 @@ body.modal-open {
 } */
 
 .modal-content {
-    overflow-y: scroll; /* Active le défilement */
-    scrollbar-width: thin; /* Réduit la largeur de la barre (Firefox) */
-    scrollbar-color: #888 transparent;
+  overflow-y: scroll;
+  /* Active le défilement */
+  scrollbar-width: thin;
+  /* Réduit la largeur de la barre (Firefox) */
+  scrollbar-color: #888 transparent;
+
+
 }
 
 .modal-content::-webkit-scrollbar {
-    width: 8px; /* Largeur de la barre (Chrome, Safari, Edge) */
-}
+  width: 8px;
+  /* Largeur de la barre (Chrome, Safari, Edge) */
 
-.modal-content::-webkit-scrollbar-track {
-    background: transparent; /* Couleur de l'arrière-plan de la piste */
-}
 
-.modal-content::-webkit-scrollbar-thumb {
-    background-color: #888;
- 
-    border-radius: 10px; /* Arrondi des coins */
-    border: 2px solid transparent; /* Espace autour de la barre */
+
+  border-radius: 10px;
+  /* Arrondi des coins */
+  border: 2px solid transparent;
+  /* Espace autour de la barre */
 }
 
 .modal-content::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-         /* Couleur de la barre au survol */
+  background-color: #555;
+
 }
+
 .photo-principale {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Espace entre l'image et le titre */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* Espace entre l'image et le titre */
 }
+
 .photo-principale h3 {
-  font-size: 4rem; /* Taille ajustable */
+  font-size: 4rem;
+  /* Taille ajustable */
   font-weight: 300;
   text-align: center;
-  
+
   color: var(--dark-green);
   text-transform: uppercase;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 
-  
-  /* Bouton de fermeture */
-  .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-   
-    color: var(--gold);
-    /* background-color: white; */
-    /* border: 5px solid black; */
-    background-color: transparent;
-    border: none;
-    font-size: 40px;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 50%;
-    z-index: 1001;
-  }
-  
-  .close-modal:hover {
-    scale: 1.2;
-  }
 
-  .project-image {
-    max-width: 50nh;
-    max-height: 60vh;
-   
-    height: auto;
-    border-radius: 8px; /* Coins arrondis */
-    transition: box-shadow 0.3s ease; /* Transition fluide pour l'ombrage */
-    cursor: pointer; /* Indique que l'image est cliquable */
+/* Bouton de fermeture */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  color: var(--gold);
+  color: var(--bg-cream);
+  /* background-color: white; */
+  /* border: 5px solid black; */
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+  z-index: 1001;
+}
+
+.close-modal:hover {
+  scale: 1.2;
+}
+
+.project-image {
+  max-width: 50nh;
+  max-height: 60vh;
+  opacity: 0.9;
+  height: auto;
+  border-radius: 8px;
+  /* Coins arrondis */
+  transition: box-shadow 0.3s ease;
+  /* Transition fluide pour l'ombrage */
+  cursor: pointer;
+  /* Indique que l'image est cliquable */
 }
 
 .project-image:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Ombre plus grande et plus dense au survol */
-}
-  
-  /* Section 1 : Photo principale */
-  .photo-principale img {
-    display: block;
-    width: 60%; /* L'image occupe toute la largeur */
-    max-height: 60vh; /* Limite la hauteur à 100% de la hauteur de l'écran */
-    margin: 50px auto; /* Centre horizontalement */
-    object-fit: cover; /* Adapte l'image à son conteneur */
-    border-radius: 5px;
-  }
-  
-  /* Section 2 : Détails */
-  .details {
-    display: flex;
-    width: 94%; /* Prend toute la largeur de la modale */
-    gap: 4%;
-    align-items: center;
-    justify-content: space-between;
-    margin: 2%;
-    
-    
-  }
-  
-  .details img {
-    width: 49%; /* L'image occupe 50% de la largeur */
-    max-height: 50vh; /* Limite la hauteur à 100% de la hauteur de l'écran */
-    object-fit: cover; /* Adapte l'image à son conteneur */
-    border-radius: 5px;
-    
-  }
-  
-  .details-text {
-    flex: 1;
-    font-family: Arial, sans-serif;
-    color: var(--dark-green);
-    /* background-color: var(--gold); */
-    text-align: center;
-    max-width: 46%;
-    height: 50vh;
-    overflow: hidden; /* ✅ Cache tout débordement */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* ✅ Centre le texte verticalement */
-    padding: 20px; /* ✅ Ajoute de l’espace intérieur */
-    box-sizing: border-box; /* ✅ Empêche que `padding` agrandisse la div */
-    word-wrap: break-word; /* ✅ Coupe les mots trop longs */
+  /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); */
+  /* box-shadow: 0 12px 24px var(--dark-green); */
+  /* Ombre plus grande et plus dense au survol */
+  opacity: 1;
 }
 
-  
-  .details-text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .details-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  /* Section 3 : Galerie */
-  .galerie-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Trois colonnes pour des images plus petites */
-    gap: 4%;
-    margin: 2%;
-    padding-bottom: 120px; /* Réduit l'espace entre les images pour conserver l'effet aéré */
-   
-    /* Ajoute un peu de padding autour de la galerie */
-  }
-  
-  .galerie-grid img {
-    width: 100%; /* Réduit légèrement la largeur des images pour un effet plus espacé */
-    margin: auto; /* Centre les images dans leurs cellules */
-    height: auto;
-    max-height: 50vh;
-    object-fit: cover; /* Adapte l'image à son conteneur */
-    border-radius: 5px; /* Coins arrondis */
-    transition: transform 0.3s ease;
-  
-  }
-  
-  /* .galerie-grid img:hover {
+/* Section 1 : Photo principale */
+.photo-principale img {
+  display: block;
+  width: 60%;
+  /* L'image occupe toute la largeur */
+  max-height: 60vh;
+  /* Limite la hauteur à 100% de la hauteur de l'écran */
+  margin: 50px auto;
+  /* Centre horizontalement */
+  object-fit: cover;
+  /* Adapte l'image à son conteneur */
+  border-radius: 5px;
+}
+
+/* Section 2 : Détails */
+.details {
+  display: flex;
+  width: 94%;
+  /* Prend toute la largeur de la modale */
+  gap: 4%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2%;
+
+
+}
+
+.details img {
+  width: 49%;
+  /* L'image occupe 50% de la largeur */
+  max-height: 50vh;
+  /* Limite la hauteur à 100% de la hauteur de l'écran */
+  object-fit: cover;
+  /* Adapte l'image à son conteneur */
+  border-radius: 5px;
+
+}
+
+.details-text {
+  flex: 1;
+  font-family: Arial, sans-serif;
+  color: var(--dark-green);
+  /* background-color: var(--gold); */
+  text-align: center;
+  max-width: 46%;
+  height: 50vh;
+  overflow: hidden;
+  /* ✅ Cache tout débordement */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* ✅ Centre le texte verticalement */
+  padding: 20px;
+  /* ✅ Ajoute de l’espace intérieur */
+  box-sizing: border-box;
+  /* ✅ Empêche que `padding` agrandisse la div */
+  word-wrap: break-word;
+  /* ✅ Coupe les mots trop longs */
+}
+
+
+.details-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.details-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Section 3 : Galerie */
+.galerie-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Trois colonnes pour des images plus petites */
+  gap: 4%;
+  margin: 2%;
+  padding-bottom: 120px;
+  /* Réduit l'espace entre les images pour conserver l'effet aéré */
+
+  /* Ajoute un peu de padding autour de la galerie */
+}
+
+.galerie-grid img {
+  width: 100%;
+  /* Réduit légèrement la largeur des images pour un effet plus espacé */
+  margin: auto;
+  /* Centre les images dans leurs cellules */
+  height: auto;
+  max-height: 50vh;
+  object-fit: cover;
+  /* Adapte l'image à son conteneur */
+  border-radius: 5px;
+  /* Coins arrondis */
+  transition: transform 0.3s ease;
+
+}
+
+/* .galerie-grid img:hover {
     transform: scale(1.1); 
   } */
-  .modal-section .carousel {
-    
-    position: relative; /* Assure que le carousel est bien positionné */
-    width: 100%; /* Prend toute la largeur disponible */
-    margin:  auto; /* Centre la section horizontalement */
-    padding: 20px 0; /* Ajoute de l'espace autour */
-    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
-  }
-  .modal-section.carousel,
+.modal-section .carousel {
 
-  .carousel-wrapper {
-   
-    position: relative; /* Parent pour le positionnement des boutons */
-    width: 95%; /* Largeur totale */
-    margin: 20px auto;
-    margin-top: 50px;
-    padding: 20px;
+  position: relative;
+  /* Assure que le carousel est bien positionné */
+  width: 100%;
+  /* Prend toute la largeur disponible */
+  margin: auto;
+  /* Centre la section horizontalement */
+  padding: 20px 0;
+  /* Ajoute de l'espace autour */
+  box-sizing: border-box;
+  /* Inclut le padding dans la largeur totale */
+}
+
+.modal-section.carousel,
+
+.carousel-wrapper {
+
+  position: relative;
+  /* Parent pour le positionnement des boutons */
+  width: 95%;
+  /* Largeur totale */
+  margin: 20px auto;
+  /* margin-top: 50px; */
+  padding: 20px;
+
 }
 
 .carousel-container {
-    overflow: hidden; /* Cache uniquement le contenu débordant du carousel */
-    width: 100%;
+  overflow: hidden;
+  /* Cache uniquement le contenu débordant du carousel */
+  width: 100%;
+
+  border-radius: 5px;
+  /* border: 1px solid var(--dark-green); */
 }
 
 .carousel {
-    display: flex;
-    gap: 10px;
-    transition: transform 0.3s ease;
+  display: flex;
+  gap: 10px;
+  gap: 5px;
+  transition: transform 0.3s ease;
 }
+
 .carousel-image-container {
   position: relative;
-  width: 100px; /* Garde la taille d’origine */
+  width: 100px;
+  /* Garde la taille d’origine */
   height: 100px;
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
 }
+
 .carousel-image-container img {
   width: 100%;
   height: 100%;
@@ -794,6 +967,7 @@ body.modal-open {
   transition: transform 0.3s ease;
   opacity: 0.8;
 }
+
 .carousel-title {
   position: absolute;
   bottom: 0;
@@ -803,7 +977,8 @@ body.modal-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black; /* Fond sombre */
+  background: black;
+  background: var(--dark-green);
   color: white;
   font-size: 14px;
   text-align: center;
@@ -811,8 +986,9 @@ body.modal-open {
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
 }
+
 .carousel-image-container:hover .carousel-title {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 /* .carousel img {
@@ -824,31 +1000,38 @@ body.modal-open {
 } */
 
 .carousel img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-    /* opacity: 1; */
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  /* opacity: 1; */
 }
 
 .carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: none; /* ❌ Supprime tout fond */
-  color: var(--dark-green); /* ✅ Utilise ta variable de couleur */
+  background: none;
+  /* ❌ Supprime tout fond */
+  color: var(--dark-green);
+  /* ✅ Utilise ta variable de couleur */
   border: none;
-  font-size: 2rem; /* ✅ Agrandit légèrement l’icône pour une meilleure visibilité */
+  font-size: 2rem;
+  /* ✅ Agrandit légèrement l’icône pour une meilleure visibilité */
   cursor: pointer;
   padding: 5px;
-  transition: transform 0.2s ease, opacity 0.2s ease; /* ✅ Ajoute une transition fluide */
-  opacity: 0.7; /* ✅ Rend le bouton un peu plus discret */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  /* ✅ Ajoute une transition fluide */
+  opacity: 0.7;
+  /* ✅ Rend le bouton un peu plus discret */
 }
 
 .carousel-button.prev {
-  left: -45px; /* ✅ Position ajustée à l’intérieur */
+  left: -45px;
+  /* ✅ Position ajustée à l’intérieur */
 }
 
 .carousel-button.next {
-  right: -45px; /* ✅ Position ajustée à l’intérieur */
+  right: -45px;
+  /* ✅ Position ajustée à l’intérieur */
 }
 
 /* ✅ Effet au survol : léger agrandissement et meilleure visibilité */
@@ -864,43 +1047,50 @@ body.modal-open {
 }
 
 .modal-grande {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: none; /* Masqué par défaut */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  /* Masqué par défaut */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .modal-grande.active {
-    display: flex; /* Visible quand active */
+  display: flex;
+  /* Visible quand active */
 }
 
 .modal-grande.inactive {
-    display: none; /* Masqué quand inactive */
+  display: none;
+  /* Masqué quand inactive */
 }
 
 .modal-grande-content {
-    position: relative;
-    background: var(--bg-cream);
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    /* max-width: 800px; */
-    height: 90%;
+  position: relative;
+  background: var(--bg-cream);
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  /* max-width: 800px; */
+  height: 90%;
 }
+
 .close-grande-image {
   position: absolute;
   top: 15px;
   right: 30px;
+  right: 2%;
   background: transparent;
-  color: var(--dark-green); /* Couleur verte */
+  color: var(--dark-green);
+  /* Couleur verte */
   border: none;
-  font-size: 40px; /* Taille plus visible */
+  font-size: 40px;
+  /* Taille plus visible */
   cursor: pointer;
   padding: 5px;
   transition: transform 0.2s ease-in-out;
@@ -918,16 +1108,20 @@ body.modal-open {
 /* Assurez-vous que le conteneur du slider n'affiche qu'une seule image à la fois */
 /* Assurez-vous que le conteneur du slider affiche une seule image */
 .slider-grande-image-container {
-  
+
   max-width: 800px;
   /* max-width: 1000px;  */
-  max-height: 100%; /* Ajustable pour éviter les débordements */
+  max-height: 100%;
+  /* Ajustable pour éviter les débordements */
   overflow: hidden;
   position: relative;
-  
-  margin: auto; /* Centre le slider */
-  border-radius: 10px; /* Ajoute des bords arrondis pour un design moderne */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet propre */
+
+  margin: auto;
+  /* Centre le slider */
+  border-radius: 10px;
+  /* Ajoute des bords arrondis pour un design moderne */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  /* Légère ombre pour un effet propre */
 }
 
 /* Défilement horizontal des images */
@@ -942,7 +1136,8 @@ body.modal-open {
 .slider-grande-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajuste l'image sans la déformer */
+  object-fit: cover;
+  /* Ajuste l'image sans la déformer */
   flex-shrink: 0;
   border-radius: 10px;
 }
@@ -961,8 +1156,9 @@ body.modal-open {
   cursor: pointer;
   z-index: 10;
   font-size: 40px;
-  border-radius: 50%; /* Rend les boutons ronds */
-  transition:  0.3s ease;
+  border-radius: 50%;
+  /* Rend les boutons ronds */
+  transition: 0.3s ease;
 }
 
 .slider-grande-image-button:hover {
@@ -980,12 +1176,14 @@ body.modal-open {
 
 /* Icônes pour remplacer le texte des boutons (si nécessaire) */
 .slider-grande-image-button::before {
-  content: ""; /* Flèche gauche */
+  content: "";
+  /* Flèche gauche */
   font-weight: bold;
 }
 
 .slider-grande-image-button.next::before {
-  content: ""; /* Flèche droite */
+  content: "";
+  /* Flèche droite */
 }
 
 /* Ajoute une animation douce au hover */
@@ -1005,6 +1203,9 @@ body.modal-open {
   padding: 40px 20px;
   background-color: var(--bg-cream);
   border-radius: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding: 10%;
 }
 
 /* Image principale */
@@ -1016,63 +1217,82 @@ body.modal-open {
   margin: auto;
   padding: 20px;
 }
+
 .contact-row {
   display: flex;
+
   justify-content: space-between;
   align-items: stretch;
   gap: 50px;
+  /* background-color: yellow; */
 }
+
 .contact-box {
   flex: 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 300px;
   border-radius: 10px;
+  max-width: 48%;
+
 
 }
 
- .contact-photo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        height: 100%;
-        max-height: 300px;
-    }
-      .contact-photo img {
-        max-width: 100%;
-        height: 100%;
-        object-fit: cover;
-        }
+.contact-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  height: 100%;
+  max-height: 300px;
+
+
+}
+
+.contact-photo img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* .contact-info{
   align-items:flex-start ;
 } */
 
-.contact-info, .contact-legal {
+.contact-info,
+.contact-legal {
   background: var(--cream);
   padding: 15px;
- 
+
   width: 100%;
+  /* width: auto; */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
- 
-  
+
+
+
   /* border: 1px solid black; */
 }
+
 .contact-info {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  
- 
+  /* background-color: red; */
+
+
 }
+
 .contact-info-content {
- 
+
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1081,44 +1301,55 @@ body.modal-open {
   padding: 15px;
   width: 100%;
   text-align: left;
-  
-  
+
+
 }
-.contact-info-content p{
+
+.contact-info-content p {
   color: var(--dark-green);
- 
+  font-size: 1.2rem;
   margin: 0;
 }
+
 .contact-info-item {
   display: flex;
   align-items: center;
+
   gap: 10px;
 }
+
 .contact-info-item i {
   font-size: 18px;
+
   color: var(--gold);
 }
-.contact-legal  {
+
+.contact-legal {
   color: var(--dark-green);
+  /* border: 1px solid var(--gold); */
+  font-size: 1.5rem;
 }
+
 .contact-legal {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   min-height: 100%;
   /* background-color: #fff; */
   text-align: left;
-  
-  padding-left: 20px;
+
+  /* padding-left: 20px; */
 }
+
 .contact-legal ul {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items:flex-start ;
-  
+  align-items: flex-start;
+  align-items: center;
+
   list-style: none;
   /* background-color: #004225; */
   margin: 5%;
@@ -1127,24 +1358,133 @@ body.modal-open {
 .contact-details {
   flex-grow: 1;
 }
+
 .contact-icons {
   margin-top: 10px;
 }
+
 .contact-icons a {
   font-size: 24px;
   margin: 0 10px;
-  color: var(--gold);
+
+  color: var(--dark-green);
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .contact-icons a:hover {
   transform: scale(1.1);
-  color: var(--dark-green);
+  color: var(--gold);
+
 }
+
 .contact-map iframe {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
+
+
+
+
+.contact-map {
+  order: 2;
+}
+
+.contact-legal {
+  order: 1;
+}
+
+
+/* Section principale */
+/* Garde la structure globale alignée avec la page contact */
+.page.portrait {
+  max-width: 100%;
+  margin: auto;
+  /* padding: 50px 5%;  */
+}
+
+/* Titre */
+.portrait h1 {
+  text-align: center;
+  /* font-size: 2rem; */
+  margin-bottom: 30px;
+}
+
+/* Section principale */
+.portrait-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10%;
+  /* Ajoute du padding à gauche et à droite */
+  margin-bottom: 30px;
+}
+
+/* Grande image */
+.portrait-image-large {
+  flex: 1;
+  max-width: 45%;
+}
+
+.portrait-image-large img {
+  width: 100%;
+  max-height: 60vh;
+  /* Ne dépasse pas 80% de la hauteur de l'écran */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Texte */
+.portrait-text {
+  flex: 1;
+  max-width: 50%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--dark-green);
+  padding: 15px;
+  /* background-color:var(--gold) ; */
+  border-radius: 25px;
+}
+
+/* Section avec deux images en bas */
+.portrait-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 5%;
+  /* Ajoute du padding latéral */
+  margin-top: 20px;
+  margin: 100px;
+}
+
+.portrait-image-small {
+  flex: 1;
+  max-width: 30%;
+}
+
+.portrait-image-small img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-height: 40vh;
+  /* Ajuste la hauteur pour éviter qu'elles soient trop grandes */
+  object-fit: cover;
+}
+
+/* Hover léger */
+/* .portrait-image-large img,
+.portrait-image-small img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.portrait-image-large img:hover,
+.portrait-image-small img:hover {
+  transform: scale(1.03);
+} */
+
+
+
 
 /* footer{
   display: flex;
@@ -1153,7 +1493,8 @@ body.modal-open {
 } */
 
 .page.inactive {
-  display: none !important; /* Cache totalement */
+  display: none !important;
+  /* Cache totalement */
   height: 0 !important;
   overflow: hidden;
 }
@@ -1168,6 +1509,7 @@ footer {
   padding: 20px 0;
   /* border-top: 1px solid gray */
 }
+
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -1175,10 +1517,12 @@ footer {
   width: 80%;
   margin: 0 auto;
 }
-.footer-info, .footer-middle {
+
+.footer-info,
+.footer-middle {
   list-style: none;
   display: flex;
- 
+
   gap: 15px;
   padding: 0;
   margin: 0;
@@ -1188,6 +1532,7 @@ footer {
   display: flex;
   gap: 30px;
 }
+
 .footer-icons a {
   font-size: 24px;
   color: black;
@@ -1205,117 +1550,229 @@ footer {
   
 } */
 
-  
-  
-  
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .galerie-grid {
-      grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les tablettes */
-    }
+
+
+
+
+/* Responsive */
+
+
+@media (max-width: 1024px) {
+  .navbar {
+    height: 90px;
+    padding: 0 15px;
+    /* background-color:red; */
   }
-  
-  @media (max-width: 480px) {
-    .galerie-grid {
-      grid-template-columns: repeat(1, 1fr); /* Une seule colonne pour les mobiles */
-    }
+
+  .logo img {
+    height: 60px;
   }
-  
-  @media (max-width: 1024px) {
-    .navbar {
-      height: 90px;
-      padding: 0 15px;
-    }
-  
-    .logo img {
-      height: 60px;
-    }
-  
-    main {
-      height: calc(100vh - 90px);
-      margin-top: 90px;
-    }
+
+  main {
+    height: calc(100vh - 90px);
+    /* margin-top: 90px; */
   }
-  
-  @media (max-width: 768px) {
-    .navbar {
+
+  .hero h1 {
+    font-size: 4.5rem !important;
+  }
+
+  .hero h2 {
+    font-size: 3.8rem !important;
+    ;
+  }
+
+  .hero h3 {
+    font-size: 2.5rem !important;
+    ;
+  }
+
+  .hero h4 {
+    font-size: 2.5rem !important;
+  }
+
+  .categories {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    max-width: 90%;
+    height: 50vh;
+    /* Laisse la div s'adapter à son contenu */
+  }
+
+  .project-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    /* gap: 15px; */
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 100%;
+    padding: 0;
+
+  }
+
+  .project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    /* background-color: #007bff; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .project-item {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .photo-principale img {
+    display: block;
+    width: 80%;
+    /* L'image occupe toute la largeur */
+    max-height: 50vh;
+    /* Limite la hauteur à 100% de la hauteur de l'écran */
+    margin: 30px auto;
+    /* Centre horizontalement */
+    object-fit: cover;
+    /* Adapte l'image à son conteneur */
+    border-radius: 5px;
+  }
+
+  .carousel-image-container {
+    position: relative;
+    width: 75px;
+    /* Garde la taille d’origine */
+    height: 75px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .slider-grande-image-button.prev {
+    left: 0;
+  }
+
+  .slider-grande-image-button.next {
+    right: 0;
+  }
+
+
+
+}
+
+@media (max-width: 768px) {
+  /* .navbar {
       flex-direction: column;
       height: auto;
       padding: 10px 0;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding-top: 10px;
-    }
-  
-    .nav-links a {
-      font-size: 16px;
-      padding: 8px 12px;
-    }
-  
-    main {
-      height: calc(100vh - 80px);
-      margin-top: 80px;
-    }
-  
-    .hero h1 {
-      font-size: 2.8rem;
-    }
-  
-    .hero h2, .hero h3, .hero h4 {
-      font-size: 1.6rem;
-    }
-  
-    .project-gallery {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .logo img {
-      height: 50px;
-    }
-  
-    .hero h1 {
-      font-size: 2.4rem;
-    }
-  
-    .hero h2, .hero h3, .hero h4 {
-      font-size: 1.4rem;
-    }
-  
-    .nav-links {
-      gap: 8px;
-    }
-  
-    .project-gallery {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
+    } */
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
   }
 
-  @media (max-width: 768px) {
-    .burger-menu {
-        display: flex; /* Affiché uniquement sur mobile */
-    }
-  
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: white;
-        width: 200px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-        border-radius: 5px;
-    }
-  
-    .nav-links.active {
-        display: flex;
-    }
+  .nav-links a {
+    font-size: 16px;
+    padding: 8px 12px;
   }
+
+  main {
+    height: calc(100vh - 80px);
+    /* margin-top: 80px; */
+  }
+
+  .hero h1 {
+    font-size: 3rem !important;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem !important;
+    ;
+  }
+
+  .hero h3 {
+    font-size: 2rem !important;
+    ;
+  }
+
+  .hero h4 {
+    font-size: 2rem !important;
+  }
+
+  .project-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .categories {
+
+    height: 40vh;
+    /* Laisse la div s'adapter à son contenu */
+  }
+
+  .galerie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Deux colonnes pour les tablettes */
+  }
+
+
+}
+
+
+@media (max-width: 480px) {
+  .galerie-grid {
+    grid-template-columns: repeat(1, 1fr);
+    /* Une seule colonne pour les mobiles */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 50px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero h2,
+  .hero h3,
+  .hero h4 {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .project-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .nav-link {
+    position: relative;
+    top: -80px
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-info,
+  .footer-icons {
+    padding: 10px;
+  }
+}
