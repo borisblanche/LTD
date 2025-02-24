@@ -1,3 +1,62 @@
+// Sélection des éléments
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+const navLinkItems = document.querySelectorAll('.nav-links a');
+
+// Fonctions pour ouvrir et fermer le menu
+function openMenu() {
+  navLinks.classList.add('open');
+}
+
+function closeMenu() {
+  navLinks.classList.remove('open');
+}
+
+function toggleMenu() {
+  navLinks.classList.toggle('open');
+}
+
+// Fonction pour configurer le comportement du menu selon la taille de l'écran
+function setupMenuBehavior() {
+  // Pour les tablettes et mobiles (1024px et moins)
+  if (window.innerWidth <= 1024) {
+    // Retirer les gestionnaires d'événement hover s'ils sont présents
+    burgerMenu.removeEventListener('mouseenter', openMenu);
+    burgerMenu.removeEventListener('mouseleave', closeMenu);
+    // Éviter les doublons en retirant un éventuel click précédent
+    burgerMenu.removeEventListener('click', toggleMenu);
+    // Ajouter le gestionnaire de clic
+    burgerMenu.addEventListener('click', toggleMenu);
+  } else {
+    // Pour les grands écrans, utiliser le hover
+    burgerMenu.removeEventListener('click', toggleMenu);
+    // Retirer d'abord pour éviter les doublons
+    burgerMenu.removeEventListener('mouseenter', openMenu);
+    burgerMenu.removeEventListener('mouseleave', closeMenu);
+    // Ajouter les événements hover
+    burgerMenu.addEventListener('mouseenter', openMenu);
+    burgerMenu.addEventListener('mouseleave', closeMenu);
+  }
+}
+
+// Initialiser au chargement de la page
+setupMenuBehavior();
+
+// Réajuster lors du redimensionnement de la fenêtre
+window.addEventListener('resize', setupMenuBehavior);
+
+// Fermer le menu lorsqu'un lien est cliqué (pour mobiles/tablettes)
+navLinkItems.forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
+
+
+
+
+
+
+
 
 document.querySelector(".logo").addEventListener("click", (e) => {
     e.preventDefault(); // Évite tout comportement par défaut
