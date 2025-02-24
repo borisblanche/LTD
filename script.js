@@ -1,35 +1,3 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//     const burger = document.querySelector(".burger-menu");
-//     const navLinks = document.querySelector(".nav-links");
-
-//     // ✅ Ouvre et ferme le menu burger
-//     burger.addEventListener("click", () => {
-//         navLinks.classList.toggle("active");
-//         burger.classList.toggle("active");
-//     });
-
-//     // ✅ Ferme le menu burger après un clic sur un lien
-//     document.querySelectorAll(".nav-links a").forEach(link => {
-//         link.addEventListener("click", (e) => {
-//             e.preventDefault(); // Empêche le comportement par défaut du lien
-    
-//             const categoryName = link.getAttribute("data-category"); // Utilise data-category
-//             if (!categoryName) {
-//                 console.error("❌ Le lien ne contient pas de catégorie valide.");
-//                 return;
-//             }
-    
-//             updateActivePage(categoryName); // Active la bonne page
-    
-//             // ✅ Ferme le menu burger après un clic
-//             document.querySelector(".nav-links").classList.remove("active");
-//             document.querySelector(".burger-menu").classList.remove("active");
-//         });
-//     });
-    
-// });
-
-
 
 document.querySelector(".logo").addEventListener("click", (e) => {
     e.preventDefault(); // Évite tout comportement par défaut
@@ -414,8 +382,16 @@ document.addEventListener("DOMContentLoaded", () => {
             // Ajouter les images au carrousel
             projectImages.forEach((img) => carousel.appendChild(img));
     
-            const visibleImages = 10;
-            const totalImages = projectImages.length;
+            // const visibleImages = 10;
+            const visibleImages = window.innerWidth < 768 ? 4 : 10;
+            // const totalImages = projectImageslength;
+            // Nombre total d'images générées
+const totalImages = projectImages.length;
+
+// Ajuster la largeur dynamique du carousel et des images
+carousel.style.width = `${totalImages * (100 / visibleImages)}%`;
+projectImages.forEach((img) => (img.style.width = `${100 / visibleImages}%`));
+
     
             // Ajuster la largeur dynamique du carrousel et des images
             carousel.style.width = `${totalImages * (100 / visibleImages)}%`;
