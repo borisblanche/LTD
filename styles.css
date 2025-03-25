@@ -81,11 +81,12 @@ header {
 .burger-menu {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  justify-content: center;
+  gap: 8px;
   cursor: pointer;
   /* margin-right: 20px; */
-  padding: 6px;
-  background-color: #007bff;
+  padding: 8px;
+ 
   background-color: var(--bg-cream);
   border-radius: 5px 0 5px 5px;
 
@@ -97,10 +98,10 @@ header {
 .burger-menu span {
   width: 35px;
 
-  height: 6px;
+  height: 1px;
   background: var(--bg-cream);
   background: var(--dark-green);
-  border: 2px solid var(--dark-green);
+  border: 1px solid var(--dark-green);
   /* border: 1px solid black; */
   transition: 0.3s ease;
 
@@ -245,6 +246,7 @@ main {
 
 }
 
+
 /* ✅ Garde uniquement la page active visible */
 .page.active {
   display: block;
@@ -268,49 +270,54 @@ main {
 
 /* Titres */
 .hero h1 {
-  font-size: 5.5rem !important;
-  font-weight: 600 !important;
-  ;
+  font-size:5rem !important;
+  font-weight: 900 !important;
+  
   text-transform: uppercase;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
-  margin-bottom: 50px !important;
+  text-shadow: 9px 9px 10px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 5px 5px  white;
+  font-style: italic;
+  margin-bottom: 20px !important;
   margin-top: 0 !important;
 
 }
 
 .hero h2 {
-  font-size: 4.8rem !important;
+  font-size: 4rem !important;
   ;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   ;
   font-style: italic;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 50px !important;
   color: var(--dark-green);
+
 
 
 }
 
 .hero h3 {
-  font-size: 4rem !important;
+  font-size: 2.5rem !important;
   ;
-  font-weight: 200 !important;
+  font-weight: 100 !important;
   ;
   margin-top: 10px;
   margin-bottom: 30px !important;
   color: var(--dark-green);
+  text-shadow: 1px 2px 2px black;
 
 
 }
 
 .hero h4 {
-  font-size: 3.5rem !important;
+  font-size: 2.5rem !important;
   ;
-  font-weight: 200 !important;
+  font-weight: 100 !important;
   ;
   margin-top: 10px;
   margin-bottom: 10px;
   color: var(--dark-green);
+  text-shadow: 1px 2px 2px black;
 
 
 
@@ -381,7 +388,7 @@ main {
 
 .categories-text p {
   font-size: 1.2rem;
-  color: white;
+  color: var(--dark-green);
   /* Assure que le texte est visible */
   line-height: 1.6;
   /* Espacement entre les lignes */
@@ -423,10 +430,10 @@ main {
   display: inline-block;
   /* ✅ Ajuste la taille de l'élément au contenu */
   letter-spacing: 2px;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
-.page p {
+.page h2 {
   font-size: 1.4rem;
   font-weight: 300;
   color: #555;
@@ -448,6 +455,7 @@ main {
   position: absolute;
   /* Permet de positionner les liens sur la page */
   top: 200px;
+ 
   /* Les placer près du bas de la page */
   width: 100%;
   /* S'étend sur toute la largeur */
@@ -455,6 +463,7 @@ main {
   justify-content: space-between;
   /* Espace égal entre les liens */
   padding: 0 20px;
+  
 }
 
 /* .nav-link {
@@ -479,10 +488,14 @@ main {
   font-size: 1.5rem;
   text-decoration: none;
   color: var(--dark-green);
+  
   padding: 8px 12px;
   border-radius: 4px;
   transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
   opacity: 0.8;
+  /* background-color: #fff; */
+  position: absolute;
+  top: 0;
 
 }
 
@@ -498,14 +511,14 @@ main {
 .left {
   position: fixed;
   left: 2%;
-  top: 30%;
+  top: 22%;
   text-align: left;
 }
 
 .right {
   position: fixed;
   right: 2%;
-  top: 30%;
+  top: 22%;
   text-align: right;
 }
 
@@ -553,6 +566,22 @@ main {
   justify-content: center;
   color: #333;
   color: var(--dark-green);
+
+  margin: 0;
+}
+
+.page-header{
+  /* background-color: cyan;
+  border: 1px solid red; */
+  position:fixed;
+  /* position:absolute; */
+  width: 100%;
+  /* height: 25vh; */
+  z-index: 100;
+  background-color: var(--bg-cream);
+
+  /* height: 50vh; */
+  
 }
 
 /* Galeries */
@@ -560,13 +589,15 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, max(250px, 1fr));
   gap: 15px;
-  width: 80%;
+  width: 100%;
   /* Prend toute la largeur */
-  margin-left: 10%;
-  margin-right: 10%;
+  /* margin-left: 5%;
+  margin-right: 5%; */
   max-width: 100%;
   /* Pas de limite à la largeur */
   padding: 0;
+  margin-top: 35vh;
+  /* background-color: #475D4C; */
   /* Pas de padding */
 
   /* background-color: #007bff; */
@@ -574,15 +605,12 @@ main {
 
 
 /* Responsive */
-
-
-
-
-
 .project-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  justify-content: space-around;
+  gap: 80px;
+ 
   justify-content: center;
   /* background-color: #007bff; */
   padding-top: 50px;
@@ -592,6 +620,7 @@ main {
 .project-item {
   position: relative;
   width: 400px;
+  height: 400px;
   /* Ajuste selon ton design */
   overflow: hidden;
   border-radius: 8px;
@@ -1062,6 +1091,7 @@ body.modal-open {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
+  background-color: var(--dark-green);
   display: none;
   /* Masqué par défaut */
   justify-content: center;
@@ -1091,11 +1121,12 @@ body.modal-open {
 
 .close-grande-image {
   position: absolute;
-  top: 15px;
-  right: 30px;
-  right: 2%;
+  top: -50px;
+  right: -60px;
   background: transparent;
   color: var(--dark-green);
+  color: #007bff;
+  color: var(--bg-cream);
   /* Couleur verte */
   border: none;
   font-size: 40px;
@@ -1579,25 +1610,31 @@ footer {
 
   main {
     height: calc(100vh - 90px);
+  
     /* margin-top: 90px; */
   }
+ 
 
   .hero h1 {
-    font-size: 4.5rem !important;
+    font-size: 4rem !important;
+    margin-top: 0;
   }
 
   .hero h2 {
-    font-size: 3.8rem !important;
+    font-size: 3.2rem !important;
+    margin-top: 0;
+    margin-bottom: 0
     ;
   }
 
   .hero h3 {
-    font-size: 2.5rem !important;
-    ;
+    font-size: 2.rem !important;
+   
+    
   }
 
   .hero h4 {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
 
   .categories {
@@ -1609,20 +1646,20 @@ footer {
     /* Laisse la div s'adapter à son contenu */
   }
 
-  .project-gallery {
+  /* .project-gallery {
     display: grid;
 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-columns: 1fr 1fr;
     justify-content: space-around;
-    /* gap: 15px; */
+    gap: 15px;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
     max-width: 100%;
     padding: 0;
 
-  }
+  } */
 
   .project-gallery {
     display: flex;
@@ -1643,6 +1680,41 @@ footer {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     cursor: pointer;
+  }
+  .page h1 {
+    font-size: 2.8rem;
+    /* ✅ Taille du titre */
+    font-weight: 100;
+    font-style: italic;
+    color: #333;
+    color: var(--dark-green);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    /* border-bottom: 3px solid #007bff; */
+    /* ✅ Petite barre bleue sous le titre */
+    display: inline-block;
+    /* ✅ Ajuste la taille de l'élément au contenu */
+    letter-spacing: 2px;
+    margin-top: 2%;
+  }
+  
+  .page h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #555;
+    color: var(--dark-green);
+    text-align: center;
+    max-width: 800px;
+    /* ✅ Largeur max pour éviter un texte trop long */
+    margin: 10px auto;
+    /* ✅ Centrage automatique */
+    line-height: 1.6;
+    /* ✅ Espacement entre les lignes */
+    padding: 0 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
 
   .photo-principale img {
@@ -1667,6 +1739,23 @@ footer {
     overflow: hidden;
     cursor: pointer;
   }
+  .close-grande-image {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    background: transparent;
+    color: var(--dark-green);
+    color: #007bff;
+    color: var(--bg-cream);
+    /* Couleur verte */
+    border: none;
+    font-size: 30px;
+    /* Taille plus visible */
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+  }
 
   .slider-grande-image-button.prev {
     left: 0;
@@ -1674,6 +1763,19 @@ footer {
 
   .slider-grande-image-button.next {
     right: 0;
+  }
+  .category h2 {
+    /* margin: 15px 0; */
+    font-size: 22px;
+    height: 20%;
+    /* Prend 20% de la hauteur de .category */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    color: var(--dark-green);
+  
+    margin: 0;
   }
 
 
@@ -1723,30 +1825,78 @@ footer {
   }
 
   .project-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-columns: 1 fr 1fr;
-    width: 60%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr,1fr));
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* width: 90%; */
 
-    margin-left: 20%;
+    /* margin-left: 20%; */
 
 
   }
 
   .project-item {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     cursor: pointer;
   }
+  .page h1 {
+    font-size: 2rem;
+    /* ✅ Taille du titre */
+    font-weight: 100;
+    font-style: italic;
+    color: #333;
+    color: var(--dark-green);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    /* border-bottom: 3px solid #007bff; */
+    /* ✅ Petite barre bleue sous le titre */
+    display: inline-block;
+    /* ✅ Ajuste la taille de l'élément au contenu */
+    letter-spacing: 2px;
+    margin-top: 3%;
+  }
+  
+  .page h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #555;
+    color: var(--dark-green);
+    text-align: center;
+    max-width: 800px;
+    /* ✅ Largeur max pour éviter un texte trop long */
+    margin: 10px auto;
+    /* ✅ Centrage automatique */
+    line-height: 1.6;
+    /* ✅ Espacement entre les lignes */
+    padding: 0 20px;
+    margin-bottom: 35px;
+    margin-top: 30px;
+  }
 
   .categories {
 
     height: 40vh;
     /* Laisse la div s'adapter à son contenu */
+  }
+  .category h2 {
+    /* margin: 15px 0; */
+    font-size: 20px;
+    height: 20%;
+    /* Prend 20% de la hauteur de .category */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    color: var(--dark-green);
+  
+    margin: 0;
   }
 
   .galerie-grid {
@@ -1758,7 +1908,7 @@ footer {
     position: relative;
     width: 50px;
     /* Garde la taille d’origine */
-    height: 100px;
+    height: 50px;
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
@@ -1905,6 +2055,28 @@ footer {
 
 
 }
+.slider-grande-image-container {
+  max-width: 80%;
+ 
+  
+}
+.close-grande-image {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background: transparent;
+  color: var(--dark-green);
+  color: #007bff;
+  color: var(--bg-cream);
+  /* Couleur verte */
+  border: none;
+  font-size: 25px;
+  /* Taille plus visible */
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1000;
+}
 
 
 @media (max-width: 480px) {
@@ -1917,6 +2089,23 @@ footer {
    
     padding: 20px;
     font-size: 1.5rem;
+  }
+  .close-grande-image {
+    position: absolute;
+    top: -60px;
+    right: 0px;
+    background: transparent;
+    color: var(--dark-green);
+    color: #007bff;
+    color: var(--bg-cream);
+    /* Couleur verte */
+    border: none;
+    font-size: 30px;
+    /* Taille plus visible */
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
   }
 }
 
@@ -1943,17 +2132,41 @@ footer {
   .nav-links {
     gap: 8px;
   }
-  .page h1{
-    font-size: 2rem;
-    /* background-color: #007bff; */
-    margin-top: 100px;
-  }
-.page p
-{
-  font-size: 1rem;
-  /* background-color: yellow; */
-  margin-top: 0px;
-  margin-bottom: 0;
+
+.page h1 {
+  font-size: 1.2rem;
+  /* ✅ Taille du titre */
+  font-weight: 100;
+  font-style: italic;
+  color: #333;
+  color: var(--dark-green);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  /* border-bottom: 3px solid #007bff; */
+  /* ✅ Petite barre bleue sous le titre */
+  display: inline-block;
+  /* ✅ Ajuste la taille de l'élément au contenu */
+  letter-spacing: 2px;
+  margin-top: 5%;
+}
+
+.page h2 {
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: #555;
+  color: var(--dark-green);
+  text-align: center;
+  max-width: 800px;
+  /* ✅ Largeur max pour éviter un texte trop long */
+  margin: 10px auto;
+  /* ✅ Centrage automatique */
+  line-height: 1.6;
+  /* ✅ Espacement entre les lignes */
+  padding: 0 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
   #categories-section {
@@ -1966,8 +2179,13 @@ footer {
   }
 
   .categories {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #007bff; */
+    min-height: 800px;
+    max-width: 80%;
 
-    height: 125px;
+    /* height: 125px; */
     /* background-color: #D4AF37; */
     gap: 1px;
     
@@ -1986,8 +2204,12 @@ footer {
   }
 
   .category {
-    flex: 1;
-    max-width: 30%;
+   
+    /* flex: 1; */
+    max-width: 100%;
+
+  
+   
 
     background-color: white;
     border-radius: 10px;
@@ -1995,7 +2217,7 @@ footer {
     text-align: center;
     margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+    /* overflow: hidden; */
     cursor: pointer;
 
 
@@ -2009,14 +2231,16 @@ footer {
   .category img {
     width: 100%;
     height: 80%;
+   
     display: block;
 
 
   }
 
+
   .category h2 {
     /* margin: 15px 0; */
-    font-size: 12px;
+    font-size: 1.6rem;
     height: 20%;
     /* Prend 20% de la hauteur de .category */
     display: flex;
@@ -2024,11 +2248,29 @@ footer {
     justify-content: center;
     color: #333;
     color: var(--dark-green);
+  
+    margin: 0;
   }
 
   .project-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr ));
+    
+    gap: 10px;
+    margin-top: 30%;
+   
 
+  }
+  
+
+  .project-item {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
   }
 
   .modal-section {
@@ -2039,12 +2281,16 @@ footer {
 
   .photo-principale {
     /* background-color: red; */
+    /* background-color: red; */
   }
 
   .photo-principale img {
     max-width: 100%;
-    max-height: 150px;
+    width: 100%;
+    max-height: 200px;
     min-height: 0;
+    padding: 0;
+    margin: 0;
 
   }
 
@@ -2083,7 +2329,7 @@ footer {
 
   .nav-link {
     /* position: relative; */
-    top: 35%;
+    top: 17%;
     font-size: 0.8rem;
   }
 
@@ -2303,7 +2549,12 @@ footer {
 @media (max-width: 376px){
 
     .page h1{
-    /* font-size: 1.2rem; */
+    font-size: 0.7rem;
+    margin-top: 10%;
+  }
+    .page h2{
+    font-size: 0.5rem;
+    margin-top: 10px;
   }
   .prev{
     left: 0;
@@ -2317,20 +2568,19 @@ footer {
   .categories-content p{
     font-size: 1rem;
   }
-  .category {
-    flex: 1;
-    max-width: 30%;
-  
-    /* background-color: white;
-    border-radius: 10px;
-    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
-    text-align: center; */
-    margin: 5px;
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    cursor: pointer; */
-  
-  
+
+  .categories {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #007bff; */
+    min-height: 800px;
+    max-width: 75%;
+
+    /* height: 125px; */
+    /* background-color: #D4AF37; */
+    gap: 1px;
+    
+    /* background-color: #007bff; */
   }
   
   .category:hover {
@@ -2347,7 +2597,7 @@ footer {
   
   .category h2 {
     /* margin: 15px 0; */
-    font-size: 10px;
+    font-size: 1rem;
     /* height: 20%;
     
     display: flex;
@@ -2355,6 +2605,26 @@ footer {
     justify-content: center;
     color: #333;
     color: var(--dark-green); */
+  }
+  .project-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr ));
+    
+    gap: 10px;
+    margin-top: 30%;
+   
+
+  }
+  
+
+  .project-item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
   }
 
 

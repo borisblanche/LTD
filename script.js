@@ -505,6 +505,10 @@ projectImages.forEach((img) => (img.style.width = `${100 / visibleImages}%`));
     
         // ✅ Fonction pour activer le scroll automatique
         const startAutoSlide = (direction) => {
+             if (window.innerWidth < 768) {
+        return;
+    }
+
             stopAutoSlide(); // Évite les doublons
             hoverInterval = setInterval(() => {
                 direction > 0 ? scrollRight() : scrollLeft();
