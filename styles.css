@@ -4,7 +4,13 @@
   --bg-cream: #f9f5f2;
   --off-white: #FAF3E0;
   --deep-black: #1C1C1C;
+  --new-green: #183E0C;
+  --new-ecru: #FFFAC8;
 }
+h1, h2, h3, h4, p,a, .titre-script {
+  font-family: 'Petit Formal Script', cursive!important ;
+}
+
 
 
 html,
@@ -258,6 +264,8 @@ main {
 .hero {
   width: 100%;
   min-height: 100vh;
+ 
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -270,13 +278,22 @@ main {
 
 /* Titres */
 .hero h1 {
-  font-size:5rem !important;
-  font-weight: 900 !important;
-  
-  text-transform: uppercase;
-  text-shadow: 9px 9px 10px rgba(0, 0, 0, 0.6);
-  text-shadow: 1px 5px 5px  white;
+  font-size:6.5rem !important;
+  font-weight: 500 !important;
   font-style: italic;
+  
+  
+ 
+  /* color:#333 !important; */
+  color: var(--new-green);
+  /* text-shadow: 1px 4px 2px var(--dark-green); */
+  text-shadow: 1px 3px 1px var(--new-ecru);
+  /* color: black!important; */
+  
+  /* text-transform: uppercase; */
+  /* text-shadow: 9px 9px 10px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 5px 5px  white; */
+  /* font-style: italic; */
   margin-bottom: 20px !important;
   margin-top: 0 !important;
 
@@ -285,39 +302,74 @@ main {
 .hero h2 {
   font-size: 4rem !important;
   ;
-  font-weight: 300 !important;
-  ;
+  font-weight: 400 !important;
+ 
+  
+ 
   font-style: italic;
+  /* text-shadow: 1px 4px 1px var(--bg-cream)!important; */
   margin-top: 0px;
   margin-bottom: 50px !important;
-  color: var(--dark-green);
+  /* color: var(--dark-green); */
+  
+  /* text-shadow: 5px 3px 1px var(--dark-green)!important; */
+  /* color: var(--bg-cream)!important;
+  color:#333 !important; */
+  /* color: var(--new-green)!important; */
+  color: var(--new-green);
+  /* text-shadow: 1px 4px 2px var(--dark-green); */
+  text-shadow: 1px 2px 1px var(--new-ecru);
+
 
 
 
 }
 
 .hero h3 {
-  font-size: 2.5rem !important;
+  font-size: 3.5rem !important;
   ;
-  font-weight: 100 !important;
+  font-weight: 400 !important;
   ;
+  font-style: oblique;
   margin-top: 10px;
   margin-bottom: 30px !important;
-  color: var(--dark-green);
-  text-shadow: 1px 2px 2px black;
+  /* color: var(--dark-green); */
+  /* text-shadow: 1px 2px 2px black; */
+  /* color: var(--bg-cream)!important; */
+  /* text-shadow: 4px 2px 1px var(--dark-green)!important; */
+  /* color:black !important;
+  text-shadow: 1px 1px 1px black!important;
+  text-shadow: 1px 1px 1px var(--bg-cream)!important; */
+  color: #333;
+  /* text-shadow: 1px 4px 2px var(--dark-green); */
+  text-shadow: 1px 1px 1px var(--new-ecru);
+  
+  
 
 
 }
 
 .hero h4 {
-  font-size: 2.5rem !important;
+  font-size: 3.2rem !important;
   ;
-  font-weight: 100 !important;
+  font-weight: 400 !important;
   ;
+  font-style: oblique;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: var(--dark-green);
-  text-shadow: 1px 2px 2px black;
+  color:#333 !important;
+  /* color:black !important; */
+  /* color: var(--new-green)!important; */
+  /* text-shadow: 1px 2px 2px black; */
+  /* color: var(--bg-cream)!important; */
+  /* text-shadow: 2px 2px 1px black!important;
+  text-shadow: 4px 2px 1px var(--dark-green)!important; */
+  /* color:#333 !important; */
+
+  /* text-shadow: 1px 1px 1px var(--bg-cream)!important; */
+  /* color: var(--new-green)!important; */
+  /* text-shadow: 1px 4px 2px var(--dark-green); */
+  text-shadow: 1px 1px 1px var(--new-ecru);
 
 
 
@@ -422,7 +474,7 @@ main {
   color: #333;
   color: var(--dark-green);
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 15px;
   padding: 10px 20px;
   /* border-bottom: 3px solid #007bff; */
@@ -881,7 +933,7 @@ body.modal-open {
 
 .details-text {
   flex: 1;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   color: var(--dark-green);
   /* background-color: var(--gold); */
   text-align: center;
