@@ -93,8 +93,13 @@ header {
   /* margin-right: 20px; */
   padding: 8px;
  
+  background-color: var(--new-ecru);
   background-color: var(--bg-cream);
+  /* background-color: transparent; */
+  /* background: var(--new-green); */
   border-radius: 5px 0 5px 5px;
+  border: 2px solid var(--new-green);
+  
 
 
 
@@ -104,10 +109,14 @@ header {
 .burger-menu span {
   width: 35px;
 
-  height: 1px;
-  background: var(--bg-cream);
+  height:1px;
+  /* background: var(--bg-cream);
   background: var(--dark-green);
-  border: 1px solid var(--dark-green);
+  border: 1px solid var(--dark-green); */
+  background: var(--new-green);
+  border: 1px solid var(--new-green);
+  /* border: 1px solid var(--new-ecru);
+  background-color: var(--new-ecru); */
   /* border: 1px solid black; */
   transition: 0.3s ease;
 
@@ -394,6 +403,7 @@ main {
 } */
 #categories-section {
   background-color: var(--bg-cream);
+  background-color: var(--new-ecru);
   /* Fond bleu */
   /* background-color: #007bff; */
   color: white;
@@ -441,6 +451,7 @@ main {
 .categories-text p {
   font-size: 1.2rem;
   color: var(--dark-green);
+  color: var(--new-green);
   /* Assure que le texte est visible */
   line-height: 1.6;
   /* Espacement entre les lignes */
@@ -1595,10 +1606,13 @@ body.modal-open {
 
 footer {
   background: var(--bg-cream);
+  background-color: var(--new-ecru);
   /* background-color: #d32f2f; */
   color: black;
   color: var(--dark-green);
+  color: var(--new-green);
   padding: 20px 0;
+  
   /* border-top: 1px solid gray */
 }
 
@@ -1608,6 +1622,7 @@ footer {
   align-items: center;
   width: 80%;
   margin: 0 auto;
+  font-family: 'Petit Formal Script', cursive!important ;
 }
 
 .footer-info,
@@ -1629,6 +1644,7 @@ footer {
   font-size: 24px;
   color: black;
   color: var(--dark-green);
+  color: var(--new-green);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
