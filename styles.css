@@ -4,11 +4,15 @@
   --bg-cream: #f9f5f2;
   --off-white: #FAF3E0;
   --deep-black: #1C1C1C;
-  --new-green: #183E0C;
+  --new-green:  #3e4c07;
   --new-ecru: #FFFAC8;
+  --ivoire: #f8f4f1;
+  --brun: #8c6532;
+
 }
 h1, h2, h3, h4, p,a, .titre-script {
-  font-family: 'Petit Formal Script', cursive!important ;
+  font-family: 'Cormorant Garamond', serif!important;
+  /* font-family: 'Petit Formal Script', cursive!important ; */
 }
 
 
@@ -90,15 +94,15 @@ header {
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-  /* margin-right: 20px; */
-  padding: 8px;
+  margin-right: 20px;
+  /* padding: 8px; */
  
-  background-color: var(--new-ecru);
-  background-color: var(--bg-cream);
+  /* background-color: var(--new-ecru);
+  background-color: var(--bg-cream); */
   /* background-color: transparent; */
   /* background: var(--new-green); */
-  border-radius: 5px 0 5px 5px;
-  border: 2px solid var(--new-green);
+  /* border-radius: 5px 0 5px 5px; */
+  /* border: 2px solid var(--new-green); */
   
 
 
@@ -107,14 +111,14 @@ header {
 }
 
 .burger-menu span {
-  width: 35px;
+  width: 55px;
 
-  height:1px;
+  height:6px;
   /* background: var(--bg-cream);
   background: var(--dark-green);
   border: 1px solid var(--dark-green); */
   background: var(--new-green);
-  border: 1px solid var(--new-green);
+  /* border: 1px solid var(--new-green); */
   /* border: 1px solid var(--new-ecru);
   background-color: var(--new-ecru); */
   /* border: 1px solid black; */
@@ -130,14 +134,16 @@ header {
   flex-direction: column;
   position: absolute;
   top: 100px;
-  right: 40px;
+  right:40px;
   background: transparent;
   background-color: black;
   background-color: rgb(9, 67, 9);
   background-color: var(--dark-green);
+ 
+  
 
 
-  width: 170px;
+  width: 160px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
   border-radius: 5px;
@@ -152,9 +158,10 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
   color: #333;
-  color: white;
+  color: var(--ivoire);
+  
   transition: color 0.3s ease;
 }
 
@@ -171,7 +178,7 @@ header {
   display: flex;
   transform: translateX(0);
   /* Assure que le menu s'affiche bien */
-  opacity: 1;
+  opacity: 0.9;
 }
 
 
@@ -273,92 +280,98 @@ main {
 .hero {
   width: 100%;
   min-height: 100vh;
+  padding-right: 40%;
+  
  
  
   display: flex;
   flex-direction: column;
-  align-items: center;
+ 
+  /* align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: center; */
   /* padding-top: 70px;  */
-  background: url('./assets/Logo/fonddaccueil.jpg') no-repeat center center/cover;
+  /* background: url('./assets/Logo/fonddaccueil.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: center top;
+  background-position: center 70%; */
+  background: url(./assets/Logo/fonddaccueil7.webp)no-repeat center center;
+  background-size: cover;
+  
+  
+  
 
+}
+.hero-first{
+ 
+  margin-left: 0;
+  margin-right: 40%;
+ 
+  margin-top: 40px;
+  padding-left: 60px;
+
+ 
 }
 
 /* Titres */
 .hero h1 {
-  font-size:6.5rem !important;
-  font-weight: 500 !important;
+  font-size:8rem !important;
+  font-weight: 100 !important;
   font-style: italic;
+  
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 30px;
+  margin-top: 50px;
   
   
  
   /* color:#333 !important; */
-  color: var(--new-green);
-  /* text-shadow: 1px 4px 2px var(--dark-green); */
-  text-shadow: 1px 3px 1px var(--new-ecru);
-  /* color: black!important; */
   
-  /* text-transform: uppercase; */
-  /* text-shadow: 9px 9px 10px rgba(0, 0, 0, 0.6);
-  text-shadow: 1px 5px 5px  white; */
-  /* font-style: italic; */
-  margin-bottom: 20px !important;
-  margin-top: 0 !important;
+  color: var(--ivoire);
+ 
+  text-shadow: 1px 2px 1px var(--deep-black);
+  
+  padding-top: 0;
 
 }
 
 .hero h2 {
   font-size: 4rem !important;
-  ;
-  font-weight: 400 !important;
- 
-  
- 
+  font-weight: 100 !important;
   font-style: italic;
-  /* text-shadow: 1px 4px 1px var(--bg-cream)!important; */
-  margin-top: 0px;
-  margin-bottom: 50px !important;
-  /* color: var(--dark-green); */
-  
-  /* text-shadow: 5px 3px 1px var(--dark-green)!important; */
-  /* color: var(--bg-cream)!important;
-  color:#333 !important; */
-  /* color: var(--new-green)!important; */
+ 
+  width: 100%!important;
   color: var(--new-green);
-  /* text-shadow: 1px 4px 2px var(--dark-green); */
-  text-shadow: 1px 2px 1px var(--new-ecru);
-
-
-
-
+  text-shadow: 3px 2px 1px var(--ivoire);
+  margin-top: 20px;
+  
+ 
 }
+
 
 .hero h3 {
-  font-size: 3.5rem !important;
+  font-size: 4rem !important;
   ;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   ;
   font-style: oblique;
-  margin-top: 10px;
-  margin-bottom: 30px !important;
-  /* color: var(--dark-green); */
-  /* text-shadow: 1px 2px 2px black; */
-  /* color: var(--bg-cream)!important; */
-  /* text-shadow: 4px 2px 1px var(--dark-green)!important; */
-  /* color:black !important;
-  text-shadow: 1px 1px 1px black!important;
-  text-shadow: 1px 1px 1px var(--bg-cream)!important; */
-  color: #333;
-  /* text-shadow: 1px 4px 2px var(--dark-green); */
-  text-shadow: 1px 1px 1px var(--new-ecru);
+  
+  color: var(--ivoire);
+  
+
+  text-shadow: 2px 1px 1px var(--deep-black);
+ 
+  width: 80%;
+  text-align: end;
+  margin-top: 200px;
+  margin-bottom: 0;
   
   
 
 
 }
 
-.hero h4 {
+/* .hero h4 {
   font-size: 3.2rem !important;
   ;
   font-weight: 400 !important;
@@ -367,22 +380,12 @@ main {
   margin-top: 10px;
   margin-bottom: 10px;
   color:#333 !important;
-  /* color:black !important; */
-  /* color: var(--new-green)!important; */
-  /* text-shadow: 1px 2px 2px black; */
-  /* color: var(--bg-cream)!important; */
-  /* text-shadow: 2px 2px 1px black!important;
-  text-shadow: 4px 2px 1px var(--dark-green)!important; */
-  /* color:#333 !important; */
-
-  /* text-shadow: 1px 1px 1px var(--bg-cream)!important; */
-  /* color: var(--new-green)!important; */
-  /* text-shadow: 1px 4px 2px var(--dark-green); */
+ 
   text-shadow: 1px 1px 1px var(--new-ecru);
 
 
 
-}
+} */
 
 .hero,
 .categories-content {
@@ -404,23 +407,18 @@ main {
 #categories-section {
   background-color: var(--bg-cream);
   background-color: var(--new-ecru);
-  /* Fond bleu */
-  /* background-color: #007bff; */
-  color: white;
-  /* Texte en blanc pour contraster */
+  background-color: var(--ivoire);
   display: flex;
   justify-content: center;
-
-
   flex-direction: column;
   width: 100%;
-  /* Prend toute la largeur */
+ 
   min-height: 110vh;
-  /* Hauteur égale à la hauteur de la fenêtre */
+
   padding: 20px;
-  /* Ajoute un peu de padding */
+  
   box-sizing: border-box;
-  /* S'assure que le padding n'affecte pas la taille */
+
   padding-bottom: 150px;
 }
 
@@ -449,9 +447,10 @@ main {
 }
 
 .categories-text p {
-  font-size: 1.2rem;
-  color: var(--dark-green);
+  font-size: 2rem;
+ 
   color: var(--new-green);
+ 
   /* Assure que le texte est visible */
   line-height: 1.6;
   /* Espacement entre les lignes */
@@ -470,48 +469,42 @@ main {
 
 .categories {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
   margin: 20px auto;
   max-width: 90%;
-  height: 50vh;
+  height: 60vh;
   /* Laisse la div s'adapter à son contenu */
 }
 
-.page h1 {
-  font-size: 2.8rem;
-  /* ✅ Taille du titre */
+ .portrait h1 {
+ 
   font-weight: 100;
   font-style: italic;
+  font-size: 4rem;
   color: #333;
   color: var(--dark-green);
   text-align: center;
-  /* text-transform: uppercase; */
+ 
   margin-bottom: 15px;
+  
   padding: 10px 20px;
-  /* border-bottom: 3px solid #007bff; */
-  /* ✅ Petite barre bleue sous le titre */
-  display: inline-block;
-  /* ✅ Ajuste la taille de l'élément au contenu */
-  letter-spacing: 2px;
-  margin-top: 2%;
-}
 
-.page h2 {
+  display: inline-block;
+  
+  /* letter-spacing: 2px; */
+  
+  padding-top: 10%;
+}
+.portrait h2 {
   font-size: 1.4rem;
   font-weight: 300;
   color: #555;
   color: var(--dark-green);
-  text-align: center;
-  max-width: 800px;
-  /* ✅ Largeur max pour éviter un texte trop long */
-  margin: 10px auto;
-  /* ✅ Centrage automatique */
-  line-height: 1.6;
-  /* ✅ Espacement entre les lignes */
-  padding: 0 20px;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  text-align: center; 
+
 }
+
 
 /* Style pour les liens de navigation */
 .navigation-links {
@@ -593,10 +586,12 @@ main {
 
 .category {
   flex: 1;
-  max-width: 30%;
+ 
+  max-width: 25%;
 
-  background-color: white;
-  border-radius: 10px;
+  background-color: var(--brun);
+  border: 20px  solid var(--brun);
+  /* border-radius: 10px; */
   transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
   text-align: center;
   margin: 10px;
@@ -614,21 +609,23 @@ main {
 
 .category img {
   width: 100%;
-  height: 80%;
+  height: 82%;
+  border: 6px solid var(--ivoire);
   display: block;
 
 }
 
 .category h2 {
   /* margin: 15px 0; */
-  font-size: 22px;
-  height: 20%;
+  font-size: 2rem;
+  font-weight: 100;
+  height: 18%;
   /* Prend 20% de la hauteur de .category */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333;
-  color: var(--dark-green);
+  color: var(--ivoire);
+  text-transform: uppercase;
 
   margin: 0;
 }
@@ -1510,7 +1507,7 @@ body.modal-open {
 .portrait h1 {
   text-align: center;
   /* font-size: 2rem; */
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
 
 /* Section principale */
@@ -1524,39 +1521,69 @@ body.modal-open {
   margin-bottom: 30px;
 }
 
+
 /* Grande image */
 .portrait-image-large {
   flex: 1;
-  max-width: 45%;
+  max-width: 30%;
+  max-height: 800px;
+  background-color: var(--brun);
+  padding-bottom: 70px;
+
+  border: 22px solid var(--brun);
+  
+
 }
 
 .portrait-image-large img {
   width: 100%;
-  max-height: 60vh;
+  /* height: 600px; */
+  max-height: 420px;
   /* Ne dépasse pas 80% de la hauteur de l'écran */
   object-fit: cover;
-  border-radius: 8px;
+  
+  border: 6px solid var(--ivoire);
+}
+
+.portrait h2{
+  font-size: 3rem;
+  padding-bottom: 40px;
+  text-align: start;
 }
 
 /* Texte */
 .portrait-text {
   flex: 1;
   max-width: 50%;
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: 2rem;
+  text-align: start;
+  line-height: 1.2;
   color: var(--dark-green);
   padding: 15px;
   /* background-color:var(--gold) ; */
   border-radius: 25px;
 }
+.portrait-text-formations{
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 80px;
+  font-size: 2rem;
+
+}
+.portrait-text-formations p{
+  font-size: 2rem;
+  color: var(--dark-green);
+  line-height: 1.2;
+
+}
 
 /* Section avec deux images en bas */
-.portrait-gallery {
+/* .portrait-gallery {
   display: flex;
   justify-content: center;
   gap: 50px;
   padding: 0 5%;
-  /* Ajoute du padding latéral */
+ 
   margin-top: 20px;
   margin: 100px;
 }
@@ -1571,9 +1598,8 @@ body.modal-open {
   height: auto;
   border-radius: 8px;
   max-height: 40vh;
-  /* Ajuste la hauteur pour éviter qu'elles soient trop grandes */
   object-fit: cover;
-}
+} */
 
 /* Hover léger */
 /* .portrait-image-large img,
@@ -1605,11 +1631,11 @@ body.modal-open {
 
 
 footer {
-  background: var(--bg-cream);
-  background-color: var(--new-ecru);
-  /* background-color: #d32f2f; */
-  color: black;
-  color: var(--dark-green);
+ background-color: var(--ivoire);
+ font-size: 1.5rem;
+ 
+
+ 
   color: var(--new-green);
   padding: 20px 0;
   
@@ -1620,9 +1646,11 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  font-family: 'Petit Formal Script', cursive!important ;
+ font-family: 'Cormorant Garamond', serif!important;
+ padding-left: 5%;
+padding-right: 5%;
 }
 
 .footer-info,
@@ -1630,9 +1658,14 @@ footer {
   list-style: none;
   display: flex;
 
-  gap: 15px;
+  /* gap: 15px; */
   padding: 0;
   margin: 0;
+}
+.footer-info{
+ width: 100%;
+ justify-content: space-around;
+
 }
 
 .footer-icons {
