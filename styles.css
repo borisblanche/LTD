@@ -640,9 +640,30 @@ main {
   /* height: 25vh; */
   z-index: 100;
   background-color: var(--bg-cream);
+  /* background-color: #007bff; */
+  padding-top: 100px;
+  padding-bottom: 50px;
+ 
 
   /* height: 50vh; */
   
+}
+.page-header h1{
+  font-size: 3.5rem;
+  font-weight: 100;
+  font-family: 'Cormorant Garamond', serif!important;
+  font-style: italic;
+  color: var(--dark-green);
+
+}
+
+.page-header h2{
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: 'Cormorant Garamond', serif!important;
+  font-style: italic;
+  color: var(--dark-green);
+
 }
 
 /* Galeries */
@@ -676,65 +697,66 @@ main {
   /* background-color: #007bff; */
   padding-top: 50px;
   padding-bottom: 50px;
+ padding-left: 10%;
+  padding-right: 10%;
+  
+  
 }
 
 .project-item {
   position: relative;
-  width: 400px;
+  width: 350px;
   height: 400px;
   /* Ajuste selon ton design */
   overflow: hidden;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   cursor: pointer;
+  border: 20px solid var(--brun);
+  background-color:var(--brun);
 }
 
 .project-item:hover {
   transform: scale(1.05);
+ 
 }
 
 .project-image {
-  width: 100%;
-  height: auto;
-  min-height: 60vh;
-  max-height: 60vh;
+width: 100%;
+max-height: 80%;
+border: 7px solid var(--off-white);
   display: block;
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 
 .project-title {
   position: absolute;
   /* top: 100%; */
-  left: 0;
+  
 
   width: 100%;
   height: 100%;
-  /* ✅ Prend toute la place */
-  display: flex;
-  align-items: center;
-  /* ✅ Centre verticalement */
 
-  justify-content: center;
-  /* ✅ Centre horizontalement */
-  background: rgba(0, 0, 0, 0.8);
   /* background: var(--dark-green);  */
-  color: white;
-  /* color: var(--gold);
-  color: var(--dark-green); */
-  font-size: 3.4rem;
-  font-weight: 400;
+  color: var(--ivoire);
+  
+  
+  font-size: 2.6rem;
+  font-weight: 200;
   font-style: italic;
   text-align: center;
-  opacity: 0;
-  transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  
+  padding-top: 20px;
+ 
+ 
 }
 
 /* ✅ Afficher le titre et l'ombre au survol */
-.project-item:hover .project-title {
+/* .project-item:hover .project-title {
   top: 0;
   opacity: 0.7;
-}
+} */
 
 
 /* .project-gallery img {
@@ -882,25 +904,7 @@ body.modal-open {
   scale: 1.2;
 }
 
-.project-image {
-  max-width: 50nh;
-  max-height: 60vh;
-  opacity: 0.9;
-  height: auto;
-  border-radius: 8px;
-  /* Coins arrondis */
-  transition: box-shadow 0.3s ease;
-  /* Transition fluide pour l'ombrage */
-  cursor: pointer;
-  /* Indique que l'image est cliquable */
-}
-
-.project-image:hover {
-  /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); */
-  /* box-shadow: 0 12px 24px var(--dark-green); */
-  /* Ombre plus grande et plus dense au survol */
-  opacity: 1;
-}
+/*  */
 
 /* Section 1 : Photo principale */
 .photo-principale img {
@@ -1465,7 +1469,7 @@ body.modal-open {
 }
  .contact-info-content p, .contact-legal {
   color: var(--dark-green);
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0;
   flex-direction: row;
 }
@@ -1592,7 +1596,7 @@ body.modal-open {
 }
 
 /* Titre */
-.portrait h1, .contact h1  {
+.portrait h1, .contact h1 {
   text-align: center;
   font-size: 5rem;
   margin-bottom: 80px;
