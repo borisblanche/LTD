@@ -95,6 +95,10 @@ header {
   gap: 8px;
   cursor: pointer;
   margin-right: 20px;
+  background-color: var(--ivoire);
+  
+  padding: 7px;
+ 
   /* padding: 8px; */
  
   /* background-color: var(--new-ecru);
@@ -111,7 +115,7 @@ header {
 }
 
 .burger-menu span {
-  width: 55px;
+  width: 40px;
 
   height:6px;
   /* background: var(--bg-cream);
@@ -139,6 +143,8 @@ header {
   background-color: black;
   background-color: rgb(9, 67, 9);
   background-color: var(--dark-green);
+  background-color: var(--brun);
+  background-color: var(--ivoire);
  
   
 
@@ -161,15 +167,14 @@ header {
   font-size: 22px;
   color: #333;
   color: var(--ivoire);
+  color: var(--brun);
+  
   
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #007bff;
-  color: #333;
-  color: goldenrod;
-  color: var(--gold);
+  
   /* color: var(--brun); */
   text-decoration: underline;
 }
@@ -442,20 +447,20 @@ main {
   /* Aucun fond */
   /* background-color: #007bff; */
   padding: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
   margin: 20px;
   /* Marge autour du texte pour mieux l'espacer */
 }
 
 .categories-text p {
-  font-size: 2rem;
+  font-size: 1.8rem;
  
   color: var(--new-green);
  
   /* Assure que le texte est visible */
   line-height: 1.6;
   /* Espacement entre les lignes */
-  margin: 20px 0;
+  margin: 10px 0;
   /* Marge au-dessus et en-dessous du texte */
   padding: 10px 0;
   /* Padding pour améliorer l'espacement autour du texte */
@@ -542,7 +547,7 @@ main {
   text-decoration: underline;
 } */
 .nav-link {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-decoration: none;
   color: var(--dark-green);
   
@@ -640,6 +645,7 @@ main {
   /* height: 25vh; */
   z-index: 100;
   background-color: var(--bg-cream);
+ 
   /* background-color: #007bff; */
   padding-top: 100px;
   padding-bottom: 50px;
@@ -649,11 +655,12 @@ main {
   
 }
 .page-header h1{
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 100;
   font-family: 'Cormorant Garamond', serif!important;
   font-style: italic;
-  color: var(--dark-green);
+  color: var(--new-green);
+  color: var(--brun);
 
 }
 
@@ -683,6 +690,7 @@ main {
   /* Pas de padding */
 
   /* background-color: #007bff; */
+  
 }
 
 
@@ -788,7 +796,7 @@ body.modal-open {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   background: color-mix(in srgb, var(--dark-green) 90%, transparent);
-
+background: var(--brun);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -809,11 +817,12 @@ body.modal-open {
 
 .modal-content {
   background: var(--bg-cream);
+  background: var(--new-ecru);
 
   padding: 20px;
-  border-radius: 8px;
-  max-width: 90%;
-  min-width: 90%;
+  /* border-radius: 8px; */
+  max-width: 75%;
+  min-width: 75%;
   max-height: 90%;
   overflow-y: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -865,13 +874,30 @@ body.modal-open {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  
   /* Espace entre l'image et le titre */
 }
+.photo-principale img {
+  display: block;
+  width: 70%;
+  /* L'image occupe toute la largeur */
+  max-height: 60vh;
+  /* Limite la hauteur à 100% de la hauteur de l'écran */
+  margin: 50px auto;
+  /* Centre horizontalement */
+  object-fit: cover;
+  border: 3px solid var(--brun);
+  
+  /* Adapte l'image à son conteneur */
+  /* border-radius: 5px; */
+}
+
 
 .photo-principale h3 {
   font-size: 4rem;
   /* Taille ajustable */
-  font-weight: 300;
+  font-weight: 200;
+  font-style: italic;
   text-align: center;
 
   color: var(--dark-green);
@@ -884,11 +910,14 @@ body.modal-open {
 /* Bouton de fermeture */
 .close-modal {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
 
   color: var(--gold);
   color: var(--bg-cream);
+  color: var(--new-ecru);
+  /* color: var(--new-green); */
+  
   /* background-color: white; */
   /* border: 5px solid black; */
   background-color: transparent;
@@ -896,7 +925,7 @@ body.modal-open {
   font-size: 40px;
   cursor: pointer;
   padding: 5px 10px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   z-index: 1001;
 }
 
@@ -907,18 +936,7 @@ body.modal-open {
 /*  */
 
 /* Section 1 : Photo principale */
-.photo-principale img {
-  display: block;
-  width: 60%;
-  /* L'image occupe toute la largeur */
-  max-height: 60vh;
-  /* Limite la hauteur à 100% de la hauteur de l'écran */
-  margin: 50px auto;
-  /* Centre horizontalement */
-  object-fit: cover;
-  /* Adapte l'image à son conteneur */
-  border-radius: 5px;
-}
+
 
 /* Section 2 : Détails */
 .details {
@@ -940,7 +958,8 @@ body.modal-open {
   /* Limite la hauteur à 100% de la hauteur de l'écran */
   object-fit: cover;
   /* Adapte l'image à son conteneur */
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  border: 3px solid var(--brun);
 
 }
 
@@ -973,7 +992,7 @@ body.modal-open {
 }
 
 .details-text p {
-  font-size: 1rem;
+  font-size: 2rem;
   line-height: 1.6;
 }
 
@@ -999,7 +1018,8 @@ body.modal-open {
   max-height: 50vh;
   object-fit: cover;
   /* Adapte l'image à son conteneur */
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  border: 3px solid var(--brun);
   /* Coins arrondis */
   transition: transform 0.3s ease;
 
@@ -1057,16 +1077,17 @@ body.modal-open {
   width: 100px;
   /* Garde la taille d’origine */
   height: 100px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   overflow: hidden;
   cursor: pointer;
+
 }
 
 .carousel-image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   transition: transform 0.3s ease;
   opacity: 0.8;
 }
@@ -1082,7 +1103,9 @@ body.modal-open {
   justify-content: center;
   background: black;
   background: var(--dark-green);
+  background: var(--brun);
   color: white;
+  
   font-size: 14px;
   text-align: center;
   opacity: 0;
@@ -1115,9 +1138,10 @@ body.modal-open {
   background: none;
   /* ❌ Supprime tout fond */
   color: var(--dark-green);
+  color: var(--brun);
   /* ✅ Utilise ta variable de couleur */
   border: none;
-  font-size: 2rem;
+  font-size: 3rem;
   /* ✅ Agrandit légèrement l’icône pour une meilleure visibilité */
   cursor: pointer;
   padding: 5px;
@@ -1156,7 +1180,8 @@ body.modal-open {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  background-color: var(--dark-green);
+  
+  background: var(--brun);
   display: none;
   /* Masqué par défaut */
   justify-content: center;
@@ -1177,27 +1202,32 @@ body.modal-open {
 .modal-grande-content {
   position: relative;
   background: var(--bg-cream);
+  background: var(--new-ecru);
   padding: 20px;
-  border-radius: 8px;
-  width: 90%;
+  /* border-radius: 8px; */
+  width: 80%;
   /* max-width: 800px; */
   height: 90%;
+   display: flex;
+ flex-direction: column ;
+ vertical-align: middle;
+ justify-content: center;
 }
 
 .close-grande-image {
   position: absolute;
   top: -50px;
-  right: -60px;
+  right: -120px!important;
   background: transparent;
-  color: var(--dark-green);
-  color: #007bff;
-  color: var(--bg-cream);
+  color: var(--new-green)!important;
+  
+
   /* Couleur verte */
   border: none;
-  font-size: 40px;
+  font-size: 3rem!important;
   /* Taille plus visible */
   cursor: pointer;
-  padding: 5px;
+ 
   transition: transform 0.2s ease-in-out;
   z-index: 1000;
 }
@@ -1213,17 +1243,21 @@ body.modal-open {
 /* Assurez-vous que le conteneur du slider n'affiche qu'une seule image à la fois */
 /* Assurez-vous que le conteneur du slider affiche une seule image */
 .slider-grande-image-container {
+ 
+ border: 3px solid var(--brun);
 
   max-width: 800px;
   /* max-width: 1000px;  */
-  max-height: 100%;
+  height: 80%;
   /* Ajustable pour éviter les débordements */
   overflow: hidden;
   position: relative;
 
   margin: auto;
+ 
+ 
   /* Centre le slider */
-  border-radius: 10px;
+  /* border-radius: 10px; */
   /* Ajoute des bords arrondis pour un design moderne */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   /* Légère ombre pour un effet propre */
@@ -1244,7 +1278,7 @@ body.modal-open {
   object-fit: cover;
   /* Ajuste l'image sans la déformer */
   flex-shrink: 0;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 /* Boutons de navigation stylés */
@@ -1255,12 +1289,12 @@ body.modal-open {
   background-color: transparent;
   /* background: rgba(0, 0, 0, 0.6); */
   color: white;
-  color: var(--dark-green);
+  color: var(--new-green);
   border: none;
   padding: 12px 18px;
   cursor: pointer;
   z-index: 10;
-  font-size: 40px;
+  font-size: 3rem;
   border-radius: 50%;
   /* Rend les boutons ronds */
   transition: 0.3s ease;
