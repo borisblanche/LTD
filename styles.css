@@ -20,7 +20,7 @@ h1, h2, h3, h4, p,a, .titre-script {
 html,
 body {
   width: 100%;
-  height: 100%;
+  height: auto;
   /* Assure que le body occupe toute la hauteur */
   overflow: auto;
   /* Permet le défilement sur la page */
@@ -58,16 +58,30 @@ header {
 }
 
 
-.page {
+/* .page {
   display: none;
-  /* Cache toutes les pages par défaut */
+  
   background-color: var(--bg-cream);
 }
 
 .page.active {
   display: block;
-  /* Affiche uniquement la page active */
+ 
+} */
+
+.page {
+  display: none; /* toutes les pages sont cachées par défaut */
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+ 
+  background-color: var(--bg-cream);
 }
+
+.page.active {
+  display: block;
+}
+
 
 
 /* ✅ Styles de la navbar */
@@ -1845,6 +1859,7 @@ footer {
  
   color: var(--new-green);
   padding: 20px 0;
+  /* position: relative; */
   
   /* border-top: 1px solid gray */
 }
