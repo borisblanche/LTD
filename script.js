@@ -112,6 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
             link.classList.toggle("active", linkCategory === categoryName); // Ajoute la classe active au lien
         });
         displayCategoryImages(categoryName); 
+        
+            window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+
     };
     document.querySelectorAll('.navigation-links a').forEach(link => {
     link.addEventListener("click", (e) => {
