@@ -219,30 +219,7 @@ header {
   transform: scale(1.1);
 }
 
-/* ✅ Conteneur des liens */
-/* .nav-links {
-  display: flex;
-  gap: 15px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
-.nav-links a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #333;
-  padding: 10px 15px; 
-  transition: color 0.3s ease, background 0.3s ease;
-  border-radius: 5px;
-}
-
-.nav-links a:hover {
-  color: white;
-  background: #007bff;
-} */
-/* Style général pour le main */
-/* Assure que le body et le html prennent toute la hauteur */
 .home {
   margin-top: 0;
   /* min-height: calc(100vh - 120px);  */
@@ -475,7 +452,7 @@ main {
   /* La section occupe toute la largeur */
   max-width: 80%;
   /* Limite la largeur pour une meilleure lisibilité */
-  text-align: center;
+  
   background-color: transparent;
   /* Aucun fond */
   /* background-color: #007bff; */
@@ -487,23 +464,13 @@ main {
 
 .categories-text p {
   font-size: 1.8rem;
-
   color: var(--new-green);
-
-  /* Assure que le texte est visible */
   line-height: 1.6;
-  /* Espacement entre les lignes */
   margin: 10px 0;
-  /* Marge au-dessus et en-dessous du texte */
   padding: 10px 0;
-  /* Padding pour améliorer l'espacement autour du texte */
   background-color: transparent;
-  /* Enlève le fond de la p */
   min-width: 100%;
-  /* Limite la largeur de l'élément */
   overflow: hidden;
-  /* Cache tout débordement */
-  /* background-color: #333; */
   text-align: justify;
 }
 
@@ -514,27 +481,18 @@ main {
   margin: 20px auto;
   max-width: 90%;
   height: 60vh;
-
-  /* Laisse la div s'adapter à son contenu */
 }
 
 .portrait h1 {
-
   font-weight: 100;
   font-style: italic;
   font-size: 4rem;
   color: #333;
   color: var(--dark-green);
   text-align: center;
-
   margin-bottom: 15px;
-
   padding: 10px 20px;
-
   display: inline-block;
-
-  /* letter-spacing: 2px; */
-
   padding-top: 10%;
 }
 
@@ -928,20 +886,21 @@ body.modal-open {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  
 
   /* Espace entre l'image et le titre */
 }
 
 .photo-principale img {
   display: block;
-  width: 70%;
+  min-width: 70%;
   /* L'image occupe toute la largeur */
-  max-height: 60vh;
+  min-height: 60vh;
   /* Limite la hauteur à 100% de la hauteur de l'écran */
   margin: 50px auto;
   /* Centre horizontalement */
   object-fit: cover;
-  border: 3px solid var(--brun);
+  border: 1px solid var(--brun);
 
   /* Adapte l'image à son conteneur */
   /* border-radius: 5px; */
@@ -1011,14 +970,14 @@ body.modal-open {
 }
 
 .details img {
-  width: 49%;
+  min-width: 50%;
   /* L'image occupe 50% de la largeur */
   max-height: 50vh;
   /* Limite la hauteur à 100% de la hauteur de l'écran */
   object-fit: cover;
   /* Adapte l'image à son conteneur */
   /* border-radius: 5px; */
-  border: 3px solid var(--brun);
+  border: 1px solid var(--brun);
 
 }
 
@@ -1063,7 +1022,7 @@ body.modal-open {
   gap: 2%;
   margin: 2%;
   padding-bottom: 120px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* Réduit l'espace entre les images pour conserver l'effet aéré */
 
   /* Ajoute un peu de padding autour de la galerie */
@@ -1079,7 +1038,7 @@ body.modal-open {
   object-fit: cover;
   /* Adapte l'image à son conteneur */
   /* border-radius: 5px; */
-  border: 3px solid var(--brun);
+  border: 1px solid var(--brun);
   /* Coins arrondis */
   transition: transform 0.3s ease;
 
@@ -1394,98 +1353,6 @@ body.modal-open {
   transform: translateY(-50%) scale(1.3);
 }
 
-
-
-/* Section Contact */
-/* Section Contact */
-/* .page.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
-  background-color: var(--bg-cream);
-  
-} */
-
-/* Image principale */
-/* .contact-container {
-  display: flex;
-  flex-direction: column;
-  
-  
-}
-
-.contact-row {
-  display: flex;
- 
-
-
-
-  
-
-
-
-} */
-/* .contact-box {
-  flex: 1;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .contact-photo  {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-  height: 100%;
-  max-height: 300px;
-
-
-}
-
-.contact-photo img  {
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
-/* .contact-info{
-  align-items:flex-start ;
-} */
-
-/* .contact-info,
-.contact-legal {
-  background: var(--cream);
-  padding: 15px;
-
-  width: 100%;
-
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-
-
-  
-}
-
-.contact-info {
-  display: flex;
-  align-items: center;
- 
- 
-
-
-}
- */
 .contact {
   padding-top: 120px;
   font-family: 'Cormorant Garamond', serif !important;
@@ -1497,10 +1364,6 @@ body.modal-open {
   font-size: 3rem;
   font-weight: 100;
   font-style: italic;
-
-
-
-
 }
 
 .contact-main {
@@ -1563,24 +1426,11 @@ body.modal-open {
   flex-direction: column;
   justify-content: center !important;
   gap: 50px;
-
-
-
-  /* background-color: #007bff; */
   padding: 0;
-
-
-
-
-
-
-
 }
 
 .contact-info-content {
   display: flex;
-  /* border:1px solid red; */
-
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
@@ -1595,6 +1445,7 @@ body.modal-open {
   justify-content: space-between;
   align-items: center;
   font-style: italic;
+  text-align: justify;
 }
 
 .contact-info-item {
@@ -1645,33 +1496,6 @@ body.modal-open {
   border: 12px solid var(--brun);
 }
 
-/* .contact-details {
-  flex-grow: 1;
-}
-
-.contact-icons {
-  margin-top: 10px;
-}
-
-.contact-icons a {
-  font-size: 24px;
-  margin: 0 10px;
-
-  color: var(--dark-green);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.contact-icons a:hover {
-  transform: scale(1.1);
-  color: var(--gold);
-
-}
-
-.contact-map iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
 
 
 
@@ -1685,8 +1509,6 @@ body.modal-open {
 } */
 
 
-/* Section principale */
-/* Garde la structure globale alignée avec la page contact */
 .page.portrait {
   max-width: 100%;
   margin: auto;
@@ -1760,13 +1582,23 @@ body.modal-open {
 .portrait-text {
   flex: 1;
   max-width: 50%;
+  
+ 
+  
+  /* background-color:var(--gold) ; */
+  border-radius: 25px;
+}
+.portrait-text-suite{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.portrait-text , .portrait-text-suite {
   font-size: 1.7rem;
-  text-align: start;
+   text-align: justify;
   line-height: 1.2;
   color: var(--dark-green);
   padding: 15px;
-  /* background-color:var(--gold) ; */
-  border-radius: 25px;
+
 }
 
 .portrait-text-formations {
@@ -1779,7 +1611,7 @@ body.modal-open {
 }
 
 .portrait-text-formations p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--dark-green);
   line-height: 1.2;
 
@@ -1790,6 +1622,7 @@ body.modal-open {
   color: var(--dark-green);
   line-height: 1.2;
   margin-top: 80px;
+  margin-bottom: 200px;
   font-weight: 200;
 }
 
@@ -2119,7 +1952,7 @@ padding-right: 5%; */
     display: block;
     width: 80%;
 
-    max-height: 50vh;
+    min-height: 65vh;
 
     margin: 30px auto;
 
@@ -2196,17 +2029,25 @@ padding-right: 5%; */
   .portrait-text {
     font-size: 1.6rem;
   }
+  .portrait-text , .portrait-text-suite {
+  font-size: 1.6rem;
+   text-align: justify;
+  line-height: 1.2;
+  color: var(--dark-green);
+  padding: 15px;
 
-  .portrait-text-formations {
+}
+
+  .portrait-text-formations p {
     font-size: 1.4rem;
   }
 
   .portrait-text-formations h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: var(--dark-green);
     line-height: 1.2;
     margin-top: 80px;
-    font-weight: 200;
+    font-weight: 400;
   }
 
   .contact-main {
@@ -2487,6 +2328,7 @@ padding-right: 5%; */
 
   .portrait-main {
     flex-direction: column;
+    
     /* background-color: #007bff; */
 
   }
@@ -2512,22 +2354,39 @@ padding-right: 5%; */
 
 
   .portrait-text {
-    /* background-color: #007bff; */
     min-width: 100%;
     margin: auto;
-
+    
   }
 
-  .portrait-text p {
-    font-size: 1.5rem;
-  }
+ 
+    .portrait-text , .portrait-text-suite {
+  font-size: 1.6rem;
+   text-align: justify;
+  line-height: 1.2;
+  color: var(--dark-green);
+  padding: 15px;
+
+}
+.portrait-text-suite{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 0;
+  margin-top: 0;
+}
+.portrait-text-formations{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 15px;
+}
 
   .portrait-text-formations p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .portrait-text-formations h3 {
     font-size: 1.2rem;
+    margin-bottom: 0;
   }
 
   .portrait-gallery {
@@ -2701,9 +2560,21 @@ padding-right: 5%; */
   .portrait-text {
     text-align: center;
   }
+      .portrait-text , .portrait-text-suite {
+  font-size: 1.4rem;
+   text-align: justify;
+  line-height: 1.2;
+  color: var(--dark-green);
+  padding: 15px;
+
+}
+.portrait-text-formations p{
+
+  font-size: 1.2rem;
+}
 
   .portrait h3 {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
   .modal-grande-content {
