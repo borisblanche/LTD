@@ -6,7 +6,7 @@ const categories = [
         titleImage: "assets/portrait.avif",
         // image: "assets/imitations-matieres/bois-jeunechene.avif",
         details: "Details about Category 1",
-        link: "#Patrimoine",
+        link: "#patrimoine",
         projects:
         [
             {
