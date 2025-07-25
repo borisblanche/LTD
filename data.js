@@ -2,11 +2,11 @@
 const categories = [
     {
         id: 1,
-        name: "decoration",
+        name: "patrimoine",
         titleImage: "assets/portrait.avif",
         // image: "assets/imitations-matieres/bois-jeunechene.avif",
         details: "Details about Category 1",
-        link: "#decoration",
+        link: "#Patrimoine",
         projects:
         [
             {
@@ -71,10 +71,10 @@ const categories = [
     },
     {
         id: 3,
-        name: "meubles-peints",
+        name: "mobilier",
         titleImage: "assets/meubles peints/mp-ensemble.avif",
         details: "Details about Category 1",
-        link: "#meubles",
+        link: "#mobilier",
         projects:
         [
             {
