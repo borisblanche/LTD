@@ -910,12 +910,12 @@ body.modal-open {
 .photo-principale h3 {
   font-size: 4rem;
   /* Taille ajustable */
-  font-weight: 200;
-  font-style: italic;
+  font-weight: 100;
+  /* font-style: italic; */
   text-align: center;
 
   color: var(--dark-green);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 

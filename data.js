@@ -79,16 +79,16 @@ const categories = [
         [
             {
                 id: 301,
-                name: "brume1",
+                name: "wax 1",
                 images: [
-                    { index: 0, src: "assets/meubles peints/brume1.webp" },
-                    { index: 1, src:"assets/meubles peints/brume2.webp" },
-                    { index: 2, src: "assets/meubles peints/brume3.webp" },
-                    { index: 3, src: "assets/meubles peints/brume4.webp" },
-                    { index: 4, src: "assets/meubles peints/brume3.webp" },
-                    { index: 5, src: "assets/meubles peints/brume4.webp" },
-                    { index: 6, src: "assets/meubles peints/brume3.webp" },
-                    { index: 7, src: "assets/meubles peints/brume4.webp" },
+                    { index: 0, src: "assets/mobilier/wax1/wax1.1.webp" },
+                    { index: 1, src:"assets/mobilier/wax1/wax1.2.webp" },
+                    { index: 2, src: "assets/mobilier/wax1/wax1.3.webp" },
+                    { index: 3, src: "assets/mobilier/wax1/wax1.4.webp" },
+                    { index: 4, src: "assets/mobilier/wax1/wax1.5.webp" },
+                    // { index: 5, src: "assets/meubles peints/brume4.webp" },
+                    // { index: 6, src: "assets/meubles peints/brume3.webp" },
+                    // { index: 7, src: "assets/meubles peints/brume4.webp" },
                     ],
               
                 description: "Description of brume papapappappapapappappappppppppppppppppppppp ppppppppppppp pppppp pppppppppppppppppppppppppppppp",
@@ -96,114 +96,127 @@ const categories = [
             },
             {
                 id: 302,
-                name: "balade",
+                name: "wax 2",
                 images: [
-                       {index: 0,src: "assets/meubles peints/balade1.webp"},
-                        {index: 1,src: "assets/meubles peints/balade2.webp"},
-                     {index: 2,src: "assets/meubles peints/balade3.webp"},
+                         { index: 0, src: "assets/mobilier/wax2/wax2.1.webp" },
+                    { index: 1, src:"assets/mobilier/wax2/wax2.2.webp" },
+                    { index: 2, src: "assets/mobilier/wax2/wax2.3.webp" },
+                    { index: 3, src: "assets/mobilier/wax2/wax2.4.webp" },
                                           ],
                 description: "Description of balade",
                 link: "project1_2.html"
             },
             {
                 id: 303,
-                name: "balade",
+                name: "wax 3",
                 images: [
-                       {index: 0,src: "assets/meubles peints/balade1.webp"},
-                        {index: 1,src: "assets/meubles peints/balade2.webp"},
-                     {index: 2,src: "assets/meubles peints/balade3.webp"},
+                          { index: 0, src: "assets/mobilier/wax3/wax3.1.webp" },
+                    { index: 1, src:"assets/mobilier/wax3/wax3.2.webp" },
+                    { index: 2, src: "assets/mobilier/wax3/wax3.3.webp" },
+                    { index: 3, src: "assets/mobilier/wax3/wax3.4.webp" },
+                    { index: 4, src: "assets/mobilier/wax3/wax3.5.webp" },
+                    { index: 5, src: "assets/mobilier/wax3/wax3.6.webp" },
+                    
                                           ],
                 description: "lbdbbdb dbbdbbd hhdh d dhhdhd dhhdh dhdhdjd  dhhd d djjd jd jd jd jd jd",
                 link: "project1_2.html"
             },
             {
                 id: 304,
-                name: "balade",
+                name: "wax 4",
                 images: [
-                       {index: 0,src: "assets/meubles peints/balade1.webp"},
-                        {index: 1,src: "assets/meubles peints/balade2.webp"},
-                     {index: 2,src: "assets/meubles peints/balade3.webp"},
+                     { index: 0, src: "assets/mobilier/wax4/wax4.1.webp" },
+                     { index: 1, src: "assets/mobilier/wax4/wax4.2.webp" },
+                     { index: 2, src: "assets/mobilier/wax4/wax4.3.webp" },
+                     { index: 3, src: "assets/mobilier/wax4/wax4.4.webp" },
+                     { index: 4, src: "assets/mobilier/wax4/wax4.5.webp" },
                                           ],
                 description: "Description of balade",
                 link: "project1_2.html"
             },
             {
                 id: 305,
-                name: "balade",
+                name: "wax 5",
                 images: [
-                       {index: 0,src: "assets/meubles peints/balade1.webp"},
-                        {index: 1,src: "assets/meubles peints/balade2.webp"},
-                     {index: 2,src: "assets/meubles peints/balade3.webp"},
+                      { index: 0, src: "assets/mobilier/wax5/wax5.1.webp" },
+                      { index: 1, src: "assets/mobilier/wax5/wax5.2.webp" },
+                      { index: 2, src: "assets/mobilier/wax5/wax5.3.webp" },
+                      { index: 3, src: "assets/mobilier/wax5/wax5.4.webp" },
+                      { index: 4, src: "assets/mobilier/wax5/wax5.5.webp" },
+                      { index: 5, src: "assets/mobilier/wax5/wax5.6.webp" },
                                           ],
                 description: "Description of balade",
                 link: "project1_2.html"
             },
             {
                 id: 306,
-                name: "balade",
+                name: "wax 6",
                 images: [
-                       {index: 0,src: "assets/meubles peints/balade1.webp"},
-                        {index: 1,src: "assets/meubles peints/balade2.webp"},
-                     {index: 2,src: "assets/meubles peints/balade3.webp"},
+                      { index: 0, src: "assets/mobilier/wax6/wax6.1.webp" },
+                      { index: 1, src: "assets/mobilier/wax6/wax6.2.webp" },
+                      { index: 2, src: "assets/mobilier/wax6/wax6.3.webp" },
+                      { index: 3, src: "assets/mobilier/wax6/wax6.4.webp" },
                                           ],
                 description: "Description of balade",
                 link: "project1_2.html"
             },
             {
                 id: 307,
-                name: "balade",
+                name: "wax 7",
                 images: [
-                       {index: 0,src: "assets/meubles peints/balade1.webp"},
-                        {index: 1,src: "assets/meubles peints/balade2.webp"},
-                     {index: 2,src: "assets/meubles peints/balade3.webp"},
+                       { index: 0, src: "assets/mobilier/wax7/wax7.1.webp" },
+                       { index: 1, src: "assets/mobilier/wax7/wax7.2.webp" },
+                       { index: 2, src: "assets/mobilier/wax7/wax7.3.webp" },
+                       { index: 3, src: "assets/mobilier/wax7/wax7.4.webp" },
+                       { index: 4, src: "assets/mobilier/wax7/wax7.5.webp" },
                                           ],
                 description: "Description of balade",
                 link: "project1_2.html"
             },
-            {
-                id: 308,
-                name: "balade",
-                images: [
-                       {index: 0,src: "assets/meubles peints/balade1.webp"},
-                        {index: 1,src: "assets/meubles peints/balade2.webp"},
-                     {index: 2,src: "assets/meubles peints/balade3.webp"},
-                                          ],
-                description: "Description of balade",
-                link: "project1_2.html"
-            },
-            {
-                id: 309,
-                name: "balade",
-                images: [
-                       {index: 0,src: "assets/meubles peints/balade1.webp"},
-                        {index: 1,src: "assets/meubles peints/balade2.webp"},
-                     {index: 2,src: "assets/meubles peints/balade3.webp"},
-                                          ],
-                description: "Description of balade",
-                link: "project1_2.html"
-            },
-            {
-                id: 310,
-                name: "balade",
-                images: [
-                       {index: 0,src: "assets/meubles peints/balade1.webp"},
-                        {index: 1,src: "assets/meubles peints/balade2.webp"},
-                     {index: 2,src: "assets/meubles peints/balade3.webp"},
-                                          ],
-                description: "Description of balade",
-                link: "project1_2.html"
-            },
-            {
-                id: 311,
-                name: "balade",
-                images: [
-                       {index: 0,src: "assets/meubles peints/balade1.webp"},
-                        {index: 1,src: "assets/meubles peints/balade2.webp"},
-                     {index: 2,src: "assets/meubles peints/balade3.webp"},
-                                          ],
-                description: "Description of balade",
-                link: "project1_2.html"
-            },
+            // {
+            //     id: 308,
+            //     name: "balade",
+            //     images: [
+            //            {index: 0,src: "assets/meubles peints/balade1.webp"},
+            //             {index: 1,src: "assets/meubles peints/balade2.webp"},
+            //          {index: 2,src: "assets/meubles peints/balade3.webp"},
+            //                               ],
+            //     description: "Description of balade",
+            //     link: "project1_2.html"
+            // },
+            // {
+            //     id: 309,
+            //     name: "balade",
+            //     images: [
+            //            {index: 0,src: "assets/meubles peints/balade1.webp"},
+            //             {index: 1,src: "assets/meubles peints/balade2.webp"},
+            //          {index: 2,src: "assets/meubles peints/balade3.webp"},
+            //                               ],
+            //     description: "Description of balade",
+            //     link: "project1_2.html"
+            // },
+            // {
+            //     id: 310,
+            //     name: "balade",
+            //     images: [
+            //            {index: 0,src: "assets/meubles peints/balade1.webp"},
+            //             {index: 1,src: "assets/meubles peints/balade2.webp"},
+            //          {index: 2,src: "assets/meubles peints/balade3.webp"},
+            //                               ],
+            //     description: "Description of balade",
+            //     link: "project1_2.html"
+            // },
+            // {
+            //     id: 311,
+            //     name: "balade",
+            //     images: [
+            //            {index: 0,src: "assets/meubles peints/balade1.webp"},
+            //             {index: 1,src: "assets/meubles peints/balade2.webp"},
+            //          {index: 2,src: "assets/meubles peints/balade3.webp"},
+            //                               ],
+            //     description: "Description of balade",
+            //     link: "project1_2.html"
+            // },
         ]
         
     }
