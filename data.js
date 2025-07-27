@@ -79,36 +79,33 @@ const categories = [
         [
             {
                 id: 301,
-                name: "wax 1",
+                name: "wax 1/7",
                 images: [
                     { index: 0, src: "assets/mobilier/wax1/wax1.1.webp" },
                     { index: 1, src:"assets/mobilier/wax1/wax1.2.webp" },
                     { index: 2, src: "assets/mobilier/wax1/wax1.3.webp" },
                     { index: 3, src: "assets/mobilier/wax1/wax1.4.webp" },
                     { index: 4, src: "assets/mobilier/wax1/wax1.5.webp" },
-                    // { index: 5, src: "assets/meubles peints/brume4.webp" },
-                    // { index: 6, src: "assets/meubles peints/brume3.webp" },
-                    // { index: 7, src: "assets/meubles peints/brume4.webp" },
                     ],
               
-                description: "Description of brume papapappappapapappappappppppppppppppppppppp ppppppppppppp pppppp pppppppppppppppppppppppppppppp",
+                description: "Anciennes chaises d'école rénovées. Imitation de tissu Wax peint à la main.",
                 link: "project1_1.html"
             },
             {
                 id: 302,
-                name: "wax 2",
+                name: "wax 2/7",
                 images: [
                          { index: 0, src: "assets/mobilier/wax2/wax2.1.webp" },
                     { index: 1, src:"assets/mobilier/wax2/wax2.2.webp" },
                     { index: 2, src: "assets/mobilier/wax2/wax2.3.webp" },
                     { index: 3, src: "assets/mobilier/wax2/wax2.4.webp" },
                                           ],
-                description: "Description of balade",
+                description: "Anciennes chaises d'école rénovées. Imitation de tissu Wax peint à la main.",
                 link: "project1_2.html"
             },
             {
                 id: 303,
-                name: "wax 3",
+                name: "wax 3/7",
                 images: [
                           { index: 0, src: "assets/mobilier/wax3/wax3.1.webp" },
                     { index: 1, src:"assets/mobilier/wax3/wax3.2.webp" },
@@ -118,12 +115,12 @@ const categories = [
                     { index: 5, src: "assets/mobilier/wax3/wax3.6.webp" },
                     
                                           ],
-                description: "lbdbbdb dbbdbbd hhdh d dhhdhd dhhdh dhdhdjd  dhhd d djjd jd jd jd jd jd",
+                description: "Anciennes chaises d'école rénovées. Imitation de tissu Wax peint à la main.",
                 link: "project1_2.html"
             },
             {
                 id: 304,
-                name: "wax 4",
+                name: "wax 4/7",
                 images: [
                      { index: 0, src: "assets/mobilier/wax4/wax4.1.webp" },
                      { index: 1, src: "assets/mobilier/wax4/wax4.2.webp" },
@@ -131,12 +128,12 @@ const categories = [
                      { index: 3, src: "assets/mobilier/wax4/wax4.4.webp" },
                      { index: 4, src: "assets/mobilier/wax4/wax4.5.webp" },
                                           ],
-                description: "Description of balade",
+                description: "Anciennes chaises d'école rénovées. Imitation de tissu Wax peint à la main.",
                 link: "project1_2.html"
             },
             {
                 id: 305,
-                name: "wax 5",
+                name: "wax 5/7",
                 images: [
                       { index: 0, src: "assets/mobilier/wax5/wax5.1.webp" },
                       { index: 1, src: "assets/mobilier/wax5/wax5.2.webp" },
@@ -145,24 +142,24 @@ const categories = [
                       { index: 4, src: "assets/mobilier/wax5/wax5.5.webp" },
                       { index: 5, src: "assets/mobilier/wax5/wax5.6.webp" },
                                           ],
-                description: "Description of balade",
+                description: "Anciennes chaises d'école rénovées. Imitation de tissu Wax peint à la main.",
                 link: "project1_2.html"
             },
             {
                 id: 306,
-                name: "wax 6",
+                name: "wax 6/7",
                 images: [
                       { index: 0, src: "assets/mobilier/wax6/wax6.1.webp" },
                       { index: 1, src: "assets/mobilier/wax6/wax6.2.webp" },
                       { index: 2, src: "assets/mobilier/wax6/wax6.3.webp" },
                       { index: 3, src: "assets/mobilier/wax6/wax6.4.webp" },
                                           ],
-                description: "Description of balade",
+                description: "Anciennes chaises d'école rénovées. Imitation de tissu Wax peint à la main.",
                 link: "project1_2.html"
             },
             {
                 id: 307,
-                name: "wax 7",
+                name: "wax 7/7",
                 images: [
                        { index: 0, src: "assets/mobilier/wax7/wax7.1.webp" },
                        { index: 1, src: "assets/mobilier/wax7/wax7.2.webp" },
@@ -170,7 +167,7 @@ const categories = [
                        { index: 3, src: "assets/mobilier/wax7/wax7.4.webp" },
                        { index: 4, src: "assets/mobilier/wax7/wax7.5.webp" },
                                           ],
-                description: "Description of balade",
+                description: "Anciennes chaises d'école rénovées. Imitation de tissu Wax peint à la main.",
                 link: "project1_2.html"
             },
             // {
