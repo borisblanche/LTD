@@ -1850,9 +1850,10 @@ padding-right: 5%; */
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
+  
     /* background-color: #007bff; */
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
     padding-left: 5%;
     padding-right: 5%;
   }
