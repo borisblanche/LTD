@@ -11,25 +11,29 @@ const categories = [
         [
             {
                 id: 101,
-                name: "Project 1.1",
+                name: "2019-Chantier Fontainebleau",
                 images: [
-                    { index: 0, src: "assets/imitations-matieres/bois-jeunechene.avif" },
-                    { index: 1, src: "assets/imitations-matieres/bois-loupe.avif" },
-                    { index: 2, src:  "assets/imitations-matieres/bois-noyer.avif" },
+                    { index: 0, src: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 1_resultat.webp" },
+                    { index: 1, src: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 2_resultat.webp" },
+                    { index: 2, src: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 3_resultat.webp" },
+                    { index: 3, src: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 4_resultat.webp" },
+                    { index: 4, src: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 5_resultat.webp" },
                     ],
-                description: "Description of Project 1.1 premier projet",
+                description: "Restitution d'un décor d'époque dans le salon d'une maison de maître à Fontainebleau (77920 - Seine et marne).Fabrication et application d'une peinture à la colle de peau de lapin sur les corniches et les volets intérieurs.Travail réalisé avec Le Décor Français.",
                 link: "project1_1.html"
             },
             {
                 id: 102,
-                name: "Project 1.2",
+                name: "2019 - Eglise de campagne",
                 images: [
-                    { index: 0, src: "assets/imitations-matieres/bois-jeunechene.avif" },
-                    { index: 1, src: "assets/imitations-matieres/bois-loupe.avif" },
-                    { index: 2, src:  "assets/imitations-matieres/bois-noyer.avif" },
+                    { index: 0, src: "assets/Restauration/2019-chantier-eglise-campagne/Eglise de Campagne - photo 1_resultat.webp" },
+                    { index: 1, src: "assets/Restauration/2019-chantier-eglise-campagne/Eglise de Campagne - photo 2_resultat.webp" },
+                    { index: 2, src: "assets/Restauration/2019-chantier-eglise-campagne/Eglise de Campagne - photo 3_resultat.webp" },
+                    { index: 3, src: "assets/Restauration/2019-chantier-eglise-campagne/Eglise de Campagne - photo 4_resultat.webp" },
+                    { index: 4, src: "assets/Restauration/2019-chantier-eglise-campagne/Eglise de Campagne - photo 5_resultat.webp" },
+                    { index: 5, src: "assets/Restauration/2019-chantier-eglise-campagne/Eglise de Campagne - photo 6_resultat.webp" },
                     ],
-               
-                description: "Description of Project 1.2",
+                description: "Reprise chromatique des décors peints de l'église Saint-Pantaléon à Campagne (40090 - Landes).Reprise des teintes et des lacunes, pour une lecture plus harmonieuse des éléments décoratifs du chœur.Travail réalisé pour l' Atelier Dufon",
                 link: "project1_2.html"
             }
         ]
