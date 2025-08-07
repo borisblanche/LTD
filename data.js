@@ -329,12 +329,12 @@ const categories = [
                 id: 203,
                 name: "2019 - Stage de staff",
                 images: [
-                    { index: 0, src: "assets/céations/2019-stage-de-staff\Stage de Staff - Photo 1_resultat.webp" },
-                    { index: 1, src: "assets/céations/2019-stage-de-staff\Stage de Staff - Photo 2_resultat.webp" },
-                    { index: 2, src: "assets/céations/2019-stage-de-staff\Stage de Staff - Photo 3_resultat.webp" },
-                    { index: 3, src: "assets/céations/2019-stage-de-staff\Stage de Staff - Photo 4_resultat.webp" },
-                    { index: 4, src: "assets/céations/2019-stage-de-staff\Stage de Staff - Photo 5_resultat.webp" },
-                    { index: 5, src: "assets/céations/2019-stage-de-staff\Stage de Staff - Photo 6_resultat.webp" },
+                    { index: 0, src: "assets/céations/2019-stage-de-staff/Stage de Staff - Photo 1_resultat.webp" },
+                    { index: 1, src: "assets/céations/2019-stage-de-staff/Stage de Staff - Photo 2_resultat.webp" },
+                    { index: 2, src: "assets/céations/2019-stage-de-staff/Stage de Staff - Photo 3_resultat.webp" },
+                    { index: 3, src: "assets/céations/2019-stage-de-staff/Stage de Staff - Photo 4_resultat.webp" },
+                    { index: 4, src: "assets/céations/2019-stage-de-staff/Stage de Staff - Photo 5_resultat.webp" },
+                    { index: 5, src: "assets/céations/2019-stage-de-staff/Stage de Staff - Photo 6_resultat.webp" },
                     ],
                 description: "Initiation au staff auprès de l’entreprise Garabos frère à Floirac (33270 - Gironde).",
                 link: "project1_1.html"
@@ -551,7 +551,7 @@ const categories = [
             },
             {
                 id: 221,
-                name: "Enduits de chaux ( Charente )",
+                name: "2024 - Enduits de chaux ( Charente )",
                 images: [
                     { index: 0, src: "assets/céations/2024-enduits-de-chaux-charente/IMG_20240411_101718_resultat.webp" },
                     { index: 1, src: "assets/céations/2024-enduits-de-chaux-charente/IMG_20240411_101735 (1)_resultat.webp" },
