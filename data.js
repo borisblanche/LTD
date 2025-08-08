@@ -3,7 +3,7 @@ const categories = [
     {
         id: 1,
         name: "patrimoine",
-        titleImage: "assets/portrait.avif",
+        titleImage: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 1_resultat.webp",
         // image: "assets/imitations-matieres/bois-jeunechene.avif",
         details: "Details about Category 1",
         link: "#patrimoine",
@@ -291,7 +291,7 @@ const categories = [
     {
         id: 2,
         name: "créations",
-        titleImage: "assets/meubles peints/lettrage-1.webp",
+        titleImage: "assets/céations/2019-Mazarinne/Mazarine - Photo 1_resultat.webp",
         details: "Details about Category 1",
         link: "#creations",
         projects:
@@ -568,7 +568,7 @@ const categories = [
     {
         id: 3,
         name: "mobilier",
-        titleImage: "assets/meubles peints/mp-ensemble.avif",
+        titleImage: "assets/illustration-mobilier.webp",
         details: "Details about Category 1",
         link: "#mobilier",
         projects:
