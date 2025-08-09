@@ -436,7 +436,7 @@ main {
   z-index: 100;
   background-color: var(--bg-cream);
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   top: 0;
 }
 
@@ -447,6 +447,7 @@ main {
   color: var(--new-green);
   opacity: 0.7;
   margin-top: 20px;
+  
 }
 
 .project-gallery {
@@ -663,13 +664,15 @@ body.modal-open {
 
 
 .details-text h3 {
+  font-weight: 200;
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .details-text p {
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1.6;
+  text-align: justify;
 }
 
 .galerie-grid {
@@ -684,7 +687,8 @@ body.modal-open {
   min-width: 100%;
   margin: auto;
   height: auto;
-  max-height: 50vh;
+  max-height: 40vh;
+  min-height: 40vh;
   object-fit: cover;
   border: 1px solid var(--brun);
   transition: transform 0.3s ease;
@@ -938,7 +942,8 @@ body.modal-open {
 
 .contact-main {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .contact-info {
@@ -973,6 +978,7 @@ body.modal-open {
   flex-direction: column;
   gap: 50px;
   padding: 0;
+ 
 }
 
 .contact-info-content {
@@ -981,6 +987,7 @@ body.modal-open {
   justify-content: space-between;
   align-items: left;
   font-size: 1.8rem;
+  
 
 }
 
@@ -1012,8 +1019,11 @@ body.modal-open {
   text-decoration: underline;
 }
 
-.mentions-legales p {
-  text-align: left;
+.mentions-legales-content{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 50px;
+ 
 }
 
 .page.portrait {
@@ -1335,6 +1345,17 @@ footer {
     margin: 30px auto;
     object-fit: cover;
   }
+  .details-text h3 {
+  font-weight: 200;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.details-text p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  text-align: justify;
+}
 
   .modal-content {
     min-width: 85%
@@ -1577,7 +1598,17 @@ footer {
   .categories {
     height: 40vh;
   }
+  .details-text h3 {
+  font-weight: 200;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
 
+.details-text p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  text-align: justify;
+}
 
   .galerie-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1695,6 +1726,13 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  .contact-main {
+padding-bottom: 0;
+
+}
+.mentions-legales-content{
+  margin-bottom: 100px;
+}
 
   .contact h2,
   .portrait h2 {
@@ -1883,7 +1921,7 @@ footer {
   }
 
   .page-header {
-    padding-bottom: 0;
+    padding-bottom: 50px;
   }
   .project-gallery {
     margin-top: 150px;
@@ -1903,7 +1941,7 @@ footer {
   }
 
   .page-header h2 {
-    font-size: 0.6rem;
+    font-size: 1rem;
     font-weight: 300;
     color: #555;
     color: var(--dark-green);
@@ -1913,7 +1951,8 @@ footer {
     line-height: 1.6;
     padding: 0 20px;
     margin-bottom: 15px;
-    margin-top: 15px;
+    margin-top: 0px;
+    padding-top: 0;
   }
 
   #categories-section {
@@ -1971,6 +2010,7 @@ footer {
     font-size: 0.8rem;
   }
 
+
   .modal-section {
     display: flex;
     flex-direction: column;
@@ -2005,17 +2045,32 @@ footer {
 
   .details-text p {
     font-size: 1.2rem;
+    
   }
+  .details-text h3 {
+  font-weight: 200;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  
+}
+
+.details-text p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  text-align: justify;
+}
 
   .galerie-grid {
-    margin-bottom: 0;
-    padding-bottom: auto;
+    min-height: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 300px;
   }
 
   .galerie-grid img {
     max-width: 100%;
     max-height: 300px;
-    min-height: 0;
+    min-height: 300px;
+    /* margin-bottom: 10px; */
   }
   .nav-link {
     top: 17%;
@@ -2077,7 +2132,6 @@ footer {
     max-width: 100%;
     min-width: 250px;
     margin: 0;
-    padding: 0;
   }
 
   .contact-photo img {
@@ -2094,6 +2148,7 @@ footer {
 
   .contact-info-content {
     font-size: 1.5rem;
+    text-align: center;
   }
 
   .contact-legal {
@@ -2231,6 +2286,7 @@ footer {
     cursor: pointer;
   }
 
+ 
   .project-image {
     max-height: 120px;
     min-height: 120px;
