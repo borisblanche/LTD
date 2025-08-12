@@ -230,12 +230,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    
-    
-    
-    
-    
-    
 
     // **4. Fonction pour ouvrir la modale**
     const openModal = (project) => {
@@ -397,9 +391,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Attacher les événements globaux
     window.closeModal = closeModal;
 
-    // **7. Gestion du carousel**
-    // Sélection des éléments
-    // Sélection des éléments
     // **7. Gestion du carousel**
  
         const carouselContainer = document.querySelector(".carousel-container");
@@ -795,57 +786,6 @@ if (currentCategoryName !== "home") {
 }
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const navLinks = document.querySelectorAll(".nav-links a");
-//     const pages = document.querySelectorAll(".page");
-
-//     const updateActivePage = (targetId) => {
-//         // Désactive toutes les pages
-//         pages.forEach(page => {
-//             page.classList.remove("active");
-//             page.classList.add("inactive");
-//         });
-
-//         // Vérifie si c'est une page existante
-//         const targetPage = document.querySelector(`.${targetId}`);
-//         if (targetPage) {
-//             targetPage.classList.add("active");
-//             targetPage.classList.remove("inactive");
-//         } else {
-//             // Si c'est une section, on scrolle vers elle
-//             const targetSection = document.getElementById(targetId);
-//             if (targetSection) {
-//                 window.scrollTo({ top: targetSection.offsetTop - 100, behavior: "smooth" });
-//             }
-//         }
-
-//         // ✅ Ferme le menu burger après le clic
-//         document.querySelector(".nav-links").classList.remove("active");
-//         document.querySelector(".burger-menu").classList.remove("active");
-//     };
-
-//     // ✅ Ajoute l'événement aux liens de navigation
-//     navLinks.forEach(link => {
-//         link.addEventListener("click", (e) => {
-//             e.preventDefault();
-//             const targetId = link.getAttribute("href").substring(1); // Supprime le "#"
-//             updateActivePage(targetId);
-//         });
-//     });
-// });
-// document.querySelectorAll(".nav-links a").forEach(link => {
-//     link.addEventListener("click", (e) => {
-//         e.preventDefault(); // Empêche le comportement par défaut du lien
-
-//         const categoryName = link.getAttribute("data-category"); // Utilise data-category
-
-//         updateActivePage(categoryName); // Active la bonne page
-
-//         // ✅ Ferme le menu burger après un clic sur un lien
-//         document.querySelector(".nav-links").classList.remove("active");
-//         document.querySelector(".burger-menu").classList.remove("active");
-//     });
-// });
 document.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector(".burger-menu");
     const navLinks = document.querySelector(".nav-links");

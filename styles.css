@@ -86,8 +86,10 @@ header {
   cursor: pointer;
   margin-right: 20px;
   background-color: var(--ivoire);
-  background-color: transparent;
+  /* background-color: transparent; */
   padding: 7px;
+  border: 2px solid var(--ivoire);
+  border-radius: 5px;
 }
 
 .burger-menu span {
@@ -943,10 +945,6 @@ body.modal-open {
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: auto;
-  padding: auto;
- 
-
  
 }
 
@@ -1043,7 +1041,7 @@ body.modal-open {
 }
 
 .portrait h4 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 200;
   padding-bottom: 20px;
   margin-top: 80px;
@@ -1056,10 +1054,12 @@ body.modal-open {
 .portrait-text {
   flex: 1;
   max-width: 100%;
+  
 }
 .portrait-text , .portrait-text-suite{
   font-size: 1.8rem;
   color: var(--new-green);
+  text-align:justify;
 }
 
 .portrait-content {
@@ -1105,11 +1105,12 @@ footer {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
   font-family: 'Cormorant Garamond', serif !important;
   padding: 20px 5%;
+  
 }
 
 .footer-info,
@@ -1126,6 +1127,9 @@ footer {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+  justify-content: space-around;
+ 
 }
 
 .footer-icons {
@@ -1377,7 +1381,7 @@ footer {
   }
 
   .portrait h4 {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     font-weight: 200;
     padding-bottom: 20px;
     margin-top: 60px;
@@ -1670,7 +1674,7 @@ footer {
   }
 
   .portrait h4 {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: 200;
     padding-bottom: 20px;
     margin-top: 60px;
@@ -1780,7 +1784,7 @@ padding-bottom: 0;
   }
 
   .portrait h4 {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 200;
     padding-bottom: 20px;
     margin-top: 60px;

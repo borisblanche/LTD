@@ -3,7 +3,7 @@ const categories = [
     {
         id: 1,
         name: "patrimoine",
-        titleImage: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 1_resultat.webp",
+        titleImage: "assets/pic-patrimoine_resultat.webp",
         // image: "assets/imitations-matieres/bois-jeunechene.avif",
         details: "Details about Category 1",
         link: "#patrimoine",
@@ -11,7 +11,7 @@ const categories = [
         [
             {
                 id: 101,
-                name: "2019-Chantier Fontainebleau",
+                name: "Chantier Fontainebleau",
                 images: [
                     { index: 0, src: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 2_resultat.webp" },
@@ -24,7 +24,7 @@ const categories = [
             },
             {
                 id: 102,
-                name: "2019 - Eglise de campagne",
+                name: "Eglise de campagne",
                 images: [
                     { index: 0, src: "assets/Restauration/2019-chantier-eglise-campagne/Eglise de Campagne - photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2019-chantier-eglise-campagne/Eglise de Campagne - photo 2_resultat.webp" },
@@ -38,7 +38,7 @@ const categories = [
             },
             {
                 id: 103,
-                name: "2019 - Notre Dame de Bon port",
+                name: "Notre Dame de Bon port",
                 images: [
                     { index: 0, src: "assets/Restauration/2019-chantier-Notre-dame-de-bon-port/NotreDamedeBonPort-Nantes-photo1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2019-chantier-Notre-dame-de-bon-port/NotreDamedeBonPort-Nantes-photo2_resultat.webp" },
@@ -51,7 +51,7 @@ const categories = [
             },
             {
                 id: 104,
-                name: "2019 - Chantier d'Orgeval-1",
+                name: "Chantier d'Orgeval-1",
                 images: [
                     { index: 0, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 2_resultat.webp" },
@@ -68,7 +68,7 @@ const categories = [
             },
             {
                 id: 105,
-                name: "2019 - Repise de marbre",
+                name: "Repise de marbre",
                 images: [
                     { index: 0, src: "assets/Restauration/2019-reprise-de-marbre/Reprise de marbre - Photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2019-reprise-de-marbre/Reprise de marbre - Photo 1_resultat.webp" },
@@ -79,7 +79,7 @@ const categories = [
             },
             {
                 id: 106,
-                name: "2020 - Eglise de Chepniers",
+                name: "Eglise de Chepniers",
                 images: [
                     { index: 0, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 2_resultat.webp" },
@@ -93,7 +93,7 @@ const categories = [
             },
             {
                 id: 107,
-                name: "2020 - Alcôve La Vieux Ville",
+                name: "Alcôve La Vieux Ville",
                 images: [
                     { index: 0, src: "assets/Restauration/2020-la-vieux-ville/La Vieux-ville photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2020-la-vieux-ville/La Vieux-ville photo 2_resultat.webp" },
@@ -110,7 +110,7 @@ const categories = [
             },
             {
                 id: 108,
-                name: "2020 - Virazeil",
+                name: "Virazeil",
                 images: [
                     { index: 0, src: "assets/Restauration/2020-virazeil/Escalier Virazeil photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2020-virazeil/Escalier Virazeil photo 2_resultat.webp" },
@@ -123,7 +123,7 @@ const categories = [
             },
             {
                 id: 109,
-                name: "2021 - Fontaine Burdigala",
+                name: "Fontaine Burdigala",
                 images: [
                     { index: 0, src: "assets/Restauration/2021-fontaine-burdigala/Fontaine Burdigala photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2021-fontaine-burdigala/Fontaine Burdigala photo 2_resultat.webp" },
@@ -137,7 +137,7 @@ const categories = [
             },
             {
                 id: 110,
-                name: "2021 - Les Briottières",
+                name: "Les Briottières",
                 images: [
                     { index: 0, src: "assets/Restauration/2021-les-briottieres/chateau des briottieres photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2021-les-briottieres/Imitation marbre photo 2_resultat.webp" },
@@ -149,7 +149,7 @@ const categories = [
             },
             {
                 id: 111,
-                name: "2022 - Mairie de Diois",
+                name: "Mairie de Diois",
                 images: [
                     { index: 0, src: "assets/Restauration/2022-mairie-de-diois/Mairie de Diois photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2022-mairie-de-diois/Mairie de Diois photo 2_resultat.webp" },
@@ -164,7 +164,7 @@ const categories = [
             },
             {
                 id: 112,
-                name: "2023 - Eglise Saint-Médard d'Eyrans",
+                name: "Eglise Saint-Médard d'Eyrans",
                 images: [
                     { index: 0, src: "assets/Restauration/2023-eglise-saint-medard/église st médard photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2023-eglise-saint-medard/église st médard photo 2_resultat.webp" },
@@ -182,7 +182,7 @@ const categories = [
             },
             {
                 id: 113,
-                name: "2023 - Orgue Angoulème",
+                name: "Orgue Angoulème",
                 images: [
                     { index: 0, src: "assets/Restauration/2023-orgue-angouleme/Orgue Angoulème photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2023-orgue-angouleme/Orgue Angoulème photo 2_resultat.webp" },
@@ -194,7 +194,7 @@ const categories = [
             },
             {
                 id: 114,
-                name: "2024 - Chapelle La Prade",
+                name: "Chapelle La Prade",
                 images: [
                     { index: 0, src: "assets/Restauration/2024-chapelle-la-prade/Chapelle la Prade photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2024-chapelle-la-prade/Chapelle la Prade photo 2_resultat.webp" },
@@ -213,7 +213,7 @@ const categories = [
             },
             {
                 id: 115,
-                name: "2024 - Cos d'Estournel",
+                name: "Cos d'Estournel",
                 images: [
                     { index: 0, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 2_resultat.webp" },
@@ -229,7 +229,7 @@ const categories = [
             },
             {
                 id: 116,
-                name: "2024 - Rejointoiement pierres",
+                name: "Rejointoiement pierres",
                 images: [
                     { index: 0, src: "assets/Restauration/2024-rejointement/Rejoitoiement photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2024-rejointement/Rejoitoiement photo 2_resultat.webp" },
@@ -242,7 +242,7 @@ const categories = [
             },
             {
                 id: 117,
-                name: "2024 - Restauration Marbre",
+                name: "Restauration Marbre",
                 images: [
                     
                     { index: 0, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 1_resultat.webp" },
@@ -264,7 +264,7 @@ const categories = [
             },
             {
                 id: 118,
-                name: "2025 - Marbres Cadaujac",
+                name: "Marbres Cadaujac",
                 images: [
                     { index: 0, src: "assets/Restauration/2025-marbres-cadaujac/Marbres Cadaujac photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2025-marbres-cadaujac/Marbres Cadaujac photo 2_resultat.webp" },
@@ -291,14 +291,14 @@ const categories = [
     {
         id: 2,
         name: "créations",
-        titleImage: "assets/céations/2019-Mazarinne/Mazarine - Photo 1_resultat.webp",
+        titleImage: "assets/pic-creation _resultat.webp",
         details: "Details about Category 1",
         link: "#creations",
         projects:
         [
             {
                 id: 201,
-                name: "2019 - Bistrot 'Le Charabia' ",
+                name: "Bistrot 'Le Charabia' ",
                 images: [
                     { index: 0, src: "assets/céations/2019-charabia/2018 - Charabia photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2019-charabia/2018 - Charabia photo 2_resultat.webp" },
@@ -311,7 +311,7 @@ const categories = [
             },
             {
                 id: 202,
-                name: "2019 - Mazarine",
+                name: "Mazarine",
                 images: [
                     { index: 0, src: "assets/céations/2019-Mazarinne/Mazarine - Photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2019-Mazarinne/Mazarine - Photo 2_resultat.webp" },
@@ -327,7 +327,7 @@ const categories = [
             },
             {
                 id: 203,
-                name: "2019 - Stage de staff",
+                name: "Stage de staff",
                 images: [
                     { index: 0, src: "assets/céations/2019-stage-de-staff/Stage de Staff - Photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2019-stage-de-staff/Stage de Staff - Photo 2_resultat.webp" },
@@ -341,7 +341,7 @@ const categories = [
             },
             {
                 id: 204,
-                name: "2019 - Palais des Congrès ( Royan )",
+                name: "Palais des Congrès - Royan ",
                 images: [
                     { index: 0, src: "assets/céations/2019Palais-des-congres-royan/Palais des Congrès Royan - Photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2019Palais-des-congres-royan/Palais des Congrès Royan - Photo 2_resultat.webp" },
@@ -358,7 +358,7 @@ const categories = [
             },
             {
                 id: 205,
-                name: "2020 - Café Murat",
+                name: "Café Murat",
                 images: [
                     { index: 0, src: "assets/céations/2020-cafe-murat/Café Murat photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2020-cafe-murat/Café Murat photo 2_resultat.webp" },
@@ -371,7 +371,7 @@ const categories = [
             },
             {
                 id: 206,
-                name: "2020 - Chantier d' Orgeval (2)",
+                name: "Chantier d' Orgeval (2)",
                 images: [
                     { index: 0, src: "assets/céations/2020-chantier-orgeval-2/Orgeval - photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2020-chantier-orgeval-2/Orgeval - photo 2_resultat.webp" },
@@ -385,7 +385,7 @@ const categories = [
             },
             {
                 id: 207,
-                name: "2020 - Colonnes Marbre",
+                name: "Colonnes Marbre",
                 images: [
                     { index: 0, src: "assets/céations/2020-colonnes-marbres/Colonnes marbre jaune photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2020-colonnes-marbres/Colonnes marbre jaune photo 2_resultat.webp" },
@@ -402,7 +402,7 @@ const categories = [
             },
             {
                 id: 208,
-                name: "2020 - Garage 2 Roues",
+                name: "Garage 2 Roues",
                 images: [
                     { index: 0, src: "assets/céations/2020-garage-deux-roues/Photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2020-garage-deux-roues/Photo 2_resultat.webp" },
@@ -413,7 +413,7 @@ const categories = [
             },
             {
                 id: 209,
-                name: "2021 - Enduit Romain",
+                name: "Enduit Romain",
                 images: [
                     { index: 0, src: "assets/céations/2021-enduit-romain/Enduit romain photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2021-enduit-romain/Enduit romain photo 2_resultat.webp" },
@@ -428,7 +428,7 @@ const categories = [
             },
             {
                 id: 210,
-                name: "2021 - Lettrage Ardoise Wiz",
+                name: "Lettrage Ardoise Wiz",
                 images: [
                     { index: 0, src: "assets/céations/2021-lettrage-ardoise/Ardoise Wiz photo 1_resultat.webp" },
                     { index: 0, src: "assets/céations/2021-lettrage-ardoise/Ardoise Wiz photo 2_resultat.webp" },
@@ -440,7 +440,7 @@ const categories = [
             },
             {
                 id: 211,
-                name: "2021 - Lettrage Hermelin",
+                name: "Lettrage Hermelin",
                 images: [
                     { index: 0, src: "assets/céations/2021-lettrage-hermelin/Lettrage Hermelin photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2021-lettrage-hermelin/Lettrage Hermelin photo 2_resultat.webp" },
@@ -452,7 +452,7 @@ const categories = [
             },
             {
                 id: 212,
-                name: "2021 - Tadelakt",
+                name: "Tadelakt",
                 images: [
                     { index: 0, src: "assets/céations/2021-tadelakt/Tadelakt photo (1)_resultat.webp" },
                     { index: 1, src: "assets/céations/2021-tadelakt/Tadelakt photo (2)_resultat.webp" },
@@ -463,7 +463,7 @@ const categories = [
             },
             {
                 id: 213,
-                name: "2021 - Tournage spot Publicitaire",
+                name: "Tournage spot Publicitaire",
                 images: [
                     { index: 0, src: "assets/céations/2021-tournage-pub/IMG_20211214_105933_resultat.webp" },
                     { index: 1, src: "assets/créations/2021-tournage-pub/IMG_20211214_112912_resultat.webp" },
@@ -473,7 +473,7 @@ const categories = [
             },
             {
                 id: 214,
-                name: "2022 - Fresque tropicale",
+                name: "Fresque tropicale",
                 images: [
                     { index: 0, src: "assets/céations/2022-fresque-tropicale/Fresque tropicale photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2022-fresque-tropicale/Fresque tropicale photo 2_resultat.webp" },
@@ -489,7 +489,7 @@ const categories = [
             },
             {
                 id: 215,
-                name: "2022 - La Madonne",
+                name: "La Madonne",
                 images: [
                     { index: 0, src: "assets/céations/2022-la-madone/La Madone photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2022-la-madone/La Madone photo 2_resultat.webp" },
@@ -502,7 +502,7 @@ const categories = [
             },
             {
                 id: 216,
-                name: "2022 - Pizzeria Dieci",
+                name: "Pizzeria Dieci",
                 images: [
                     { index: 0, src: "assets/céations/2022-pizzeria-dieci/Dieci pizza photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2022-pizzeria-dieci/Dieci pizza photo 2_resultat.webp" },
@@ -512,7 +512,7 @@ const categories = [
             },
             {
                 id: 217,
-                name: "2023 - The Hostel",
+                name: "The Hostel",
                 images: [
                     { index: 0, src: "assets/céations/2023-the-hostel/The Hostel photo 1 (1)_resultat.webp" },
                     { index: 1, src: "assets/céations/2023-the-hostel/The Hostel photo 1 (2)_resultat.webp" },
@@ -522,7 +522,7 @@ const categories = [
             },
             {
                 id: 218,
-                name: "2023 - The Hostel (2)",
+                name: "The Hostel (2)",
                 images: [
                     { index: 0, src: "assets/céations/2023--the-hostel-2/IMG_20230620_161442_resultat.webp" },
                     ],
@@ -531,7 +531,7 @@ const categories = [
             },
             {
                 id: 219,
-                name: "2023 - Escape Hunt",
+                name: "Escape Hunt",
                 images: [
                     { index: 0, src: "assets/céations/2023-escape-hunt/Escape hunt photo 1_resultat.webp" },
                     ],
@@ -540,7 +540,7 @@ const categories = [
             },
             {
                 id: 220,
-                name: "2024 - Badigeon Saugnac",
+                name: "Badigeon Saugnac",
                 images: [
                     { index: 0, src: "assets/céations/2024-badigeon-saugnac/Badigeon Saugnac photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2024-badigeon-saugnac/Badigeon Saugnac photo 2_resultat.webp" },
@@ -551,7 +551,7 @@ const categories = [
             },
             {
                 id: 221,
-                name: "2024 - Enduits de chaux ( Charente )",
+                name: "Enduits de chaux - Charente ",
                 images: [
                     { index: 0, src: "assets/céations/2024-enduits-de-chaux-charente/IMG_20240411_101718_resultat.webp" },
                     { index: 1, src: "assets/céations/2024-enduits-de-chaux-charente/IMG_20240411_101735 (1)_resultat.webp" },
@@ -568,7 +568,7 @@ const categories = [
     {
         id: 3,
         name: "mobilier",
-        titleImage: "assets/illustration-mobilier.webp",
+        titleImage: "assets/pic-mobilier_resultat.webp",
         details: "Details about Category 1",
         link: "#mobilier",
         projects:
