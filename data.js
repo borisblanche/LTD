@@ -19,7 +19,7 @@ const categories = [
                     { index: 3, src: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 4_resultat.webp" },
                     { index: 4, src: "assets/Restauration/2018-chantier-Fontainebleau/Chantier Fontainebleau - Photo 5_resultat.webp" },
                     ],
-                description: "Restitution d'un décor d'époque dans le salon d'une maison de maître à Fontainebleau (77920 - Seine et marne).Fabrication et application d'une peinture à la colle de peau de lapin sur les corniches et les volets intérieurs.Travail réalisé avec Le Décor Français.",
+                description: "Restitution d'un décor d'époque dans le salon d'une maison de maître à Fontainebleau (77920 - Seine et marne). Fabrication et application d'une peinture à la colle de peau de lapin sur les corniches et les volets intérieurs. Travail réalisé avec Le Décor Français.",
                 link: "project1_1.html"
             },
             {
@@ -33,7 +33,7 @@ const categories = [
                     { index: 4, src: "assets/Restauration/2019-chantier-eglise-campagne/Eglise de Campagne - photo 5_resultat.webp" },
                     { index: 5, src: "assets/Restauration/2019-chantier-eglise-campagne/Eglise de Campagne - photo 6_resultat.webp" },
                     ],
-                description: "Reprise chromatique des décors peints de l'église Saint-Pantaléon à Campagne (40090 - Landes).Reprise des teintes et des lacunes, pour une lecture plus harmonieuse des éléments décoratifs du chœur.Travail réalisé pour l' Atelier Dufon",
+                description: "Reprise chromatique des décors peints de l'église Saint-Pantaléon à Campagne (40090 - Landes).Reprise des teintes et des lacunes, pour une lecture plus harmonieuse des éléments décoratifs du chœur. Travail réalisé pour l' Atelier Dufon.",
                 link: "project1_2.html"
             },
             {
@@ -46,7 +46,7 @@ const categories = [
                     { index: 3, src: "assets/Restauration/2019-chantier-Notre-dame-de-bon-port/NotreDamedeBonPort-Nantes-photo4_resultat.webp" },
                     { index: 4, src: "assets/Restauration/2019-chantier-Notre-dame-de-bon-port/NotreDamedeBonPort-Nantes-photo5_resultat.webp" },
                     ],
-                description: "Étude et analyse préalable à la restauration du dôme de l'église Notre-Dame-de-Bon-Port à Nantes (44000 - Loire Atlantique)Comparaison et analyse des différents tests des protocoles d’interventions pour nettoyage et consolidation des décors peints du dôme..Travail réalisé pour Arthema.",
+                description: "Étude et analyse préalable à la restauration du dôme de l'église Notre-Dame-de-Bon-Port à Nantes (44000 - Loire Atlantique). Comparaison et analyse des différents tests des protocoles d’interventions pour nettoyage et consolidation des décors peints du dôme.. Travail réalisé pour Arthema.",
                 link: "project1_2.html"
             },
             {
@@ -63,7 +63,7 @@ const categories = [
                     { index: 7, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 8_resultat.webp" },
                     { index: 7, src: "assets/Restauration/2019-chantier-Orgeval-1/IMG-20191114-WA0016 (1)_resultat.webp" },
                     ],
-                description: "Intervention pour participer au chantier de restauration et rénovation du salon de musique d’un château d’Orgeval.Reprise des lacunes à la gouache et remise en teinte générale du plafond peint.Réalisation d’une patine cordée sur les murs.Chantier réalisé avec Sophie de Sagazan.",
+                description: "Intervention pour participer au chantier de restauration et rénovation du salon de musique d’un château d’Orgeval. Reprise des lacunes à la gouache et remise en teinte générale du plafond peint. Réalisation d’une patine cordée sur les murs. Chantier réalisé avec Sophie de Sagazan.",
                 link: "project1_2.html"
             },
             {
@@ -88,7 +88,7 @@ const categories = [
                     { index: 4, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 5_resultat.webp" },
                     { index: 5, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 6_resultat.webp" },
                     ],
-                description: "Nettoyage à sec et consolidation des enduits soufflés et écailles de peintures des décorspeints de l’église Saint-Etienne de Chepniers (17210 - Charente Maritime).Travail avec Arthema Restauration",
+                description: "Nettoyage à sec et consolidation des enduits soufflés et écailles de peintures des décors peints de l’église Saint-Etienne de Chepniers (17210 - Charente Maritime). Travail avec Arthema Restauration.",
                 link: "project1_2.html"
             },
             {
@@ -118,7 +118,7 @@ const categories = [
                     { index: 3, src: "assets/Restauration/2020-virazeil/Escalier Virazeil photo 4_resultat.webp" },
                     { index: 4, src: "assets/Restauration/2020-virazeil/Escalier Virazeil photo 5_resultat.webp" },
                     ],
-                description: "Rénovation d’une cage d’escalier dans une maison de maître proche Marmande (47200 -Lot et Garonne).Reprise des creux et fissures à la chaux. Fabrication et application d’un badigeon de chaux teinté. Filage d’un appareillage.",
+                description: "Rénovation d’une cage d’escalier dans une maison de maître proche Marmande (47200 -Lot et Garonne). Reprise des creux et fissures à la chaux. Fabrication et application d’un badigeon de chaux teinté. Filage d’un appareillage.",
                 link: "project1_2.html"
             },
             {
@@ -144,7 +144,7 @@ const categories = [
                     { index: 2, src: "assets/Restauration/2021-les-briottieres/salle à manger chateau briottières photo 3_resultat.webp" },
                     { index: 3, src: "assets/Restauration/2021-les-briottieres/escalier briottières photo 4_resultat.webp" },
                     ],
-                description: "Chantier de restitution des lacunes de marbres de la cage d’escalier, ainsi que des peintureset soubassement de la salle à manger du Château des Briottières (Maine-et-Loire). Travail avec Le Décor Français",
+                description: "Chantier de restitution des lacunes de marbres de la cage d’escalier, ainsi que des peintures et soubassements de la salle à manger du Château des Briottières (Maine-et-Loire). Travail avec Le Décor Français.",
                 link: "project1_2.html"
             },
             {
@@ -159,7 +159,7 @@ const categories = [
                     { index: 5, src: "assets/Restauration/2022-mairie-de-diois/Mairie de Diois photo 6_resultat.webp" },
                     { index: 6, src: "assets/Restauration/2022-mairie-de-diois/Mairie de Diois photo 7_resultat.webp" },
                     ],
-                description: "Restauration Mairie Châtillon en Diois.Nettoyage à sec et à l’eau des fresques de l’escalier, dégagement des derniers décors pourretrouver la campagne précédente, recherche de teintes pour reprise à tono sotto afin degarder la lecture de l’intervention de restauration.Travail avec Atelier Sud France",
+                description: "Restauration Mairie Châtillon en Diois. Nettoyage à sec et à l’eau des fresques de l’escalier, dégagement des derniers décors pour retrouver la campagne précédente, recherche de teintes pour reprise à tono sotto afin degarder la lecture de l’intervention de restauration. Travail avec Atelier Sud France.",
                 link: "project1_2.html"
             },
             {
@@ -177,7 +177,7 @@ const categories = [
                     { index: 8, src: "assets/Restauration/2023-eglise-saint-medard/Phase 4a_resultat.webp" },
                     { index: 9, src: "assets/Restauration/2023-eglise-saint-medard/Phase 4b_resultat.webp" },
                     ],
-                description: "Dégagements et reprises des enduits de chaux abîmés du choeur et d’une chapelle del’église de la commune de Saint-Médard-d’Eyrans (33650 - Gironde).Fabrication et application des enduits de chaux.Réintégration des décors et appareillages disparus.Travail avec Atelier la Margotterie",
+                description: "Dégagements et reprises des enduits de chaux abîmés du choeur et d’une chapelle del’église de la commune de Saint-Médard-d’Eyrans (33650 - Gironde). Fabrication et application des enduits de chaux. Réintégration des décors et appareillages disparus.Travail avec Atelier la Margotterie.",
                 link: "project1_2.html"
             },
             {
@@ -189,7 +189,7 @@ const categories = [
                     { index: 2, src: "assets/Restauration/2023-orgue-angouleme/Orgue Angoulème photo 3_resultat.webp" },
                     { index: 3, src: "assets/Restauration/2023-orgue-angouleme/Orgue Angoulème photo 4_resultat.webp" },
                     ],
-                description: "Nettoyage et décapage des ornements de l’orgue de l’église Saint-Jacques de l’Houmeauavant reprise de l’imitation de bois et vernis.Travail avec Le Décor Français",
+                description: "Nettoyage et décapage des ornements de l’orgue de l’église Saint-Jacques de l’Houmeauavant , reprise de l’imitation de bois et vernis. Travail avec Le Décor Français.",
                 link: "project1_2.html"
             },
             {
@@ -208,7 +208,7 @@ const categories = [
                     { index: 9, src: "assets/Restauration/2024-chapelle-la-prade/Chapelle la Prade photo 10_resultat.webp" },
                     { index: 10, src: "assets/Restauration/2024-chapelle-la-prade/Chapelle la Prade photo 11_resultat.webp" },
                     ],
-                description: "Nettoyage et reprise des lacunes des décors ornementaux des murs d’une chapelle privée àla Prade (33650 - Gironde). Travail à l’aquarelle et à la gouache.Travail réalisé avec Atelier la Margotterie.",
+                description: "Nettoyage et reprise des lacunes des décors ornementaux des murs d’une chapelle privée à la Prade (33650 - Gironde). Travail à l’aquarelle et à la gouache. Travail réalisé avec Atelier la Margotterie.",
                 link: "project1_2.html"
             },
             {
@@ -224,7 +224,7 @@ const categories = [
                     { index: 6, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 7_resultat.webp" },
                     { index: 7, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 8_resultat.webp" },
                     ],
-                description: "Restauration des lacunes d’un papier peint dans la salle à manger du château de Cosd’Estournel.Travail réalisé avec Atelier la Margotterie.",
+                description: "Restauration des lacunes d’un papier peint dans la salle à manger du château de Cos d’Estournel. Travail réalisé avec Atelier la Margotterie.",
                 link: "project1_2.html"
             },
             {
@@ -237,7 +237,7 @@ const categories = [
                     { index: 3, src: "assets/Restauration/2024-rejointement/Rejoitoiement photo 4_resultat.webp" },
                     { index: 4, src: "assets/Restauration/2024-rejointement/Rejoitoiement photo 5_resultat.webp" },
                     ],
-                description: "Dégagement des anciens joints abîmés. Reprise de nouveaux joints à la chaux.Travail réalisé avec R’Arts peinture.",
+                description: "Dégagement des anciens joints abîmés. Reprise de nouveaux joints à la chaux. Travail réalisé avec R’Arts peinture.",
                 link: "project1_2.html"
             },
             {
@@ -247,19 +247,19 @@ const categories = [
                     
                     { index: 0, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 1 (2)_resultat.webp" },
-                    { index: 2, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 2_resultat.webp" },
-                    { index: 3, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 3_resultat.webp" },
-                    { index: 4, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 4_resultat.webp" },
-                    { index: 5, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 5_resultat.webp" },
-                    { index: 6, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 6_resultat.webp" },
-                    { index: 7, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 7_resultat.webp" },
-                    { index: 8, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 8_resultat.webp" },
-                    { index: 9, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 9_resultat.webp" },
-                    { index: 10, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 10_resultat.webp" },
-                    { index: 11, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 11_resultat.webp" },
-                    { index: 12, src: "assets/Restauration/2024-restauration-marbre/Restitution marbre photo 12_resultat.webp" },
+                    { index: 2, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 2_resultat.webp" },
+                    { index: 3, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 3_resultat.webp" },
+                    { index: 4, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 4_resultat.webp" },
+                    { index: 5, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 5_resultat.webp" },
+                    { index: 6, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 6_resultat.webp" },
+                    { index: 7, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 7_resultat.webp" },
+                    { index: 8, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 8_resultat.webp" },
+                    { index: 9, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 9_resultat.webp" },
+                    { index: 10, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 10_resultat.webp" },
+                    { index: 11, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 11_resultat.webp" },
+                    { index: 12, src: "assets/Restauration/2024-restauration-marbre/Restauration marbre photo 12_resultat.webp" },
                     ],
-                description: "Dégagement des enduits couvrants les imitations de marbres retrouvées lors du retrait d’un papier peint dans ce couloir d’entrée d’une maison au Bouscat (33110 - Gironde).Rebouchage des fissures et restitution des parties manquantes partielles et soubassements pour une harmonie d’ensemble.Travail à l’aquarelle et à l’huile.Travail réalisé avec Atelier la Margotterie.",
+                description: "Dégagement des enduits couvrants les imitations de marbres retrouvées lors du retrait d’un papier peint dans ce couloir d’entrée d’une maison au Bouscat (33110 - Gironde). Rebouchage des fissures et restitution des parties manquantes partielles et soubassements pour une harmonie d’ensemble. Travail à l’aquarelle et à l’huile. Travail réalisé avec Atelier la Margotterie.",
                 link: "project1_2.html"
             },
             {
@@ -282,7 +282,7 @@ const categories = [
                     { index: 13, src: "assets/Restauration/2025-marbres-cadaujac/Marbres Cadaujac photo 14_resultat.webp" },
                     { index: 14, src: "assets/Restauration/2025-marbres-cadaujac/Marbres Cadaujac photo 15_resultat.webp" },
                     ],
-                description: "Dégagement des anciens enduits abîmés.Fabrication et application de nouveaux enduits de chaux.Imitation de trois marbres inspirés des précédents à la peinture caséine dans ce domaine de Cadaujac (33140 - Gironde).Travail réalisé avec Atelier la Margotterie.",
+                description: "Dégagement des anciens enduits abîmés. Fabrication et application de nouveaux enduits de chaux. Imitation de trois marbres inspirés des précédents à la peinture caséine dans ce domaine de Cadaujac (33140 - Gironde). Travail réalisé avec Atelier la Margotterie.",
                 link: "project1_2.html"
             },
         ]
@@ -301,10 +301,10 @@ const categories = [
                 name: "Bistrot 'Le Charabia' ",
                 images: [
                     { index: 0, src: "assets/céations/2019-charabia/2018 - Charabia photo 1_resultat.webp" },
-                    { index: 1, src: "assets/céations/2019-charabia/2018 - Charabia photo 2_resultat.webp" },
-                    { index: 2, src: "assets/céations/2019-charabia/2018 - Charabia photo 3_resultat.webp" },
-                    { index: 3, src: "assets/céations/2019-charabia/2018 - Charabia photo 4_resultat.webp" },
-                    { index: 4, src: "assets/céations/2019-charabia/2018 - Charabia photo 5_resultat.webp" },
+                    { index: 1, src: "assets/céations/2019-charabia/2018-Charabia photo 2_resultat.webp" },
+                    { index: 2, src: "assets/céations/2019-charabia/2018-Charabia photo 3_resultat.webp" },
+                    { index: 3, src: "assets/céations/2019-charabia/2018-Charabia photo 4_resultat.webp" },
+                    { index: 4, src: "assets/céations/2019-charabia/2018-Charabia photo 5_resultat.webp" },
                     ],
                 description: "Réalisation d’une imitation de métal oxydé. Sur un IPN, recouvrement de la peinture bâtiment existante par une patine imitant le métal en cours d’oxydation pour un effet trompe l'œil.",
                 link: "project1_1.html"
@@ -408,7 +408,7 @@ const categories = [
                     { index: 1, src: "assets/céations/2020-garage-deux-roues/Photo 2_resultat.webp" },
                     { index: 2, src: "assets/céations/2020-garage-deux-roues/Photo 3_resultat.webp" },
                     ],
-                description: "Dégagement d’une enseigne en bois de façade d’un garage à louer dans les rues Bordelaises. Fabrication et application d’une peinture à l’ocre en préparation avant la réalisation d’un lettrage à la peinture à l’huile. Bordeaux (33000 - Gironde)",
+                description: "Dégagement d’une enseigne en bois de façade d’un garage à louer dans les rues Bordelaises. Fabrication et application d’une peinture à l’ocre en préparation avant la réalisation d’un lettrage à la peinture à l’huile. Bordeaux (33000 - Gironde).",
                 link: "project1_1.html"
             },
             {
@@ -418,10 +418,10 @@ const categories = [
                     { index: 0, src: "assets/céations/2021-enduit-romain/Enduit romain photo 1_resultat.webp" },
                     { index: 1, src: "assets/céations/2021-enduit-romain/Enduit romain photo 2_resultat.webp" },
                     { index: 2, src: "assets/céations/2021-enduit-romain/Enduit romain photo 3_resultat.webp" },
-                    { index: 3, src: "assets/céations/2021-enduit-romain/escalier briottières gé,éral_resultat.webp" },
-                    { index: 4, src:  "assets/céations/2021-enduit-romain/escalier briottières_resultat.webp" },
-                    { index: 5, src:  "assets/céations/2021-enduit-romain/salle à manger chateau briottières_resultat.webp" },
-                    { index: 6, src:  "assets/céations/2021-enduit-romain/chateau des briottieres_resultat.webp" },
+                    // { index: 3, src: "assets/céations/2021-enduit-romain/escalier briottières gé,éral_resultat.webp" },
+                    // { index: 4, src:  "assets/céations/2021-enduit-romain/escalier briottières_resultat.webp" },
+                    // { index: 5, src:  "assets/céations/2021-enduit-romain/salle à manger chateau briottières_resultat.webp" },
+                    // { index: 6, src:  "assets/céations/2021-enduit-romain/chateau des briottieres_resultat.webp" },
                     ],
                 description: "Fabrication et application d’un enduit romain ferré (cellulose et poudre de marbre) dans une cage d’escalier. Le Mans (72000 - Sarthe). Travail avec Le Décor Français",
                 link: "project1_1.html"
@@ -435,7 +435,7 @@ const categories = [
                     { index: 0, src: "assets/céations/2021-lettrage-ardoise/Ardoise Wiz photo 3_resultat.webp" },
                     { index: 0, src: "assets/céations/2021-lettrage-ardoise/IMG_20230121_113725_resultat.webp" },
                     ],
-                description: "Lettrage et écriture au pinceau et à la gouache de la carte du restaurant Le Wiz ( Mimizan 40200 - Landes)",
+                description: "Lettrage et écriture au pinceau et à la gouache de la carte du restaurant Le Wiz ( Mimizan 40200 - Landes).",
                 link: "project1_1.html"
             },
             {
@@ -458,7 +458,7 @@ const categories = [
                     { index: 1, src: "assets/céations/2021-tadelakt/Tadelakt photo (2)_resultat.webp" },
                     { index: 2, src: "assets/céations/2021-tadelakt/Tadelakt photo (3)_resultat.webp" },
                     ],
-                description: "Fabrication et application d’un enduit de chaux dans une salle de douche à la finition tadelakt. Le Mans (72000 - Sarthe). Travail avec Le Décor Français",
+                description: "Fabrication et application d’un enduit de chaux dans une salle de douche à la finition tadelakt. Le Mans (72000 - Sarthe). Travail avec Le Décor Français.",
                 link: "project1_1.html"
             },
             {
@@ -466,9 +466,9 @@ const categories = [
                 name: "Tournage spot Publicitaire",
                 images: [
                     { index: 0, src: "assets/céations/2021-tournage-pub/IMG_20211214_105933_resultat.webp" },
-                    { index: 1, src: "assets/créations/2021-tournage-pub/IMG_20211214_112912_resultat.webp" },
+                    { index: 1, src: "assets/céations/2021-tournage-pub/IMG_20211214_112912_resultat.webp" },
                     ],
-                description: "Préparation d’un fond pour le tournage d’un film publicitaire. Réalisation d’une patine de vieillissement adaptée au tournage. Bordeaux 33000 - Gironde",
+                description: "Préparation d’un fond pour le tournage d’un film publicitaire. Réalisation d’une patine de vieillissement adaptée au tournage. Bordeaux 33000 - Gironde.",
                 link: "project1_1.html"
             },
             {
@@ -484,7 +484,7 @@ const categories = [
                     { index: 6, src: "assets/céations/2022-fresque-tropicale/Fresque tropicale photo 7_resultat.webp" },
                     { index: 7, src: "assets/céations/2022-fresque-tropicale/Fresque tropicale photo 8_resultat.webp" },
                     ],
-                description: "Réalisation d’une fresque murale en extérieur à Villenave-d’Ornon (33140 - Gironde). Travail avec Mélissa Mangnez",
+                description: "Réalisation d’une fresque murale en extérieur à Villenave-d’Ornon (33140 - Gironde). Travail avec Mélissa Mangnez.",
                 link: "project1_1.html"
             },
             {
@@ -497,7 +497,7 @@ const categories = [
                     { index: 3, src: "assets/céations/2022-la-madone/La Madone photo 4_resultat.webp" },
                     { index: 4, src: "assets/céations/2022-la-madone/La Madone photo 5_resultat.webp" },
                     ],
-                description: "Fabrication et application d’une peinture à la caséine teintée sur les murs de la cage d’escalier de cette maison du Cap Corse. Travail réalisé avec Clairedb Atelier",
+                description: "Fabrication et application d’une peinture à la caséine teintée sur les murs de la cage d’escalier de cette maison du Cap Corse. Travail réalisé avec Clairedb Atelier.",
                 link: "project1_1.html"
             },
             {
@@ -535,7 +535,7 @@ const categories = [
                 images: [
                     { index: 0, src: "assets/céations/2023-escape-hunt/Escape hunt photo 1_resultat.webp" },
                     ],
-                description: "Réalisation d’une ambiance pour une salle d’escape game. Mystère et enquête à découvrir chez Escape hunt Tourny",
+                description: "Réalisation d’une ambiance pour une salle d’escape game. Mystère et enquête à découvrir chez Escape hunt Tourny.",
                 link: "project1_1.html"
             },
             {
@@ -666,257 +666,11 @@ const categories = [
                 description: "Anciennes chaises d'école rénovées. Imitation de tissu Wax peint à la main.",
                 link: "project1_2.html"
             },
-            // {
-            //     id: 308,
-            //     name: "balade",
-            //     images: [
-            //            {index: 0,src: "assets/meubles peints/balade1.webp"},
-            //             {index: 1,src: "assets/meubles peints/balade2.webp"},
-            //          {index: 2,src: "assets/meubles peints/balade3.webp"},
-            //                               ],
-            //     description: "Description of balade",
-            //     link: "project1_2.html"
-            // },
-            // {
-            //     id: 309,
-            //     name: "balade",
-            //     images: [
-            //            {index: 0,src: "assets/meubles peints/balade1.webp"},
-            //             {index: 1,src: "assets/meubles peints/balade2.webp"},
-            //          {index: 2,src: "assets/meubles peints/balade3.webp"},
-            //                               ],
-            //     description: "Description of balade",
-            //     link: "project1_2.html"
-            // },
-            // {
-            //     id: 310,
-            //     name: "balade",
-            //     images: [
-            //            {index: 0,src: "assets/meubles peints/balade1.webp"},
-            //             {index: 1,src: "assets/meubles peints/balade2.webp"},
-            //          {index: 2,src: "assets/meubles peints/balade3.webp"},
-            //                               ],
-            //     description: "Description of balade",
-            //     link: "project1_2.html"
-            // },
-            // {
-            //     id: 311,
-            //     name: "balade",
-            //     images: [
-            //            {index: 0,src: "assets/meubles peints/balade1.webp"},
-            //             {index: 1,src: "assets/meubles peints/balade2.webp"},
-            //          {index: 2,src: "assets/meubles peints/balade3.webp"},
-            //                               ],
-            //     description: "Description of balade",
-            //     link: "project1_2.html"
-            // },
         ]
         
     }
 ]
 
 
-// const categories = [
-//     {
-//         id: 1,
-//         name: "decoration",
-//         image: "assets/imitations-matieres/bois-jeunechene.avif",
-//         details: "Details about Category 1",
-//         link: "#decoration",
-//         projects: [
-//             {
-//                 id: 101,
-//                 name: "Project 1.1",
-//                 images: ["assets/imitations-matieres/bois-jeunechene.avif", "assets/imitations-matieres/marbre-blancveine.avif"],
-//                 description: "Description of Project 1.1",
-//                 link: "project1_1.html"
-//             },
-//             {
-//                 id: 102,
-//                 name: "Project 1.2",
-//                 images: ["assets/imitations-matieres/bois-loupe.avif", "assets/imitations-matieres/bois-noyer.avif"],
-//                 description: "Description of Project 1.2",
-//                 link: "project1_2.html"
-//             }
-//         ]
-//     },
-//     {
-//         id: 2,
-//         name: "restauration",
-//         image: "assets/conservation-restauration/conservation-1.webp",
-//         details: "Details about Category 2",
-//         link: "#restauration",
-//         projects: [
-//             {
-//                 id: 201,
-//                 name: "Project 2.1",
-//                 images: ["assets/conservation-restauration/conservation-1.webp", "assets/conservation-restauration/conservation-2.webp"],
-//                 description: "Description of Project 2.1",
-//                 link: "project2_1.html"
-//             },
-//             {
-//                 id: 202,
-//                 name: "Project 2.2",
-//                 images: ["assets/conservation-restauration/restau-fresque-1.webp", "assets/conservation-restauration/restau-fresque-2.webp"],
-//                 description: "Description of Project 2.2",
-//                 link: "project2_2.html"
-//             }
-//         ]
-//     },
-//     {
-//         id: 3,
-//         name: "creations",
-//         image: "assets/meubles peints/balade1.webp",
-//         details: "Details about Category 3",
-//         link: "#creations",
-//         projects: [
-//             {
-//                 id: 301,
-//                 name: "balade",
-//                 images: [
-//                     {index: 0,src: "assets/meubles peints/balade1.webp"},
-//                     {index: 1,src: "assets/meubles peints/balade2.webp"},
-//                     {index: 2,src: "assets/meubles peints/balade3.webp"},
-//                       ],
-//                 description: "Description of Project 3.1",
-//                 link: "project3_1.html"
-//             },
-//             {
-//                 id: 302,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 303,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 304,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 305,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 306,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 307,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 308,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 309,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 310,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 311,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 312,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 313,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 314,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 315,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//             {
-//                 id: 316,
-//                 name: "brume",
-//                 images: ["assets/meubles peints/brume1.webp", "assets/meubles peints/brume2.webp", "assets/meubles peints/brume3.webp",
-//                     "assets/meubles peints/brume4.webp",
-//                 ],
-//                 description: "Description of Project 3.2",
-//                 link: "project3_2.html"
-//             },
-//         ]
-//     }
-// ];
+
 

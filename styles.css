@@ -1047,9 +1047,9 @@ body.modal-open {
   font-weight: 200;
   padding-bottom: 20px;
   margin-top: 80px;
-  text-align: justify;
+  text-align: center;
   color: var(--new-green);
-  font-weight: 200;
+  font-weight: 800;
   font-style: italic;
 }
 
@@ -1387,7 +1387,7 @@ footer {
 
   .portrait h4 {
     font-size: 1.4rem;
-    font-weight: 200;
+    
     padding-bottom: 20px;
     margin-top: 60px;
   }
@@ -1681,7 +1681,6 @@ footer {
 
   .portrait h4 {
     font-size: 1rem;
-    font-weight: 200;
     padding-bottom: 20px;
     margin-top: 60px;
 
@@ -1796,7 +1795,6 @@ footer {
 
   .portrait h4 {
     font-size: 1rem;
-    font-weight: 200;
     padding-bottom: 20px;
     margin-top: 60px;
   }
