@@ -186,13 +186,13 @@ main {
 .hero {
   width: 100%;
   max-height: 100vh;
+  min-height: 100vh;
   padding-bottom: 0px;
   display: flex;
   flex-direction: column;
   background: url(./assets/Logo/fonddaccueil7.webp)no-repeat center center;
   background-size: cover;
-  gap: 400px;
-
+  gap: 300px;
 }
 
 .hero-first {
@@ -201,6 +201,7 @@ main {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-top: 100px;
+
 }
 
 .hero-title {
@@ -246,6 +247,7 @@ main {
   text-align: end;
   padding-right: 50px;
   padding-top: 0px;
+
   bottom: 0;
 }
 
@@ -637,7 +639,7 @@ body.modal-open {
   padding: 20px;
   box-sizing: border-box;
   word-wrap: break-word;
- 
+
 }
 
 
@@ -651,7 +653,7 @@ body.modal-open {
   font-size: 1.4rem;
   line-height: 1.4;
   text-align: justify;
-   
+
 }
 
 .galerie-grid {
@@ -660,9 +662,10 @@ body.modal-open {
   gap: 2%;
   margin: 2%;
   padding-bottom: 120px;
+
 }
 
-.galerie-grid img {
+/* .galerie-grid img {
   min-width: 100%;
   margin: auto;
   height: auto;
@@ -671,7 +674,18 @@ body.modal-open {
   object-fit: cover;
   border: 1px solid var(--brun);
   transition: transform 0.3s ease;
+} */
+.galerie-grid img {
+  min-width: 100%;
+  margin: auto;
+  height: 40vh;
+  /* fixe proprement */
+  object-fit: cover;
+  border: 1px solid var(--brun);
+  transition: transform 0.3s ease;
 }
+
+
 
 .galerie-grid img:hover {
   cursor: pointer;
@@ -981,8 +995,17 @@ body.modal-open {
   padding: 20px;
 }
 
+.footer-icons {
+  padding: 20px;
+}
+
 .mentions-legales {
   text-align: left;
+}
+
+.mentions-legales-content h3 {
+  font-size: 1.2rem;
+
 }
 
 
@@ -1213,7 +1236,7 @@ footer {
   }
 
   .hero {
-    gap: 100px;
+    gap: 300px;
   }
 
   .hero-first {
@@ -1387,9 +1410,13 @@ footer {
     font-size: 2rem;
   }
 
+  .mentions-legales h3 {
+    font-size: 1.2rem;
+  }
+
   .portrait h4 {
     font-size: 1.4rem;
-    
+
     padding-bottom: 20px;
     margin-top: 60px;
   }
@@ -1449,8 +1476,8 @@ footer {
   }
 
   .burger-menu span {
-    width: 32px;
-    height: 1px;
+    width: 22px;
+    height: 2px;
     background: var(--new-green);
     transition: 0.3s ease;
   }
@@ -1458,12 +1485,13 @@ footer {
 
   .hero {
     max-height: 100vh;
+    gap: 300px;
   }
 
   .hero-first {
     margin-top: 0px;
     margin-bottom: 0;
-    padding-top: 20px;
+    padding-top: 100px;
   }
 
   .hero-description {
@@ -1716,6 +1744,10 @@ footer {
   .contact h2,
   .portrait h2 {
     font-size: 3rem;
+  }
+
+  .mentions-legales h3 {
+    font-size: 1.2rem;
   }
 
   .contact-image {
@@ -2219,6 +2251,10 @@ footer {
 
   .portrait h3 {
     font-size: 2rem;
+  }
+
+  .mentions-legales h3 {
+    font-size: 1rem;
   }
 }
 
