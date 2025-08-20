@@ -1165,6 +1165,13 @@ footer {
   display: flex;
   gap: 30px;
 }
+.footer-mail a{
+  color: var(--new-green);
+  text-decoration: none;
+}
+.footer-mail a:hover{
+  text-decoration: underline;
+}
 
 .footer-icons a {
   font-size: 24px;
