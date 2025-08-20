@@ -637,6 +637,7 @@ body.modal-open {
   padding: 20px;
   box-sizing: border-box;
   word-wrap: break-word;
+ 
 }
 
 
@@ -647,9 +648,10 @@ body.modal-open {
 }
 
 .details-text p {
-  font-size: 1.6rem;
-  line-height: 1.6;
+  font-size: 1.4rem;
+  line-height: 1.4;
   text-align: justify;
+   
 }
 
 .galerie-grid {
@@ -1329,7 +1331,7 @@ footer {
   }
 
   .details-text p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.4;
     text-align: justify;
   }
@@ -1582,7 +1584,7 @@ footer {
   }
 
   .details-text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.2;
     text-align: justify;
   }

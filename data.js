@@ -55,13 +55,14 @@ const categories = [
                 images: [
                     { index: 0, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 2_resultat.webp" },
-                    { index: 2, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 3_resultat.webp" },
-                    { index: 3, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 4_resultat.webp" },
-                    { index: 4, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 5_resultat.webp" },
-                    { index: 5, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 6_resultat.webp" },
-                    { index: 6, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 7_resultat.webp" },
-                    { index: 7, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 8_resultat.webp" },
-                    { index: 7, src: "assets/Restauration/2019-chantier-Orgeval-1/IMG-20191114-WA0016 (1)_resultat.webp" },
+                    { index: 2, src: "assets/Restauration/2019-chantier-Orgeval-1/IMG-20191114-WA0016 (1)_resultat.webp" },
+                    { index: 3, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 3_resultat.webp" },
+                    { index: 4, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 4_resultat.webp" },
+                    { index: 5, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 5_resultat.webp" },
+                    { index: 6, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 6_resultat.webp" },
+                    { index: 7, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 7_resultat.webp" },
+                    { index: 8, src: "assets/Restauration/2019-chantier-Orgeval-1/Chantier Orgeval 1 - Photo 8_resultat.webp" },
+                    
                     ],
                 description: "Intervention pour participer au chantier de restauration et rénovation du salon de musique d’un château d’Orgeval. Reprise des lacunes à la gouache et remise en teinte générale du plafond peint. Réalisation d’une patine cordée sur les murs. Chantier réalisé avec Sophie de Sagazan.",
                 link: "project1_2.html"
@@ -71,8 +72,8 @@ const categories = [
                 name: "Repise de marbre",
                 images: [
                     { index: 0, src: "assets/Restauration/2019-reprise-de-marbre/Reprise de marbre - Photo 1_resultat.webp" },
-                    { index: 1, src: "assets/Restauration/2019-reprise-de-marbre/Reprise de marbre - Photo 1_resultat.webp" },
-                    { index: 2, src: "assets/Restauration/2019-reprise-de-marbre/Reprise de marbre - Photo 1_resultat.webp" },
+                    { index: 1, src: "assets/Restauration/2019-reprise-de-marbre/Reprise de marbre - Photo 2_resultat.webp" },
+                    { index: 2, src: "assets/Restauration/2019-reprise-de-marbre/Reprise de marbre - Photo 3_resultat.webp" },
                     ],
                 description: "Reprise à l’huile d’une rayure sur le socle d’une sculpture en imitation de marbre.",
                 link: "project1_2.html"
@@ -81,10 +82,12 @@ const categories = [
                 id: 106,
                 name: "Eglise de Chepniers",
                 images: [
+                    
+                 
                     { index: 0, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 1_resultat.webp" },
-                    { index: 1, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 2_resultat.webp" },
-                    { index: 2, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 3_resultat.webp" },
                     { index: 3, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 4_resultat.webp" },
+                    { index: 1, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 3_resultat.webp" },  
+                    { index: 2, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 2_resultat.webp" },
                     { index: 4, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 5_resultat.webp" },
                     { index: 5, src: "assets/Restauration/2020-eglise-de-chepniers/Eglise de Chepniers - Photo 6_resultat.webp" },
                     ],
@@ -96,6 +99,7 @@ const categories = [
                 name: "Alcôve La Vieux Ville",
                 images: [
                     { index: 0, src: "assets/Restauration/2020-la-vieux-ville/La Vieux-ville photo 1_resultat.webp" },
+                    { index: 8, src: "assets/Restauration/2020-la-vieux-ville/Screenshot_20231029_200350_com.android.gallery3d_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2020-la-vieux-ville/La Vieux-ville photo 2_resultat.webp" },
                     { index: 2, src: "assets/Restauration/2020-la-vieux-ville/La Vieux-ville photo 3_resultat.webp" },
                     { index: 3, src: "assets/Restauration/2020-la-vieux-ville/La Vieux-ville photo 4_resultat.webp" },
@@ -103,7 +107,7 @@ const categories = [
                     { index: 5, src: "assets/Restauration/2020-la-vieux-ville/La Vieux-ville photo 6_resultat.webp" },
                     { index: 6, src: "assets/Restauration/2020-la-vieux-ville/La Vieux-ville photo 7_resultat.webp" },
                     { index: 7, src: "assets/Restauration/2020-la-vieux-ville/photo 8_resultat.webp" },
-                    { index: 8, src: "assets/Restauration/2020-la-vieux-ville/Screenshot_20231029_200350_com.android.gallery3d_resultat.webp" },
+                    
                     ],
                 description: "Dégagement et consolidation des enduits soufflés. Reprises des lacunes pour une harmonisation de l’ensemble. Travail à l’aquarelle et à la colle de peau de lapin. Mise en peinture des solives et entrevous du plafond à la peinture à l’ocre.",
                 link: "project1_2.html"
@@ -215,9 +219,9 @@ const categories = [
                 name: "Cos d'Estournel",
                 images: [
                     { index: 0, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 1_resultat.webp" },
-                    { index: 1, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 2_resultat.webp" },
-                    { index: 2, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 3_resultat.webp" },
                     { index: 3, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 4_resultat.webp" },
+                    { index: 2, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 3_resultat.webp" },
+                    { index: 1, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 2_resultat.webp" },
                     { index: 4, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 5_resultat.webp" },
                     { index: 5, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 6_resultat.webp" },
                     { index: 6, src: "assets/Restauration/2024-cos-d-estournel/Cos d'Estournel photo 7_resultat.webp" },
