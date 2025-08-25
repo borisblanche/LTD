@@ -269,7 +269,7 @@ const categories = [
                 id: 118,
                 name: "Marbres Cadaujac",
                 images: [
-                    { index: 0, src: "assets/Restauration/2025-marbres-cadaujac/Marbres Cadaujac photo 1_resultat.webp" },
+                    { index: 0, src: "assets/Restauration/2025-marbres-cadaujac/Marbres-Cadaujac-photo-1_resultat.webp" },
                     { index: 1, src: "assets/Restauration/2025-marbres-cadaujac/Marbres Cadaujac photo 2_resultat.webp" },
                     { index: 2, src: "assets/Restauration/2025-marbres-cadaujac/Marbres Cadaujac photo 3_resultat.webp" },
                     { index: 3, src: "assets/Restauration/2025-marbres-cadaujac/Marbres Cadaujac photo 4_resultat.webp" },
